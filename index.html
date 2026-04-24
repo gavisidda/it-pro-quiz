@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT Pro Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@300;400;600;800&display=swap" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+<style>
+:root{--bg:#090e1a;--bg2:#0d1527;--bg3:#111e36;--panel:#0a1628;--border:#1a3a6b;--accent:#00c8ff;--accent2:#0af0a0;--accent3:#ff6b35;--gold:#ffd700;--red:#ff4444;--text:#e8f4ff;--muted:#5a7fa8;--mono:'Space Mono',monospace;--sans:'Sora',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(0,200,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,200,255,.03) 1px,transparent 1px);background-size:40px 40px}
+.screen{display:none;position:relative;z-index:1}
+.screen.active{display:flex;flex-direction:column;min-height:100vh}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg2)}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+/* BUTTONS */
+.btn{font-family:var(--sans);font-weight:600;border:none;cursor:pointer;border-radius:8px;transition:all .2s;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn-primary{background:linear-gradient(135deg,#0077b6,#00c8ff);color:#fff;padding:14px 28px;font-size:15px}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,200,255,.35)}
+.btn-google{background:#fff;color:#333;padding:13px 24px;font-size:14px;font-weight:600;width:100%}
+.btn-google:hover{background:#f0f0f0;transform:translateY(-1px)}
+.btn-guest{background:transparent;color:var(--muted);border:1px solid var(--border);padding:13px 24px;font-size:14px;width:100%}
+.btn-guest:hover{border-color:var(--accent);color:var(--accent)}
+.btn-outline{background:transparent;color:var(--accent);border:1px solid var(--accent);padding:10px 20px;font-size:13px}
+.btn-outline:hover{background:rgba(0,200,255,.1)}
+.btn-danger{background:rgba(255,68,68,.15);color:var(--red);border:1px solid rgba(255,68,68,.3);padding:10px 20px;font-size:13px}
+
+/* CARDS */
+.card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:24px}
+.input{width:100%;background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:12px 16px;border-radius:8px;font-family:var(--sans);font-size:14px;transition:border-color .2s}
+.input:focus{outline:none;border-color:var(--accent)}
+.input::placeholder{color:var(--muted)}
+
+/* LOGIN */
+#loginScreen{align-items:center;justify-content:center;padding:20px}
+.login-wrap{width:100%;max-width:440px;display:flex;flex-direction:column;gap:24px}
+.brand-header{text-align:center}
+.brand-icon{font-size:52px;display:block;margin-bottom:12px;filter:drop-shadow(0 0 16px rgba(0,200,255,.5))}
+.brand-title{font-size:28px;font-weight:800;background:linear-gradient(135deg,#00c8ff,#0af0a0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2}
+.brand-sub{font-size:13px;color:var(--muted);margin-top:6px;font-family:var(--mono)}
+.login-card{gap:16px;display:flex;flex-direction:column}
+.login-card h3{font-size:14px;color:var(--muted);text-align:center;font-weight:400}
+.divider{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:12px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--border)}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+.stat-box{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 4px}
+.stat-num{font-family:var(--mono);font-size:20px;color:var(--accent);font-weight:700}
+.stat-lbl{font-size:10px;color:var(--muted);margin-top:2px}
+
+/* HOME */
+#homeScreen{padding:0}
+.top-nav{background:var(--panel);border-bottom:1px solid var(--border);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.nav-brand{font-family:var(--mono);font-size:13px;color:var(--accent)}
+.nav-user{display:flex;align-items:center;gap:12px}
+.avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#0077b6,#00c8ff);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700}
+.home-content{padding:24px;max-width:900px;margin:0 auto;width:100%}
+.hero-banner{background:linear-gradient(135deg,#0d2040,#0a1628);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:28px;position:relative;overflow:hidden}
+.hero-banner::after{content:'🖥️';position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:72px;opacity:.12}
+.hero-banner h1{font-size:22px;font-weight:800;margin-bottom:8px}
+.hero-banner p{font-size:13px;color:var(--muted);max-width:420px;line-height:1.6}
+.hero-stats{display:flex;gap:20px;margin-top:20px;flex-wrap:wrap}
+.hs{background:rgba(0,200,255,.08);border:1px solid rgba(0,200,255,.2);border-radius:8px;padding:10px 16px}
+.hs-val{font-family:var(--mono);font-size:18px;color:var(--accent);font-weight:700}
+.hs-key{font-size:11px;color:var(--muted)}
+.section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.section-title{font-size:14px;font-weight:600;font-family:var(--mono);color:var(--accent2);display:flex;align-items:center;gap:8px}
+.section-title::before{content:'//';color:var(--muted)}
+
+/* CATEGORY GRID */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-bottom:32px}
+.cat-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px 14px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+.cat-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,200,255,.15)}
+.cat-card.empty{opacity:.35;cursor:default;pointer-events:none}
+.cat-card.empty::after{content:'No questions yet';position:absolute;bottom:7px;left:0;right:0;text-align:center;font-size:9px;color:var(--red);font-family:var(--mono)}
+.cat-icon{font-size:28px;margin-bottom:10px}
+.cat-name{font-size:13px;font-weight:600;line-height:1.3}
+.cat-qlabel{font-size:10px;color:var(--muted);margin-top:4px;font-family:var(--mono)}
+.cat-progress{margin-top:10px}
+.cat-prog-bar{height:3px;background:var(--border);border-radius:2px;margin-top:4px}
+.cat-prog-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;transition:width .4s}
+.cat-prog-text{font-size:10px;color:var(--muted);font-family:var(--mono)}
+
+/* LEVEL SCREEN */
+#levelScreen{padding:24px;max-width:700px;margin:0 auto;width:100%}
+.back-btn{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:13px;cursor:pointer;margin-bottom:24px;transition:color .2s}
+.back-btn:hover{color:var(--accent)}
+.level-header{text-align:center;margin-bottom:28px}
+.level-cat-icon{font-size:48px;filter:drop-shadow(0 0 12px rgba(0,200,255,.4))}
+.level-cat-name{font-size:22px;font-weight:800;margin-top:8px}
+.level-cat-desc{font-size:13px;color:var(--muted);margin-top:4px}
+.levels-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+.level-btn{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px 10px;cursor:pointer;text-align:center;transition:all .2s;position:relative}
+.level-btn:hover:not(.lk){border-color:var(--accent);box-shadow:0 4px 16px rgba(0,200,255,.2)}
+.level-btn.lk{opacity:.4;cursor:not-allowed}
+.level-btn.done{border-color:var(--accent2)}
+.level-btn.no-qs{opacity:.25;cursor:not-allowed;border-style:dashed}
+.level-num{font-family:var(--mono);font-size:20px;font-weight:700;color:var(--accent)}
+.level-label{font-size:11px;color:var(--muted);margin-top:4px}
+.level-stars{font-size:12px;margin-top:4px}
+
+/* QUIZ */
+#quizScreen{padding:0;background:var(--bg)}
+.quiz-topbar{background:var(--panel);border-bottom:1px solid var(--border);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.quiz-breadcrumb{font-size:12px;color:var(--muted);font-family:var(--mono)}
+.quiz-breadcrumb span{color:var(--accent)}
+.timer-circle{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px;font-weight:700}
+.speed-selector{display:flex;align-items:center;gap:6px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:5px 10px}
+.speed-selector label{font-family:var(--mono);font-size:11px;color:var(--muted);white-space:nowrap}
+.speed-selector select{background:transparent;border:none;color:var(--accent);font-family:var(--mono);font-size:12px;cursor:pointer;outline:none}
+.speed-selector select option{background:var(--bg2)}
+.icon-btn{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:16px;color:var(--muted);transition:all .2s;line-height:1}
+.icon-btn.on{color:var(--accent2);border-color:var(--accent2)}
+.quiz-body{padding:24px;max-width:720px;margin:0 auto}
+.qnum{font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:8px}
+.qtopic{font-size:11px;color:var(--muted);margin-bottom:14px;font-family:var(--mono)}
+.question-text{font-size:17px;font-weight:600;line-height:1.6;margin-bottom:24px;color:var(--text)}
+.options-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+@media(max-width:520px){.options-grid{grid-template-columns:1fr}}
+.opt{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;cursor:pointer;transition:all .2s;display:flex;align-items:flex-start;gap:10px;font-size:14px;line-height:1.4;text-align:left;width:100%}
+.opt:hover:not(.disabled){border-color:var(--accent);background:rgba(0,200,255,.06)}
+.opt.correct{border-color:var(--accent2)!important;background:rgba(10,240,160,.12)!important;color:var(--accent2)}
+.opt.wrong{border-color:var(--red)!important;background:rgba(255,68,68,.12)!important;color:var(--red)}
+.opt.disabled{cursor:not-allowed}
+.opt-letter{font-family:var(--mono);font-size:12px;color:var(--muted);flex-shrink:0;width:18px;margin-top:1px}
+.lifelines{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+.lifeline{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:8px 14px;cursor:pointer;font-size:12px;display:flex;align-items:center;gap:6px;transition:all .2s}
+.lifeline:hover:not(.used){border-color:var(--gold);color:var(--gold)}
+.lifeline.used{opacity:.3;cursor:not-allowed}
+
+/* TTS banner */
+.tts-bar{display:none;align-items:center;gap:10px;padding:11px 14px;border-radius:10px;margin-top:14px;font-size:13px;line-height:1.5;border:1px solid}
+.tts-bar.correct-bar{background:rgba(10,240,160,.07);border-color:rgba(10,240,160,.25);color:var(--accent2)}
+.tts-bar.wrong-bar{background:rgba(255,68,68,.07);border-color:rgba(255,68,68,.25);color:#ff8080}
+.tts-bar.show{display:flex}
+.tts-stop{margin-left:auto;background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;flex-shrink:0;font-family:var(--mono)}
+
+.explanation-box{background:rgba(0,200,255,.06);border:1px solid rgba(0,200,255,.2);border-radius:10px;padding:14px;margin-top:12px;font-size:13px;line-height:1.6;color:var(--muted);display:none}
+.explanation-box strong{color:var(--accent)}
+.progress-bar-full{height:3px;background:var(--border)}
+.progress-bar-fill{height:100%;background:linear-gradient(90deg,#0077b6,#0af0a0);transition:width .4s}
+
+/* RESULT */
+#resultScreen{align-items:center;justify-content:center;padding:24px;min-height:100vh}
+.result-card{width:100%;max-width:480px;background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:32px;text-align:center}
+.result-emoji{font-size:64px;margin-bottom:12px}
+.result-title{font-size:24px;font-weight:800;margin-bottom:4px}
+.result-sub{font-size:13px;color:var(--muted);margin-bottom:24px}
+.result-score{font-family:var(--mono);font-size:48px;font-weight:700;color:var(--accent);margin-bottom:8px}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}
+.rg-box{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:12px 6px}
+.rg-val{font-family:var(--mono);font-size:20px;color:var(--accent2);font-weight:700}
+.rg-key{font-size:10px;color:var(--muted);margin-top:2px}
+.result-btns{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+
+/* ADMIN */
+#adminScreen{padding:0}
+.admin-nav{background:var(--panel);border-bottom:1px solid var(--border);padding:12px 24px;display:flex;align-items:center;justify-content:space-between}
+.admin-body{padding:24px;max-width:1000px;margin:0 auto}
+.admin-tabs{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.atab{padding:8px 18px;border-radius:8px;cursor:pointer;font-size:13px;background:var(--bg2);border:1px solid var(--border);color:var(--muted);transition:all .2s}
+.atab.active{background:rgba(0,200,255,.1);border-color:var(--accent);color:var(--accent)}
+.tab-content{display:none}.tab-content.active{display:block}
+.stat-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-bottom:24px}
+.sc{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px}
+.sc-num{font-family:var(--mono);font-size:28px;color:var(--accent);font-weight:700}
+.sc-lbl{font-size:12px;color:var(--muted);margin-top:4px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;padding:10px 12px;color:var(--muted);font-family:var(--mono);font-size:11px;border-bottom:1px solid var(--border);font-weight:400}
+td{padding:10px 12px;border-bottom:1px solid rgba(26,58,107,.4)}
+tr:hover td{background:rgba(0,200,255,.03)}
+
+/* TOAST */
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:12px 20px;font-size:13px;z-index:9999;transition:transform .3s ease;pointer-events:none;max-width:320px;text-align:center}
+#toast.show{transform:translateX(-50%) translateY(0)}
+
+/* MODAL */
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;z-index:500;padding:20px}
+.modal-bg.open{display:flex}
+.modal{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:28px;width:100%;max-width:400px}
+.modal h3{margin-bottom:16px}
+
+/* FEEDBACK FLASH */
+@keyframes flash{0%{opacity:.9;transform:translate(-50%,-50%) scale(.6)}40%{opacity:1;transform:translate(-50%,-50%) scale(1.15)}100%{opacity:0;transform:translate(-50%,-50%) scale(1.3)}}
+.fb-overlay{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);font-size:80px;pointer-events:none;z-index:1000;opacity:0}
+.fb-overlay.pop{animation:flash .6s ease-out forwards}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.fade-in{animation:fadeIn .3s ease}
+</style>
+</head>
+<body>
+
+<div id="fbOverlay" class="fb-overlay"></div>
+<div id="toast"></div>
+
+<!-- LOGIN -->
+<div id="loginScreen" class="screen active">
+  <div class="login-wrap fade-in">
+    <div class="brand-header">
+      <span class="brand-icon">🖥️</span>
+      <div class="brand-title">IT Pro Quiz</div>
+      <div class="brand-sub">// Infrastructure Administrator Challenge</div>
+    </div>
+    <div class="stats-row">
+      <div class="stat-box"><div class="stat-num">20</div><div class="stat-lbl">Categories</div></div>
+      <div class="stat-box"><div class="stat-num">5+</div><div class="stat-lbl">Levels Each</div></div>
+      <div class="stat-box"><div class="stat-num">500+</div><div class="stat-lbl">Questions</div></div>
+    </div>
+    <div class="card login-card">
+      <h3>Sign in to track your progress</h3>
+      <button class="btn btn-google" onclick="loginGoogle()">
+        <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        Continue with Google
+      </button>
+      <div class="divider">or</div>
+      <button class="btn btn-guest" onclick="loginGuest()">👤 Continue as Guest</button>
+      <div style="text-align:center;margin-top:4px">
+        <span onclick="openAdminModal()" style="font-size:12px;color:var(--muted);cursor:pointer;text-decoration:underline">🔐 Admin Login</span>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:11px;color:var(--muted)">For IT professionals · Interview prep · Knowledge assessment</p>
+  </div>
+</div>
+
+<!-- HOME -->
+<div id="homeScreen" class="screen">
+  <nav class="top-nav">
+    <div class="nav-brand">IT_PRO_QUIZ</div>
+    <div class="nav-user">
+      <span id="navScore" style="font-family:var(--mono);font-size:13px;color:var(--accent2)">⭐ 0</span>
+      <div class="avatar" id="navAvatar">U</div>
+      <button class="btn btn-outline" onclick="logout()" style="padding:6px 14px;font-size:12px">Logout</button>
+    </div>
+  </nav>
+  <div class="home-content fade-in">
+    <div class="hero-banner">
+      <h1>Welcome, <span id="welcomeName" style="color:var(--accent)">Admin</span> 👋</h1>
+      <p>Master IT infrastructure across 20 technology domains. Complete all levels in each category to become an IT Pro.</p>
+      <div class="hero-stats">
+        <div class="hs"><div class="hs-val" id="totalScore">0</div><div class="hs-key">Total Score</div></div>
+        <div class="hs"><div class="hs-val" id="totalCorrect">0</div><div class="hs-key">Correct Answers</div></div>
+        <div class="hs"><div class="hs-val" id="completedCats">0</div><div class="hs-key">Categories Done</div></div>
+      </div>
+    </div>
+    <div class="section-header">
+      <div class="section-title">CATEGORIES</div>
+      <span id="catProgress" style="font-size:12px;color:var(--muted)">Loading...</span>
+    </div>
+    <div class="cat-grid" id="catGrid"></div>
+  </div>
+</div>
+
+<!-- LEVEL SELECT -->
+<div id="levelScreen" class="screen">
+  <div style="max-width:700px;margin:0 auto;padding:24px;width:100%">
+    <div class="back-btn" onclick="goScreen('homeScreen')">← Back to Categories</div>
+    <div class="level-header fade-in">
+      <div class="level-cat-icon" id="lcIcon">🖥️</div>
+      <div class="level-cat-name" id="lcName">Category</div>
+      <div class="level-cat-desc" id="lcDesc">Select a level to begin</div>
+    </div>
+    <div class="levels-grid" id="levelsGrid"></div>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<div id="quizScreen" class="screen">
+  <div class="quiz-topbar">
+    <div class="quiz-breadcrumb"><span id="qbCat">Category</span> › Level <span id="qbLevel">1</span></div>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+      <div class="speed-selector">
+        <label>⚡</label>
+        <select id="speedSel" onchange="setSpeed(this.value)">
+          <option value="0.5">0.5×</option>
+          <option value="1" selected>1×</option>
+          <option value="1.5">1.5×</option>
+          <option value="2">2×</option>
+        </select>
+      </div>
+      <button class="icon-btn on" id="soundBtn" onclick="toggleSound()" title="Sound on/off">🔊</button>
+      <button class="icon-btn on" id="ttsBtn" onclick="toggleTTS()" title="Voice on/off">🗣️</button>
+      <div id="streakBox" style="font-family:var(--mono);font-size:12px;color:var(--accent3);display:none">🔥 <span id="streakNum">0</span></div>
+      <div class="timer-circle" id="timerCircle" style="background:conic-gradient(var(--accent) 100%,var(--border) 0)">30</div>
+      <button class="btn btn-outline" onclick="quitQuiz()" style="padding:6px 12px;font-size:12px">✕ Quit</button>
+    </div>
+  </div>
+  <div class="progress-bar-full"><div class="progress-bar-fill" id="qProgress" style="width:0%"></div></div>
+  <div class="quiz-body fade-in">
+    <div class="qnum" id="qNum">Question 1 of 10</div>
+    <div class="qtopic" id="qTopic"></div>
+    <div class="question-text" id="questionText">Loading...</div>
+    <div class="lifelines">
+      <div class="lifeline" id="ll50" onclick="use5050()">50:50</div>
+      <div class="lifeline" id="llSkip" onclick="useSkip()">⏭ Skip</div>
+      <div class="lifeline" id="llHint" onclick="useHint()">💡 Hint</div>
+    </div>
+    <div class="options-grid" id="optionsGrid"></div>
+    <!-- TTS Result Bar -->
+    <div class="tts-bar" id="ttsBar">
+      <span id="ttsIcon">🔊</span>
+      <span id="ttsMsg" style="flex:1"></span>
+      <button class="tts-stop" onclick="stopTTS()">■ Stop</button>
+    </div>
+    <div class="explanation-box" id="explanationBox">
+      <strong>💡 Explanation:</strong> <span id="explanationText"></span>
+    </div>
+    <div style="margin-top:20px;display:flex;justify-content:flex-end">
+      <button class="btn btn-primary" onclick="nextQ()" id="nextBtn" style="display:none">Next Question →</button>
+    </div>
+  </div>
+</div>
+
+<!-- RESULT -->
+<div id="resultScreen" class="screen">
+  <div class="result-card fade-in">
+    <div class="result-emoji" id="resEmoji">🎉</div>
+    <div class="result-title" id="resTitle">Level Complete!</div>
+    <div class="result-sub" id="resSub">Great performance</div>
+    <div class="result-score" id="resScore">8/10</div>
+    <div class="result-grid">
+      <div class="rg-box"><div class="rg-val" id="resCorrect">8</div><div class="rg-key">Correct</div></div>
+      <div class="rg-box"><div class="rg-val" id="resTime">2m30s</div><div class="rg-key">Time</div></div>
+      <div class="rg-box"><div class="rg-val" id="resPoints">800</div><div class="rg-key">Points</div></div>
+    </div>
+    <div class="result-btns">
+      <button class="btn btn-primary" id="nextLevelBtn" onclick="goNextLevel()">Next Level →</button>
+      <button class="btn btn-outline" onclick="retryLevel()">↺ Try Again</button>
+      <button class="btn btn-guest" onclick="goScreen('homeScreen')">Back to Categories</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN -->
+<div id="adminScreen" class="screen">
+  <div class="admin-nav">
+    <div style="font-family:var(--mono);font-size:14px;color:var(--accent)">🔐 Admin Dashboard</div>
+    <button class="btn btn-outline" onclick="goScreen('homeScreen')" style="padding:6px 14px;font-size:12px">← Exit</button>
+  </div>
+  <div class="admin-body">
+    <div class="admin-tabs">
+      <div class="atab active" onclick="switchTab(this,'overview')">📊 Overview</div>
+      <div class="atab" onclick="switchTab(this,'participants')">👥 Participants</div>
+      <div class="atab" onclick="switchTab(this,'settings')">⚙️ Settings</div>
+    </div>
+    <div class="tab-content active" id="tab-overview">
+      <div class="stat-cards">
+        <div class="sc"><div class="sc-num" id="adPlayers">—</div><div class="sc-lbl">Total Players</div></div>
+        <div class="sc"><div class="sc-num" id="adTop">—</div><div class="sc-lbl">Top Score</div></div>
+        <div class="sc"><div class="sc-num" id="adAvg">—</div><div class="sc-lbl">Avg Score</div></div>
+        <div class="sc"><div class="sc-num" id="adGames">—</div><div class="sc-lbl">Games Played</div></div>
+      </div>
+    </div>
+    <div class="tab-content" id="tab-participants">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+        <div style="font-size:14px;font-weight:600">Player Records</div>
+        <button class="btn btn-outline" onclick="loadPlayers()" style="padding:6px 14px;font-size:12px">↻ Refresh</button>
+      </div>
+      <div class="card" style="overflow-x:auto">
+        <table><thead><tr><th>#</th><th>Player</th><th>Type</th><th>Score</th><th>Correct</th><th>Games</th><th>Joined</th></tr></thead>
+        <tbody id="playersTable"><tr><td colspan="7" style="text-align:center;color:var(--muted);padding:24px">Loading...</td></tr></tbody></table>
+      </div>
+    </div>
+    <div class="tab-content" id="tab-settings">
+      <div class="card" style="max-width:400px">
+        <div style="font-size:14px;font-weight:600;margin-bottom:16px">Quiz Settings</div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div>
+            <label style="font-size:12px;color:var(--muted);display:block;margin-bottom:6px">Pass Threshold (%)</label>
+            <input class="input" type="number" id="cfgPass" value="70" min="50" max="100">
+          </div>
+          <div>
+            <label style="font-size:12px;color:var(--muted);display:block;margin-bottom:6px">Questions Per Level</label>
+            <input class="input" type="number" id="cfgQPL" value="10" min="5" max="30">
+          </div>
+          <button class="btn btn-primary" onclick="saveSettings()">💾 Save Settings</button>
+        </div>
+      </div>
+      <div class="card" style="max-width:400px;margin-top:16px">
+        <div style="font-size:14px;font-weight:600;margin-bottom:16px">Change Admin Password</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <input class="input" type="password" id="curPwd" placeholder="Current password">
+          <input class="input" type="password" id="newPwd" placeholder="New password (min 6 chars)">
+          <button class="btn btn-outline" onclick="changeAdminPwd()">🔄 Change Password</button>
+        </div>
+      </div>
+      <div class="card" style="max-width:400px;margin-top:16px;border-color:rgba(255,68,68,.3)">
+        <div style="font-size:14px;font-weight:600;color:var(--red);margin-bottom:8px">⚠️ Danger Zone</div>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:12px">Reset all local progress for this device.</p>
+        <button class="btn btn-danger" onclick="resetAllData()">Reset Local Data</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODALS -->
+<div class="modal-bg" id="adminModal">
+  <div class="modal">
+    <h3>🔐 Admin Login</h3>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <input class="input" type="text" id="adminUser" placeholder="Username" value="admin">
+      <input class="input" type="password" id="adminPwdIn" placeholder="Password">
+      <div style="display:flex;gap:8px">
+        <button class="btn btn-primary" onclick="verifyAdmin()" style="flex:1">Login</button>
+        <button class="btn btn-guest" onclick="closeAdminModal()" style="flex:1">Cancel</button>
+      </div>
+      <div id="adminErr" style="font-size:12px;color:var(--red);text-align:center;display:none">Invalid credentials</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-bg" id="nameModal">
+  <div class="modal">
+    <h3>👤 Enter Your Name</h3>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:14px">Used to track your scores.</p>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <input class="input" id="guestNameIn" placeholder="Your name">
+      <button class="btn btn-primary" onclick="confirmGuest()">Start Quiz →</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ════════════════════════════════════════════
+// FIREBASE — replace with your project values
+// ════════════════════════════════════════════
+const FB_CONFIG = {
+  apiKey: "AIzaSyBiwVqfowgxxpZzst_xJ5o_PjTqCVGGeSQ",
+  authDomain: "it-pro-quiz.firebaseapp.com",
+  projectId: "it-pro-quiz",
+  storageBucket: "it-pro-quiz.firebasestorage.app",
+  messagingSenderId: "975431982507",
+  appId: "1:975431982507:web:e0536baf4dc9b4c02b46ee",
+  measurementId: "G-YGT5DLBTJP"
+};
+let db=null, auth=null, fbReady=false;
+try { firebase.initializeApp(FB_CONFIG); db=firebase.firestore(); auth=firebase.auth(); fbReady=true; }
+catch(e){ console.warn('Firebase offline — local mode'); }
+
+// ════════════════════════════════════════════
+// CATEGORIES  (add/remove here to match JSONs)
+// ════════════════════════════════════════════
+const CATEGORIES = [
+  { id:'servers',    icon:'🖥️', name:'Servers',          desc:'Windows/Linux, roles, hardware, troubleshooting' },
+  { id:'network',    icon:'🌐', name:'Network',           desc:'TCP/IP, OSI, switching, routing, protocols' },
+  { id:'vmware',     icon:'💠', name:'Virtualization',    desc:'VMware, Hyper-V, containers, Citrix' },
+  { id:'aws',        icon:'☁️', name:'AWS Cloud',         desc:'EC2, S3, VPC, IAM, Lambda, CloudFormation' },
+  { id:'m365',       icon:'📧', name:'Microsoft 365',     desc:'Exchange Online, Teams, SharePoint, OneDrive' },
+  { id:'ad',         icon:'🗂️', name:'Active Directory',  desc:'AD DS, GPO, OU, replication, trusts, LDAP' },
+  { id:'dhcpdns',    icon:'📡', name:'DHCP / DNS',        desc:'Scopes, leases, zones, records, TTL' },
+  { id:'wsus',       icon:'🔄', name:'WSUS',              desc:'Windows Server Update Services, patching' },
+  { id:'sccm',       icon:'🛠️', name:'SCCM / MECM',       desc:'Software deployment, OSD, inventory' },
+  { id:'firewall',   icon:'🔒', name:'Firewall',          desc:'Rules, NAT, IDS/IPS, Palo Alto, Fortinet' },
+  { id:'database',   icon:'🗄️', name:'Database',          desc:'SQL Server, MySQL, Oracle, backup, tuning' },
+  { id:'powershell', icon:'💻', name:'PowerShell',        desc:'Scripting, automation, cmdlets, remoting' },
+  { id:'ip',         icon:'🔢', name:'IP Addressing',     desc:'Subnetting, CIDR, IPv6, VLSM' },
+  { id:'security',   icon:'🛡️', name:'Cyber Security',    desc:'Zero trust, SOC, SIEM, hardening' },
+  { id:'antivirus',  icon:'🦠', name:'Anti-Virus / EDR',  desc:'Trend Micro, Kaspersky, Sophos, XDR' },
+  { id:'sdwan',      icon:'📶', name:'SD-WAN',            desc:'Concepts, vendors, policies, overlay networks' },
+  { id:'intune',     icon:'📱', name:'Microsoft Intune',  desc:'MDM, MAM, compliance, app deployment' },
+  { id:'ticketing',  icon:'🎫', name:'Ticketing Tools',   desc:'ServiceNow, Jira, Zendesk, ITIL workflows' },
+  { id:'storage',    icon:'💾', name:'Storage & Backup',  desc:'SAN, NAS, RAID, Veeam, DR strategies' },
+  { id:'monitoring', icon:'📊', name:'Monitoring',        desc:'SCOM, Nagios, Zabbix, SolarWinds, alerting' },
+];
+
+// ════════════════════════════════════════════
+// STATE
+// ════════════════════════════════════════════
+let currentUser=null, currentCat=null, currentLevel=null;
+let quizQs=[], qIdx=0, correctCount=0;
+let startTime=null, timer=null, timeLeft=30;
+let lifelines={f:false,s:false,h:false};
+let streak=0;
+let PASS_THRESH=0.7, Q_PER_LEVEL=10;
+let speed=1, soundOn=true, ttsOn=true;
+const ADMIN_PWD_KEY='itpq_apwd';
+let adminPwd = localStorage.getItem(ADMIN_PWD_KEY) || 'itpro2024';
+
+// question cache: catId → { levelNum: [q,q,...], ... }
+const qCache={};
+
+// ════════════════════════════════════════════
+// QUESTION LOADING
+//
+// JSON format (questions/<catId>.json):
+// {
+//   "category": "ad",
+//   "questions": [
+//     {
+//       "q":          "What does AD stand for?",
+//       "options":    ["Active Directory","Azure Deployment","Auto Domain","Access Directory"],
+//       "answer":     0,          ← index of correct option (0=A, 1=B, 2=C, 3=D)
+//       "explanation":"AD = Active Directory, Microsoft's directory service.",
+//       "topic":      "Basics",   ← optional label shown above question
+//       "level":      1           ← 1–5 (or higher if you extend)
+//     }
+//   ]
+// }
+// ════════════════════════════════════════════
+async function loadCatQs(catId){
+  if(qCache[catId]!==undefined) return qCache[catId];
+  try{
+    // cache-bust so edits appear immediately
+    const r=await fetch(`questions/${catId}.json?t=${Date.now()}`);
+    if(!r.ok) throw new Error('404');
+    const data=await r.json();
+    // group by level
+    const byLv={};
+    (data.questions||[]).forEach(q=>{
+      const lv=q.level||1;
+      if(!byLv[lv]) byLv[lv]=[];
+      byLv[lv].push(q);
+    });
+    qCache[catId]=byLv;
+    return byLv;
+  }catch(e){
+    qCache[catId]=null;
+    return null;
+  }
+}
+
+async function getQsForLevel(catId,lv){
+  const byLv=await loadCatQs(catId);
+  if(!byLv) return null;
+  const pool=byLv[lv];
+  if(!pool||!pool.length) return null;
+  return shuffle([...pool]).slice(0,Q_PER_LEVEL);
+}
+
+// returns the max level number that has questions
+async function maxLvWithQs(catId){
+  const byLv=await loadCatQs(catId);
+  if(!byLv) return 0;
+  return Math.max(0,...Object.keys(byLv).map(Number).filter(lv=>byLv[lv]&&byLv[lv].length>0));
+}
+
+// Pre-fetch all category metadata for home screen
+const catMeta={}; // catId → { maxLv, totalQs }
+async function prefetchMeta(){
+  await Promise.all(CATEGORIES.map(async cat=>{
+    const byLv=await loadCatQs(cat.id);
+    if(!byLv){ catMeta[cat.id]={maxLv:0,totalQs:0}; return; }
+    const maxLv=Math.max(0,...Object.keys(byLv).map(Number));
+    const totalQs=Object.values(byLv).reduce((s,a)=>s+a.length,0);
+    catMeta[cat.id]={maxLv,totalQs};
+  }));
+  renderCategories();
+}
+
+function shuffle(a){
+  for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]; }
+  return a;
+}
+
+// ════════════════════════════════════════════
+// SOUND  (Web Audio)
+// ════════════════════════════════════════════
+let actx=null;
+function getActx(){ if(!actx) actx=new(window.AudioContext||window.webkitAudioContext)(); return actx; }
+
+function playCorrect(){
+  if(!soundOn) return;
+  try{
+    const c=getActx(),t=c.currentTime;
+    [523.25,659.25,783.99].forEach((f,i)=>{
+      const o=c.createOscillator(),g=c.createGain();
+      o.connect(g);g.connect(c.destination);o.type='sine';o.frequency.value=f;
+      const s=t+i*.08/speed,e=s+.18/speed;
+      g.gain.setValueAtTime(0,s);g.gain.linearRampToValueAtTime(.28,s+.015);g.gain.exponentialRampToValueAtTime(.001,e);
+      o.start(s);o.stop(e+.05);
+    });
+  }catch(e){}
+}
+function playWrong(){
+  if(!soundOn) return;
+  try{
+    const c=getActx(),t=c.currentTime;
+    [220,185].forEach((f,i)=>{
+      const o=c.createOscillator(),g=c.createGain();
+      o.connect(g);g.connect(c.destination);o.type='sawtooth';o.frequency.value=f;
+      const s=t+i*.12/speed,e=s+.2/speed;
+      g.gain.setValueAtTime(0,s);g.gain.linearRampToValueAtTime(.2,s+.02);g.gain.exponentialRampToValueAtTime(.001,e);
+      o.start(s);o.stop(e+.05);
+    });
+  }catch(e){}
+}
+function toggleSound(){
+  soundOn=!soundOn;
+  const b=document.getElementById('soundBtn');
+  b.textContent=soundOn?'🔊':'🔇'; b.classList.toggle('on',soundOn);
+  localStorage.setItem('itpq_snd',soundOn?'1':'0');
+}
+function setSpeed(v){
+  speed=parseFloat(v);
+  localStorage.setItem('itpq_spd',v);
+}
+
+// ════════════════════════════════════════════
+// TEXT-TO-SPEECH
+// ════════════════════════════════════════════
+function toggleTTS(){
+  ttsOn=!ttsOn;
+  const b=document.getElementById('ttsBtn');
+  b.classList.toggle('on',ttsOn);
+  b.style.opacity=ttsOn?'1':'0.5';
+  if(!ttsOn) stopTTS();
+  localStorage.setItem('itpq_tts',ttsOn?'1':'0');
+}
+
+function speakResult(isCorrect, correctText){
+  if(!ttsOn||!soundOn) return;
+  if(!window.speechSynthesis) return;
+  stopTTS();
+
+  // "1947 is the correct answer"  /  "Wrong. The correct answer is 1857"
+  const msg = isCorrect
+    ? `${correctText} is the correct answer.`
+    : `Wrong. The correct answer is ${correctText}.`;
+
+  const bar   = document.getElementById('ttsBar');
+  const icon  = document.getElementById('ttsIcon');
+  const msgEl = document.getElementById('ttsMsg');
+  icon.textContent  = isCorrect ? '✅' : '❌';
+  msgEl.textContent = msg;
+  bar.className     = 'tts-bar show ' + (isCorrect ? 'correct-bar' : 'wrong-bar');
+
+  const utt = new SpeechSynthesisUtterance(msg);
+  utt.rate  = Math.min(speed * 0.95, 1.7);
+  utt.pitch = isCorrect ? 1.1 : 0.85;
+  utt.volume = 1;
+  utt.onend = utt.onerror = () => {
+    bar.className='tts-bar'; // hide
+  };
+  window.speechSynthesis.speak(utt);
+}
+
+function stopTTS(){
+  if(window.speechSynthesis) window.speechSynthesis.cancel();
+  document.getElementById('ttsBar').className='tts-bar';
+}
+
+// ════════════════════════════════════════════
+// LOCAL STORAGE
+// ════════════════════════════════════════════
+const getProg  = ()=>JSON.parse(localStorage.getItem('itpq_prog')||'{}');
+const saveProg = d=>localStorage.setItem('itpq_prog',JSON.stringify(d));
+const getUser  = ()=>JSON.parse(localStorage.getItem('itpq_user')||'null');
+const saveUser = d=>localStorage.setItem('itpq_user',JSON.stringify(d));
+const getCfg   = ()=>{ const s=JSON.parse(localStorage.getItem('itpq_cfg')||'{}'); return{pass:s.pass||70,qpl:s.qpl||10}; };
+
+// ════════════════════════════════════════════
+// AUTH
+// ════════════════════════════════════════════
+function loginGoogle(){
+  if(!fbReady){ toast('Firebase not configured — use guest mode'); return; }
+  auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+    .then(r=>{ const u=r.user; setUser({uid:u.uid,name:u.displayName||u.email.split('@')[0],email:u.email,type:'google'}); syncFirestore(); goHome(); })
+    .catch(e=>toast('Google login failed: '+e.message));
+}
+function loginGuest(){
+  document.getElementById('nameModal').classList.add('open');
+  setTimeout(()=>document.getElementById('guestNameIn').focus(),100);
+}
+function confirmGuest(){
+  const n=document.getElementById('guestNameIn').value.trim()||'Guest';
+  setUser({uid:'g_'+Date.now(),name:n,type:'guest'});
+  document.getElementById('nameModal').classList.remove('open');
+  goHome();
+}
+function setUser(u){ currentUser=u; saveUser(u); }
+function logout(){
+  if(fbReady&&auth.currentUser) auth.signOut();
+  currentUser=null; saveUser(null); goScreen('loginScreen');
+}
+
+// ════════════════════════════════════════════
+// FIRESTORE
+// ════════════════════════════════════════════
+async function syncFirestore(){
+  if(!fbReady||!currentUser||currentUser.type==='guest') return;
+  try{
+    const p=getProg();
+    const total=Object.values(p).reduce((s,c)=>s+(c.score||0),0);
+    const correct=Object.values(p).reduce((s,c)=>s+(c.correct||0),0);
+    const games=Object.values(p).reduce((s,c)=>s+(c.games||0),0);
+    await db.collection('itpq_players').doc(currentUser.uid).set(
+      {name:currentUser.name,type:currentUser.type,total,correct,games,
+       lastSeen:firebase.firestore.FieldValue.serverTimestamp(),
+       joinedAt:firebase.firestore.FieldValue.serverTimestamp()},
+      {merge:true});
+  }catch(e){ console.warn('Firestore sync failed',e); }
+}
+
+// ════════════════════════════════════════════
+// HOME
+// ════════════════════════════════════════════
+function goHome(){
+  const u=currentUser||getUser(); if(!u){ goScreen('loginScreen'); return; }
+  currentUser=u;
+  document.getElementById('welcomeName').textContent=u.name.split(' ')[0];
+  document.getElementById('navAvatar').textContent=u.name.charAt(0).toUpperCase();
+  updateStats(); renderCategories(); goScreen('homeScreen');
+  prefetchMeta(); // async refresh
+}
+function updateStats(){
+  const p=getProg(); let ts=0,tc=0,cc=0;
+  CATEGORIES.forEach(c=>{ const cp=p[c.id]||{}; ts+=cp.score||0; tc+=cp.correct||0; });
+  const maxLvls=CATEGORIES.map(c=>{ const m=catMeta[c.id]; return m?m.maxLv:0; });
+  CATEGORIES.forEach((c,i)=>{ if((p[c.id]?.maxLevel||0)>=(maxLvls[i]||1)&&maxLvls[i]>0) cc++; });
+  set('totalScore',ts); set('totalCorrect',tc); set('completedCats',cc);
+  set('navScore','⭐ '+ts);
+  set('catProgress',cc+' / '+CATEGORIES.length+' completed');
+}
+function renderCategories(){
+  const p=getProg(), grid=$('catGrid'); grid.innerHTML='';
+  CATEGORIES.forEach(cat=>{
+    const cp=p[cat.id]||{};
+    const meta=catMeta[cat.id];
+    const maxLv=meta?meta.maxLv:0;
+    const totalQs=meta?meta.totalQs:0;
+    const done=cp.maxLevel||0;
+    const pct=maxLv>0?Math.round((done/maxLv)*100):0;
+    const empty=totalQs===0;
+    const d=document.createElement('div');
+    d.className='cat-card'+(empty?' empty':'');
+    d.innerHTML=`<div class="cat-icon">${cat.icon}</div>
+<div class="cat-name">${cat.name}</div>
+<div class="cat-qlabel">${empty?'No questions yet':totalQs+' questions · '+maxLv+' levels'}</div>
+<div class="cat-progress">
+  <div class="cat-prog-text">${done}/${maxLv||'?'} levels done</div>
+  <div class="cat-prog-bar"><div class="cat-prog-fill" style="width:${pct}%"></div></div>
+</div>`;
+    if(!empty) d.onclick=()=>openLevels(cat.id);
+    grid.appendChild(d);
+  });
+}
+
+// ════════════════════════════════════════════
+// LEVEL SELECT
+// Levels are dynamic — only show levels that
+// have questions in the JSON. No hard limit.
+// Progress unlocks next level after passing.
+// ════════════════════════════════════════════
+async function openLevels(catId){
+  const cat=CATEGORIES.find(c=>c.id===catId); currentCat=cat;
+  const p=getProg(), cp=p[catId]||{};
+  const byLv=await loadCatQs(catId)||{};
+  const allLvs=Object.keys(byLv).map(Number).filter(lv=>byLv[lv]&&byLv[lv].length>0).sort((a,b)=>a-b);
+
+  set('lcIcon',cat.icon); set('lcName',cat.name); set('lcDesc',cat.desc);
+  const grid=$('levelsGrid'); grid.innerHTML='';
+
+  if(allLvs.length===0){
+    grid.innerHTML='<p style="color:var(--muted);font-size:13px;text-align:center;grid-column:1/-1">No questions found. Add questions with level 1–N in the JSON file.</p>';
+    goScreen('levelScreen'); return;
+  }
+
+  const LABELS=['Beginner','Intermediate','Advanced','Expert','Master','Pro','Elite','Legend','Champion','Grandmaster'];
+  const maxDone=cp.maxLevel||0;
+
+  allLvs.forEach(lv=>{
+    const locked=lv>maxDone+1;
+    const done=lv<=maxDone;
+    const stars=done?(cp['s'+lv]||'⭐'):'';
+    const label=LABELS[lv-1]||('Level '+lv);
+    const qCount=byLv[lv]?byLv[lv].length:0;
+    const d=document.createElement('div');
+    d.className='level-btn'+(locked?' lk':'')+(done?' done':'');
+    d.innerHTML=`<div class="level-num">${lv}</div>
+<div class="level-label">${label}</div>
+<div style="font-size:9px;color:var(--muted);margin-top:2px;font-family:var(--mono)">${qCount}q</div>
+<div class="level-stars">${stars||(locked?'🔒':'')}</div>`;
+    if(!locked) d.onclick=()=>startQuiz(catId,lv);
+    grid.appendChild(d);
+  });
+  goScreen('levelScreen');
+}
+
+// ════════════════════════════════════════════
+// QUIZ ENGINE
+// ════════════════════════════════════════════
+async function startQuiz(catId,lv){
+  currentCat=CATEGORIES.find(c=>c.id===catId); currentLevel=lv;
+  qIdx=0; correctCount=0; streak=0; startTime=Date.now();
+  lifelines={f:false,s:false,h:false};
+  set('qbCat',currentCat.name); set('qbLevel',lv);
+  ['ll50','llSkip','llHint'].forEach(id=>$(id).classList.remove('used'));
+  goScreen('quizScreen');
+  const qs=await getQsForLevel(catId,lv);
+  if(!qs||!qs.length){ toast('No questions for this level'); openLevels(catId); return; }
+  quizQs=qs; renderQ();
+}
+
+function renderQ(){
+  stopTTS();
+  if(qIdx>=quizQs.length){ endQuiz(); return; }
+  const q=quizQs[qIdx];
+  set('qNum',`Question ${qIdx+1} of ${quizQs.length}`);
+  set('questionText',q.q);
+  set('qTopic',q.topic?`📌 ${q.topic}`:'');
+  $('qProgress').style.width=((qIdx/quizQs.length)*100)+'%';
+  $('explanationBox').style.display='none';
+  $('nextBtn').style.display='none';
+
+  const grid=$('optionsGrid'); grid.innerHTML='';
+  ['A','B','C','D'].forEach((L,i)=>{
+    if(!q.options[i]) return;
+    const b=document.createElement('button');
+    b.className='opt'; b.dataset.i=i;
+    b.innerHTML=`<span class="opt-letter">${L}</span>${q.options[i]}`;
+    b.onclick=()=>pick(i,q);
+    grid.appendChild(b);
+  });
+
+  // timer
+  clearInterval(timer);
+  const base=30;
+  timeLeft=Math.round(base/speed);
+  drawTimer(timeLeft,timeLeft);
+  timer=setInterval(()=>{
+    timeLeft--;
+    drawTimer(timeLeft,Math.round(base/speed));
+    if(timeLeft<=0){ clearInterval(timer); toast('⏱ Time up!'); reveal(-1,q); }
+  },1000);
+}
+
+function drawTimer(t,max){
+  const el=$('timerCircle');
+  const pct=(t/(max||30))*100;
+  el.textContent=t;
+  el.style.background=`conic-gradient(${t>(max||30)*.33?'var(--accent)':'var(--red)'} ${pct}%,var(--border) 0)`;
+}
+
+function pick(i,q){ clearInterval(timer); reveal(i,q); }
+
+function reveal(sel,q){
+  document.querySelectorAll('.opt').forEach(o=>{
+    o.classList.add('disabled');
+    const i=parseInt(o.dataset.i);
+    if(i===q.answer) o.classList.add('correct');
+    else if(i===sel&&sel!==q.answer) o.classList.add('wrong');
+  });
+  const ok=sel===q.answer;
+  if(ok){ correctCount++; streak++; playCorrect(); flash('✅'); }
+  else   { streak=0;            playWrong();  flash('❌'); }
+  $('streakBox').style.display=streak>=3?'block':'none';
+  if(streak>=3) set('streakNum',streak);
+
+  // TTS — slight delay so audio chime finishes first
+  const correctText=q.options[q.answer]||'';
+  setTimeout(()=>speakResult(ok,correctText),320);
+
+  if(q.explanation){ set('explanationText',q.explanation); $('explanationBox').style.display='block'; }
+  $('nextBtn').style.display='inline-flex';
+}
+
+function flash(e){
+  const el=$('fbOverlay'); el.textContent=e; el.className='fb-overlay';
+  void el.offsetWidth; el.classList.add('pop');
+}
+
+function nextQ(){ stopTTS(); qIdx++; renderQ(); }
+
+function use5050(){
+  if(lifelines.f) return; lifelines.f=true; $('ll50').classList.add('used');
+  const ans=quizQs[qIdx].answer; let h=0;
+  document.querySelectorAll('.opt').forEach(o=>{ if(parseInt(o.dataset.i)!==ans&&h<2){ o.style.visibility='hidden'; h++; } });
+  toast('50:50 used!');
+}
+function useSkip(){
+  if(lifelines.s) return; lifelines.s=true; $('llSkip').classList.add('used');
+  clearInterval(timer); stopTTS(); qIdx++; renderQ(); toast('Skipped');
+}
+function useHint(){
+  if(lifelines.h) return; lifelines.h=true; $('llHint').classList.add('used');
+  const ans=quizQs[qIdx].answer;
+  toast('💡 Answer starts with: '+['A','B','C','D'][ans]);
+}
+function quitQuiz(){ clearInterval(timer); stopTTS(); openLevels(currentCat.id); }
+
+function endQuiz(){
+  clearInterval(timer); stopTTS();
+  const elapsed=Math.round((Date.now()-startTime)/1000);
+  const tot=quizQs.length, pct=correctCount/tot;
+  const pass=pct>=PASS_THRESH;
+  const pts=correctCount*(currentLevel*10)+(pass?100:0);
+  const mins=Math.floor(elapsed/60),secs=elapsed%60;
+
+  const p=getProg();
+  if(!p[currentCat.id]) p[currentCat.id]={maxLevel:0,score:0,correct:0,games:0};
+  p[currentCat.id].games=(p[currentCat.id].games||0)+1;
+  p[currentCat.id].correct=(p[currentCat.id].correct||0)+correctCount;
+  p[currentCat.id].score=(p[currentCat.id].score||0)+pts;
+  if(pass&&currentLevel>(p[currentCat.id].maxLevel||0)) p[currentCat.id].maxLevel=currentLevel;
+  const stars=pct>=.9?'⭐⭐⭐':pct>=.7?'⭐⭐':'⭐';
+  p[currentCat.id]['s'+currentLevel]=stars;
+  saveProg(p); syncFirestore();
+
+  set('resEmoji', pct>=.9?'🏆':pct>=.7?'🎉':pct>=.5?'📚':'💪');
+  set('resTitle', pct>=.9?'Excellent!':pct>=.7?'Level Passed!':pct>=.5?'Keep Practicing!':'Keep Going!');
+  set('resSub',   pct>=.9?'Outstanding, IT Pro!':pass?`You unlocked Level ${currentLevel+1}!`:'Review and try again.');
+  set('resScore', `${correctCount}/${tot}`);
+  set('resCorrect',correctCount); set('resTime',`${mins}m${secs}s`); set('resPoints',pts);
+
+  const nb=$('nextLevelBtn');
+  // check if next level has questions
+  const meta=catMeta[currentCat.id]||{};
+  const maxAvail=meta.maxLv||0;
+  if(pass&&currentLevel<maxAvail){ nb.style.display='flex'; nb.textContent=`Level ${currentLevel+1} Unlocked! →`; }
+  else if(pass&&currentLevel>=maxAvail){ nb.style.display='flex'; nb.textContent='🏆 All Levels Done!'; }
+  else nb.style.display='none';
+  goScreen('resultScreen');
+}
+
+function goNextLevel(){
+  const meta=catMeta[currentCat.id]||{};
+  if(currentLevel<(meta.maxLv||0)) startQuiz(currentCat.id,currentLevel+1);
+  else goScreen('homeScreen');
+}
+function retryLevel(){ startQuiz(currentCat.id,currentLevel); }
+
+// ════════════════════════════════════════════
+// ADMIN
+// ════════════════════════════════════════════
+function openAdminModal(){ $('adminErr').style.display='none'; $('adminPwdIn').value=''; $('adminModal').classList.add('open'); }
+function closeAdminModal(){ $('adminModal').classList.remove('open'); }
+function verifyAdmin(){
+  if($('adminUser').value==='admin'&&$('adminPwdIn').value===adminPwd){ closeAdminModal(); $('adminScreen'); showAdmin(); }
+  else $('adminErr').style.display='block';
+}
+function showAdmin(){ goScreen('adminScreen'); loadPlayers(); }
+function switchTab(el,id){
+  document.querySelectorAll('.atab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active'); $('tab-'+id).classList.add('active');
+}
+async function loadPlayers(){
+  const tb=$('playersTable');
+  if(!fbReady){ tb.innerHTML='<tr><td colspan="7" style="text-align:center;color:var(--muted);padding:24px">Firebase not configured.</td></tr>'; return; }
+  try{
+    const snap=await db.collection('itpq_players').orderBy('total','desc').limit(100).get();
+    if(snap.empty){ tb.innerHTML='<tr><td colspan="7" style="text-align:center;color:var(--muted);padding:24px">No players yet.</td></tr>'; return; }
+    const rows=snap.docs.map((d,i)=>{ const p=d.data(),dt=p.joinedAt?new Date(p.joinedAt.seconds*1000).toLocaleDateString():'—';
+      return `<tr><td style="color:var(--muted);font-family:var(--mono)">${i+1}</td><td><strong>${p.name||'—'}</strong></td><td>${p.type||'—'}</td><td style="color:var(--accent);font-family:var(--mono)">${p.total||0}</td><td>${p.correct||0}</td><td>${p.games||0}</td><td style="color:var(--muted)">${dt}</td></tr>`; });
+    tb.innerHTML=rows.join('');
+    const pl=snap.docs.map(d=>d.data());
+    set('adPlayers',pl.length);
+    set('adTop',Math.max(...pl.map(p=>p.total||0)));
+    set('adAvg',Math.round(pl.reduce((s,p)=>s+(p.total||0),0)/pl.length)||0);
+    set('adGames',pl.reduce((s,p)=>s+(p.games||0),0));
+  }catch(e){ tb.innerHTML='<tr><td colspan="7" style="text-align:center;color:var(--red);padding:24px">Error loading.</td></tr>'; }
+}
+function saveSettings(){
+  const pass=parseInt($('cfgPass').value), qpl=parseInt($('cfgQPL').value);
+  PASS_THRESH=pass/100; Q_PER_LEVEL=qpl;
+  localStorage.setItem('itpq_cfg',JSON.stringify({pass,qpl})); toast('Settings saved!');
+}
+function changeAdminPwd(){
+  const c=$('curPwd').value,n=$('newPwd').value;
+  if(c!==adminPwd){ toast('Current password wrong'); return; }
+  if(n.length<6){ toast('New password too short'); return; }
+  adminPwd=n; localStorage.setItem(ADMIN_PWD_KEY,n); toast('Password changed!');
+}
+function resetAllData(){ if(confirm('Reset all local progress?')){ localStorage.removeItem('itpq_prog'); toast('Data reset!'); } }
+
+// ════════════════════════════════════════════
+// UTILS
+// ════════════════════════════════════════════
+function $   (id){ return document.getElementById(id); }
+function set (id,v){ const e=$(id); if(e) e.textContent=v; }
+function goScreen(id){ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active')); $(id).classList.add('active'); window.scrollTo(0,0); }
+function toast(msg){ const t=$('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2600); }
+
+// ════════════════════════════════════════════
+// INIT
+// ════════════════════════════════════════════
+window.addEventListener('load',()=>{
+  const cfg=getCfg(); PASS_THRESH=cfg.pass/100; Q_PER_LEVEL=cfg.qpl;
+  $('cfgPass').value=cfg.pass; $('cfgQPL').value=cfg.qpl;
+
+  const snd=localStorage.getItem('itpq_snd');
+  if(snd!==null){ soundOn=snd==='1'; const b=$('soundBtn'); b.textContent=soundOn?'🔊':'🔇'; b.classList.toggle('on',soundOn); }
+  const tts=localStorage.getItem('itpq_tts');
+  if(tts!==null){ ttsOn=tts==='1'; const b=$('ttsBtn'); b.classList.toggle('on',ttsOn); b.style.opacity=ttsOn?'1':'0.5'; }
+  const spd=localStorage.getItem('itpq_spd');
+  if(spd){ speed=parseFloat(spd); $('speedSel').value=spd; }
+
+  const u=getUser(); if(u){ currentUser=u; goHome(); }
+  if(fbReady) auth.onAuthStateChanged(u=>{ if(u&&!currentUser){ setUser({uid:u.uid,name:u.displayName||u.email?.split('@')[0]||'User',type:'google'}); goHome(); } });
+});
+</script>
+</body>
+</html>
