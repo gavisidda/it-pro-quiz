@@ -1,0 +1,1892 @@
+{
+  "category": "vmware",
+  "questions": [
+    {
+      "answer": 1,
+      "explanation": "Virtualization creates virtual versions of hardware like servers, storage, and networks.",
+      "level": 1,
+      "options": [
+        "Running multiple physical servers on one OS",
+        "Creating virtual versions of computing resources",
+        "Increasing CPU speed",
+        "Replacing hardware completely"
+      ],
+      "q": "What is virtualization?",
+      "topic": "Basics"
+    },
+    {
+      "answer": 1,
+      "explanation": "A hypervisor manages and runs virtual machines.",
+      "level": 1,
+      "options": [
+        "Antivirus software",
+        "Software that creates and runs virtual machines",
+        "Disk management tool",
+        "Network switch"
+      ],
+      "q": "What is a hypervisor?",
+      "topic": "Hypervisor"
+    },
+    {
+      "answer": 2,
+      "explanation": "ESXi runs directly on hardware (bare metal).",
+      "level": 1,
+      "options": [
+        "VMware Workstation",
+        "VirtualBox",
+        "VMware ESXi",
+        "Citrix Receiver"
+      ],
+      "q": "Which is a Type 1 hypervisor?",
+      "topic": "Hypervisor"
+    },
+    {
+      "answer": 2,
+      "explanation": "Type 2 runs on top of an operating system.",
+      "level": 1,
+      "options": [
+        "VMware ESXi",
+        "Microsoft Hyper-V Server Core",
+        "VMware Workstation",
+        "KVM"
+      ],
+      "q": "Which is a Type 2 hypervisor?",
+      "topic": "Hypervisor"
+    },
+    {
+      "answer": 1,
+      "explanation": "A VM is a software-based emulation of a physical computer.",
+      "level": 1,
+      "options": [
+        "Physical server",
+        "Software-based computer system",
+        "Network device",
+        "Storage disk"
+      ],
+      "q": "What is a virtual machine?",
+      "topic": "VM"
+    },
+    {
+      "answer": 1,
+      "explanation": "vSphere includes ESXi hypervisor and vCenter management.",
+      "level": 1,
+      "options": [
+        "Only storage tools",
+        "ESXi and vCenter management platform",
+        "Only networking tools",
+        "Only OS licensing"
+      ],
+      "q": "What does VMware vSphere include?",
+      "topic": "VMware"
+    },
+    {
+      "answer": 1,
+      "explanation": "vCenter manages multiple ESXi hosts centrally.",
+      "level": 1,
+      "options": [
+        "Creating DNS records",
+        "Centralized VM management",
+        "File transfer",
+        "Firewall configuration"
+      ],
+      "q": "What is vCenter used for?",
+      "topic": "VMware"
+    },
+    {
+      "answer": 1,
+      "explanation": "Snapshots capture VM state at a moment in time.",
+      "level": 1,
+      "options": [
+        "Backup of network",
+        "Point-in-time state of a VM",
+        "Disk formatting",
+        "Firewall rule"
+      ],
+      "q": "What is snapshot in virtualization?",
+      "topic": "VM"
+    },
+    {
+      "answer": 1,
+      "explanation": "Overcommitment allocates more vCPUs than available physical CPUs.",
+      "level": 1,
+      "options": [
+        "Assigning fewer CPUs than physical",
+        "Assigning more virtual CPUs than physical cores",
+        "CPU shutdown",
+        "Disk failure"
+      ],
+      "q": "What is CPU overcommitment?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "Ballooning optimizes memory usage between VMs.",
+      "level": 1,
+      "options": [
+        "Increasing disk size",
+        "Reclaiming unused memory from VMs",
+        "CPU boosting",
+        "Network compression"
+      ],
+      "q": "What is RAM ballooning?",
+      "topic": "Memory"
+    },
+    {
+      "answer": 1,
+      "explanation": "High Availability restarts VMs automatically on host failure.",
+      "level": 1,
+      "options": [
+        "Disk encryption",
+        "Restart VMs on another host during failure",
+        "DNS management",
+        "Firewall control"
+      ],
+      "q": "What is VMware HA used for?",
+      "topic": "VMware"
+    },
+    {
+      "answer": 1,
+      "explanation": "DRS balances workloads across ESXi hosts.",
+      "level": 1,
+      "options": [
+        "Disk Recovery System",
+        "Distributed Resource Scheduler",
+        "Dynamic Routing Service",
+        "Data Replication System"
+      ],
+      "q": "What is DRS in VMware?",
+      "topic": "VMware"
+    },
+    {
+      "answer": 1,
+      "explanation": "Live migration moves running VMs between hosts.",
+      "level": 1,
+      "options": [
+        "Copying files manually",
+        "Moving VM without downtime",
+        "Restarting server",
+        "Deleting VM"
+      ],
+      "q": "What is live migration in virtualization?",
+      "topic": "VM"
+    },
+    {
+      "answer": 1,
+      "explanation": "Hyper-V is Microsoft's virtualization platform.",
+      "level": 1,
+      "options": [
+        "Linux OS",
+        "Microsoft hypervisor",
+        "Database system",
+        "Firewall tool"
+      ],
+      "q": "What is Hyper-V?",
+      "topic": "Hypervisor"
+    },
+    {
+      "answer": 1,
+      "explanation": "Virtual switches connect VMs inside hypervisor.",
+      "level": 1,
+      "options": [
+        "Physical switch",
+        "Software-based network switch for VMs",
+        "Router device",
+        "Firewall"
+      ],
+      "q": "What is a virtual switch?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Containers share OS kernel but isolate applications.",
+      "level": 2,
+      "options": [
+        "Full OS virtualization",
+        "Running isolated applications on shared OS kernel",
+        "Hardware replacement",
+        "Network segmentation"
+      ],
+      "q": "What is containerization?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 1,
+      "explanation": "Docker is a containerization platform.",
+      "level": 2,
+      "options": [
+        "Hypervisor",
+        "Container platform",
+        "Firewall",
+        "Database"
+      ],
+      "q": "What is Docker?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 1,
+      "explanation": "Kubernetes manages container deployment and scaling.",
+      "level": 2,
+      "options": [
+        "Virtual machines",
+        "Container orchestration",
+        "DNS management",
+        "Disk management"
+      ],
+      "q": "What is Kubernetes used for?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 1,
+      "explanation": "Pod is a group of containers running together.",
+      "level": 2,
+      "options": [
+        "Virtual machine",
+        "Smallest deployable unit containing containers",
+        "Network switch",
+        "Storage volume"
+      ],
+      "q": "What is a pod in Kubernetes?",
+      "topic": "Kubernetes"
+    },
+    {
+      "answer": 1,
+      "explanation": "Citrix delivers apps/desktops remotely.",
+      "level": 2,
+      "options": [
+        "File storage",
+        "Application and desktop virtualization",
+        "DNS service",
+        "Firewall"
+      ],
+      "q": "What is Citrix Virtual Apps used for?",
+      "topic": "Citrix"
+    },
+    {
+      "answer": 1,
+      "explanation": "VDI provides virtual desktops to users.",
+      "level": 2,
+      "options": [
+        "Virtual Disk Interface",
+        "Virtual Desktop Infrastructure",
+        "Virtual Data Index",
+        "Virtual Domain Integration"
+      ],
+      "q": "What is VDI?",
+      "topic": "Citrix"
+    },
+    {
+      "answer": 1,
+      "explanation": "Containers are lightweight and efficient.",
+      "level": 2,
+      "options": [
+        "More OS overhead",
+        "Lighter and faster deployment",
+        "Requires hardware",
+        "Slower startup"
+      ],
+      "q": "What is container advantage over VM?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 1,
+      "explanation": "Docker image is a blueprint for containers.",
+      "level": 2,
+      "options": [
+        "Snapshot of VM",
+        "Template for creating containers",
+        "Firewall rule",
+        "Network config"
+      ],
+      "q": "What is image in Docker?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 1,
+      "explanation": "Persistent storage keeps data after container restart.",
+      "level": 2,
+      "options": [
+        "Temporary RAM storage",
+        "Data retained beyond container lifecycle",
+        "Network cache",
+        "CPU cache"
+      ],
+      "q": "What is persistent storage in containers?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 1,
+      "explanation": "HCI integrates compute, storage, and networking.",
+      "level": 2,
+      "options": [
+        "Only storage system",
+        "Compute, storage, and networking in one system",
+        "Firewall system",
+        "Database system"
+      ],
+      "q": "What is hyperconverged infrastructure?",
+      "topic": "Infrastructure"
+    },
+    {
+      "answer": 1,
+      "explanation": "VM sprawl causes resource inefficiency.",
+      "level": 2,
+      "options": [
+        "Network failure",
+        "Uncontrolled growth of virtual machines",
+        "CPU failure",
+        "Disk encryption"
+      ],
+      "q": "What is VM sprawl?",
+      "topic": "VM Management"
+    },
+    {
+      "answer": 1,
+      "explanation": "Thin provisioning allocates storage dynamically.",
+      "level": 2,
+      "options": [
+        "Allocating full disk upfront",
+        "Allocating storage on demand",
+        "Encrypting storage",
+        "Deleting storage"
+      ],
+      "q": "What is thin provisioning?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "Thick provisioning reserves full disk space immediately.",
+      "level": 2,
+      "options": [
+        "Dynamic storage allocation",
+        "Pre-allocating full storage upfront",
+        "No storage allocation",
+        "Network storage",
+        "Cloud storage only"
+      ],
+      "q": "What is thick provisioning?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 3,
+      "explanation": "Containers isolate applications while sharing the host OS kernel.",
+      "level": 2,
+      "options": [
+        "Full OS virtualization",
+        "Running isolated applications on shared OS kernel",
+        "Hardware replacement",
+        "Network segmentation"
+      ],
+      "q": "What is containerization?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 0,
+      "explanation": "Docker is a platform used to create and manage containers.",
+      "level": 2,
+      "options": [
+        "Hypervisor",
+        "Container platform",
+        "Firewall",
+        "Database"
+      ],
+      "q": "What is Docker?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 2,
+      "explanation": "Kubernetes manages deployment, scaling, and orchestration of containers.",
+      "level": 2,
+      "options": [
+        "Virtual machines",
+        "Container orchestration",
+        "DNS management",
+        "Disk management"
+      ],
+      "q": "What is Kubernetes used for?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 1,
+      "explanation": "A pod is the smallest execution unit in Kubernetes.",
+      "level": 2,
+      "options": [
+        "Virtual machine",
+        "Smallest deployable unit containing containers",
+        "Network switch",
+        "Storage volume"
+      ],
+      "q": "What is a pod in Kubernetes?",
+      "topic": "Kubernetes"
+    },
+    {
+      "answer": 3,
+      "explanation": "Citrix delivers virtual applications and desktops remotely.",
+      "level": 2,
+      "options": [
+        "File storage",
+        "Application and desktop virtualization",
+        "DNS service",
+        "Firewall"
+      ],
+      "q": "What is Citrix Virtual Apps used for?",
+      "topic": "Citrix"
+    },
+    {
+      "answer": 0,
+      "explanation": "VDI provides virtual desktops hosted on centralized servers.",
+      "level": 2,
+      "options": [
+        "Virtual Disk Interface",
+        "Virtual Desktop Infrastructure",
+        "Virtual Data Index",
+        "Virtual Domain Integration"
+      ],
+      "q": "What is VDI?",
+      "topic": "Citrix"
+    },
+    {
+      "answer": 1,
+      "explanation": "Containers are lightweight compared to full VMs.",
+      "level": 2,
+      "options": [
+        "More OS overhead",
+        "Lighter and faster deployment",
+        "Requires hardware",
+        "Slower startup"
+      ],
+      "q": "What is container advantage over VM?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 2,
+      "explanation": "Docker images are templates used to create containers.",
+      "level": 2,
+      "options": [
+        "Snapshot of VM",
+        "Template for creating containers",
+        "Firewall rule",
+        "Network config"
+      ],
+      "q": "What is image in Docker?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 0,
+      "explanation": "Persistent storage keeps data beyond container life.",
+      "level": 2,
+      "options": [
+        "Temporary RAM storage",
+        "Data retained beyond container lifecycle",
+        "Network cache",
+        "CPU cache"
+      ],
+      "q": "What is persistent storage in containers?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 3,
+      "explanation": "HCI integrates compute, storage, and networking in one platform.",
+      "level": 2,
+      "options": [
+        "Only storage system",
+        "Compute, storage, and networking in one system",
+        "Firewall system",
+        "Database system"
+      ],
+      "q": "What is hyperconverged infrastructure?",
+      "topic": "Infrastructure"
+    },
+    {
+      "answer": 1,
+      "explanation": "VM sprawl happens when too many unmanaged VMs are created.",
+      "level": 2,
+      "options": [
+        "Network failure",
+        "Uncontrolled growth of virtual machines",
+        "CPU failure",
+        "Disk encryption"
+      ],
+      "q": "What is VM sprawl?",
+      "topic": "VM Management"
+    },
+    {
+      "answer": 2,
+      "explanation": "Thin provisioning allocates storage dynamically as needed.",
+      "level": 2,
+      "options": [
+        "Allocating full disk upfront",
+        "Allocating storage on demand",
+        "Encrypting storage",
+        "Deleting storage"
+      ],
+      "q": "What is thin provisioning?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 0,
+      "explanation": "Thick provisioning reserves full storage immediately.",
+      "level": 2,
+      "options": [
+        "Dynamic storage allocation",
+        "Pre-allocating full storage upfront",
+        "No storage allocation",
+        "Network storage",
+        "Cloud storage only"
+      ],
+      "q": "What is thick provisioning?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 3,
+      "explanation": "Cloning creates an identical VM copy.",
+      "level": 2,
+      "options": [
+        "Deleting VM",
+        "Creating identical copy of a VM",
+        "Encrypting VM",
+        "Restarting VM"
+      ],
+      "q": "What is VM cloning?",
+      "topic": "VM"
+    },
+    {
+      "answer": 1,
+      "explanation": "Pods can restart automatically in Kubernetes.",
+      "level": 2,
+      "options": [
+        "Manual scaling only",
+        "Self-healing and auto-restart capability",
+        "Static execution",
+        "Hardware dependency"
+      ],
+      "q": "What is Kubernetes pod lifecycle advantage?",
+      "topic": "Kubernetes"
+    },
+    {
+      "answer": 2,
+      "explanation": "vMotion allows moving a running VM without downtime.",
+      "level": 3,
+      "options": [
+        "Backup mechanism",
+        "Live migration of running VM between hosts",
+        "Storage replication tool",
+        "Firewall feature"
+      ],
+      "q": "What is vMotion in VMware?",
+      "topic": "VMware"
+    },
+    {
+      "answer": 1,
+      "explanation": "Storage vMotion moves VM storage while VM is running.",
+      "level": 3,
+      "options": [
+        "Moving VM CPU",
+        "Migrating VM disk files between datastores without downtime",
+        "Deleting storage",
+        "Encrypting disks"
+      ],
+      "q": "What is Storage vMotion?",
+      "topic": "VMware Storage"
+    },
+    {
+      "answer": 3,
+      "explanation": "HA restarts VMs on other available hosts after failure.",
+      "level": 3,
+      "options": [
+        "VMs are deleted",
+        "VMs restart on other hosts",
+        "Network stops completely",
+        "Storage is lost"
+      ],
+      "q": "What is ESXi host failure impact in HA cluster?",
+      "topic": "HA"
+    },
+    {
+      "answer": 1,
+      "explanation": "vSAN pools local storage across ESXi hosts.",
+      "level": 3,
+      "options": [
+        "CPU management",
+        "Software-defined storage using local disks",
+        "Firewall configuration",
+        "DNS resolution"
+      ],
+      "q": "What is vSAN used for?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 2,
+      "explanation": "NFS provides shared file storage for ESXi hosts.",
+      "level": 3,
+      "options": [
+        "Block storage system",
+        "File-based shared storage over network",
+        "CPU sharing system",
+        "Firewall rule set"
+      ],
+      "q": "What is NFS datastore in VMware?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "iSCSI provides block storage over Ethernet networks.",
+      "level": 3,
+      "options": [
+        "Network routing",
+        "Block-level storage over IP network",
+        "DNS resolution",
+        "VM backup"
+      ],
+      "q": "What is iSCSI used for in virtualization?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 2,
+      "explanation": "CPU scheduler allocates processing time to VMs.",
+      "level": 3,
+      "options": [
+        "Assigning IP addresses",
+        "Allocating CPU time to virtual machines",
+        "Disk formatting",
+        "Firewall filtering"
+      ],
+      "q": "What is CPU scheduling in hypervisor?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "Overcommitment allows more VM memory than physical RAM.",
+      "level": 3,
+      "options": [
+        "Using less RAM than physical available",
+        "Allocating more virtual memory than physical RAM",
+        "Disabling memory",
+        "Encrypting RAM"
+      ],
+      "q": "What is memory overcommitment?",
+      "topic": "Memory"
+    },
+    {
+      "answer": 1,
+      "explanation": "Balloon driver reclaims unused memory from VMs.",
+      "level": 3,
+      "options": [
+        "Disk controller",
+        "Memory reclamation technique",
+        "CPU scheduler",
+        "Network adapter"
+      ],
+      "q": "What is balloon driver in VMware?",
+      "topic": "Memory"
+    },
+    {
+      "answer": 2,
+      "explanation": "NUMA improves performance by aligning CPU and memory locality.",
+      "level": 3,
+      "options": [
+        "Network protocol",
+        "Memory architecture optimizing CPU-memory access",
+        "Disk type",
+        "Firewall model"
+      ],
+      "q": "What is NUMA in virtualization?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 3,
+      "explanation": "Consolidation merges snapshot files into main disk.",
+      "level": 3,
+      "options": [
+        "Deleting VM",
+        "Merging snapshot delta files into base disk",
+        "Creating backup",
+        "Encrypting VM"
+      ],
+      "q": "What is snapshot consolidation?",
+      "topic": "Snapshots"
+    },
+    {
+      "answer": 1,
+      "explanation": "DRS balances workloads automatically in cluster.",
+      "level": 3,
+      "options": [
+        "DNS routing rule",
+        "Automation of VM load balancing across hosts",
+        "Firewall rule",
+        "Storage rule"
+      ],
+      "q": "What is VMware DRS rule?",
+      "topic": "VMware"
+    },
+    {
+      "answer": 1,
+      "explanation": "Affinity rules control VM placement behavior.",
+      "level": 3,
+      "options": [
+        "VM must run together on same host",
+        "VM placement restriction rules",
+        "Disk encryption rule",
+        "Firewall rule"
+      ],
+      "q": "What is affinity rule in virtualization?",
+      "topic": "Cluster"
+    },
+    {
+      "answer": 2,
+      "explanation": "Anti-affinity separates critical VMs across hosts.",
+      "level": 3,
+      "options": [
+        "VMs must run on same host",
+        "VMs must run on different hosts",
+        "VM backup rule",
+        "Storage rule"
+      ],
+      "q": "What is anti-affinity rule?",
+      "topic": "Cluster"
+    },
+    {
+      "answer": 0,
+      "explanation": "VMware Tools improves guest OS performance.",
+      "level": 3,
+      "options": [
+        "Storage management",
+        "Improving VM performance and integration",
+        "Network firewall",
+        "DNS configuration"
+      ],
+      "q": "What is VMtools used for?",
+      "topic": "VMware"
+    },
+    {
+      "answer": 2,
+      "explanation": "Hyper-V live migration moves VMs without downtime.",
+      "level": 4,
+      "options": [
+        "Storage deletion",
+        "Moving running VM between Hyper-V hosts",
+        "DNS failover",
+        "Firewall migration"
+      ],
+      "q": "What is Hyper-V live migration equivalent?",
+      "topic": "Hyper-V"
+    },
+    {
+      "answer": 0,
+      "explanation": "Checkpoint is Hyper-V snapshot feature.",
+      "level": 4,
+      "options": [
+        "Snapshot equivalent",
+        "Network rule",
+        "Firewall backup",
+        "Disk partition"
+      ],
+      "q": "What is checkpoint in Hyper-V?",
+      "topic": "Hyper-V"
+    },
+    {
+      "answer": 3,
+      "explanation": "Dynamic memory adjusts RAM based on workload.",
+      "level": 4,
+      "options": [
+        "Fixed RAM allocation",
+        "Adjusting VM memory dynamically",
+        "Disk compression",
+        "CPU scaling"
+      ],
+      "q": "What is dynamic memory in Hyper-V?",
+      "topic": "Memory"
+    },
+    {
+      "answer": 2,
+      "explanation": "SR-IOV improves network performance by bypassing hypervisor.",
+      "level": 4,
+      "options": [
+        "Storage replication",
+        "Direct network hardware access for VMs",
+        "CPU scheduling",
+        "Firewall bypass"
+      ],
+      "q": "What is SR-IOV in virtualization?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "GPU passthrough gives VM direct GPU access.",
+      "level": 4,
+      "options": [
+        "Sharing GPU between VMs",
+        "Direct GPU access for a VM",
+        "CPU sharing",
+        "Disk acceleration"
+      ],
+      "q": "What is GPU passthrough?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 0,
+      "explanation": "Container runtime executes container processes.",
+      "level": 4,
+      "options": [
+        "Hypervisor engine",
+        "Software that runs containers",
+        "Firewall system",
+        "DNS service"
+      ],
+      "q": "What is container runtime?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 2,
+      "explanation": "Overlay networks connect containers across hosts.",
+      "level": 4,
+      "options": [
+        "Physical network",
+        "Virtual network across multiple hosts",
+        "Firewall layer",
+        "Storage layer"
+      ],
+      "q": "What is overlay network in containers?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 1,
+      "explanation": "HDX improves remote desktop experience.",
+      "level": 4,
+      "options": [
+        "Storage protocol",
+        "High-definition remote display protocol",
+        "Firewall system",
+        "DNS system"
+      ],
+      "q": "What is Citrix HDX?",
+      "topic": "Citrix"
+    },
+    {
+      "answer": 3,
+      "explanation": "Session virtualization allows multiple user sessions on one OS.",
+      "level": 4,
+      "options": [
+        "Full OS virtualization",
+        "Multiple users sharing same OS session",
+        "Network routing",
+        "Disk partitioning"
+      ],
+      "q": "What is session virtualization?",
+      "topic": "Citrix"
+    },
+    {
+      "answer": 2,
+      "explanation": "Cloud bursting moves overflow workload to cloud.",
+      "level": 4,
+      "options": [
+        "Disk failure",
+        "Extending on-prem workload to cloud",
+        "Firewall attack",
+        "DNS overload"
+      ],
+      "q": "What is cloud bursting?",
+      "topic": "Cloud"
+    },
+    {
+      "answer": 1,
+      "explanation": "A cluster is a group of ESXi hosts sharing resources and managed together.",
+      "level": 5,
+      "options": [
+        "Single ESXi host",
+        "Group of ESXi hosts managed together",
+        "Storage array system",
+        "Network firewall group"
+      ],
+      "q": "What is a VMware vSphere cluster?",
+      "topic": "VMware"
+    },
+    {
+      "answer": 1,
+      "explanation": "Admission control ensures resources are available for failover.",
+      "level": 5,
+      "options": [
+        "Improving DNS performance",
+        "Reserving resources for failover capacity",
+        "Encrypting VMs",
+        "Managing firewall rules"
+      ],
+      "q": "What is vSphere HA admission control used for?",
+      "topic": "HA"
+    },
+    {
+      "answer": 1,
+      "explanation": "FT keeps a secondary VM in sync for zero downtime failover.",
+      "level": 5,
+      "options": [
+        "Backup mechanism",
+        "Continuous VM replication for zero downtime",
+        "Storage compression",
+        "Network monitoring"
+      ],
+      "q": "What is Fault Tolerance (FT) in VMware?",
+      "topic": "HA"
+    },
+    {
+      "answer": 1,
+      "explanation": "vSAN policies define storage behavior per VM.",
+      "level": 5,
+      "options": [
+        "Firewall configuration rule",
+        "Defines storage redundancy and performance rules",
+        "CPU scheduling rule",
+        "Network routing rule"
+      ],
+      "q": "What is vSAN storage policy?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "High storage latency reduces VM performance.",
+      "level": 5,
+      "options": [
+        "Faster VM boot",
+        "Slow application performance",
+        "Better CPU usage",
+        "DNS resolution delay"
+      ],
+      "q": "What is storage latency impact in virtualization?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "vDS provides centralized networking for ESXi hosts.",
+      "level": 5,
+      "options": [
+        "Physical switch",
+        "Centralized virtual switch across hosts",
+        "Firewall device",
+        "Storage controller"
+      ],
+      "q": "What is VMware Distributed Switch (vDS)?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Port groups define network policies for VMs.",
+      "level": 5,
+      "options": [
+        "Storage container",
+        "Logical grouping of VM network ports",
+        "CPU group",
+        "Firewall group"
+      ],
+      "q": "What is port group in VMware networking?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Starvation occurs when VM lacks resources.",
+      "level": 5,
+      "options": [
+        "Disk failure",
+        "Insufficient CPU or memory allocation",
+        "Network outage",
+        "DNS failure"
+      ],
+      "q": "What is VM starvation?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "It controls how aggressively VMs are moved.",
+      "level": 5,
+      "options": [
+        "Firewall rule level",
+        "Aggressiveness of VM balancing",
+        "DNS update speed",
+        "Storage size limit"
+      ],
+      "q": "What is DRS migration threshold?",
+      "topic": "DRS"
+    },
+    {
+      "answer": 1,
+      "explanation": "vCenter HA protects vCenter from failure.",
+      "level": 5,
+      "options": [
+        "VM backup tool",
+        "High availability for vCenter server",
+        "Firewall system",
+        "DNS replication"
+      ],
+      "q": "What is VMware vCenter HA?",
+      "topic": "HA"
+    },
+    {
+      "answer": 1,
+      "explanation": "vMotion requires shared or accessible storage.",
+      "level": 5,
+      "options": [
+        "Different CPU architecture required",
+        "Shared storage or compatible storage access",
+        "Different OS required",
+        "No network required"
+      ],
+      "q": "What is vMotion dependency requirement?",
+      "topic": "VMware"
+    },
+    {
+      "answer": 1,
+      "explanation": "VM encryption protects data at rest.",
+      "level": 5,
+      "options": [
+        "CPU optimization",
+        "Securing VM disk and data",
+        "Network routing",
+        "Storage compression"
+      ],
+      "q": "What is VM encryption used for?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Too many snapshots slow VM performance.",
+      "level": 5,
+      "options": [
+        "Improves CPU speed",
+        "Can degrade VM performance over time",
+        "Increases RAM",
+        "Improves networking"
+      ],
+      "q": "What is snapshot impact on performance?",
+      "topic": "Snapshots"
+    },
+    {
+      "answer": 1,
+      "explanation": "Maintenance mode evacuates VMs from a host.",
+      "level": 5,
+      "options": [
+        "DNS update mode",
+        "Moving VMs off host for maintenance",
+        "Firewall mode",
+        "Storage mode"
+      ],
+      "q": "What is host maintenance mode?",
+      "topic": "Operations"
+    },
+    {
+      "answer": 1,
+      "explanation": "CPU ready time indicates scheduling delay.",
+      "level": 5,
+      "options": [
+        "Disk latency",
+        "Time VM waits for CPU allocation",
+        "Network delay",
+        "Storage delay"
+      ],
+      "q": "What is hypervisor CPU ready time?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "Service mesh manages microservice communication.",
+      "level": 6,
+      "options": [
+        "Storage management",
+        "Traffic control between microservices",
+        "VM backup",
+        "Firewall replacement"
+      ],
+      "q": "What is Kubernetes service mesh used for?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 1,
+      "explanation": "DR restores systems after major failure.",
+      "level": 6,
+      "options": [
+        "CPU optimization",
+        "Restoring services after failure",
+        "Disk formatting",
+        "DNS replication only"
+      ],
+      "q": "What is DR (Disaster Recovery) in virtualization?",
+      "topic": "DR"
+    },
+    {
+      "answer": 1,
+      "explanation": "RPO defines acceptable data loss time.",
+      "level": 6,
+      "options": [
+        "Recovery Point Objective",
+        "Recovery Process Output",
+        "Routing Path Object",
+        "Resource Planning Output"
+      ],
+      "q": "What is RPO in disaster recovery?",
+      "topic": "DR"
+    },
+    {
+      "answer": 1,
+      "explanation": "RTO defines time to restore services.",
+      "level": 6,
+      "options": [
+        "Recovery Time Objective",
+        "Routing Time Optimization",
+        "Resource Transfer Operation",
+        "Remote Task Output"
+      ],
+      "q": "What is RTO in disaster recovery?",
+      "topic": "DR"
+    },
+    {
+      "answer": 1,
+      "explanation": "Active-active uses both sites in parallel.",
+      "level": 6,
+      "options": [
+        "Only one site active",
+        "Both sites running simultaneously",
+        "Backup only system",
+        "Offline system"
+      ],
+      "q": "What is active-active DR setup?",
+      "topic": "DR"
+    },
+    {
+      "answer": 1,
+      "explanation": "Passive site activates during failure.",
+      "level": 6,
+      "options": [
+        "Both sites active",
+        "One active, one standby",
+        "No backup",
+        "Cloud-only setup"
+      ],
+      "q": "What is active-passive DR setup?",
+      "topic": "DR"
+    },
+    {
+      "answer": 1,
+      "explanation": "StoreFront provides user access to apps/desktops.",
+      "level": 6,
+      "options": [
+        "Storage system",
+        "Application delivery portal",
+        "Firewall system",
+        "DNS system"
+      ],
+      "q": "What is Citrix StoreFront used for?",
+      "topic": "Citrix"
+    },
+    {
+      "answer": 1,
+      "explanation": "Load balancing distributes user sessions evenly.",
+      "level": 6,
+      "options": [
+        "Disk balancing",
+        "Distributing user sessions across servers",
+        "CPU scheduling",
+        "Firewall rules"
+      ],
+      "q": "What is Citrix load balancing used for?",
+      "topic": "Citrix"
+    },
+    {
+      "answer": 1,
+      "explanation": "Ingress controls external traffic routing.",
+      "level": 6,
+      "options": [
+        "Storage manager",
+        "Manages external access to services",
+        "Firewall system",
+        "VM manager"
+      ],
+      "q": "What is Kubernetes ingress controller?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 1,
+      "explanation": "Orchestration automates container lifecycle.",
+      "level": 6,
+      "options": [
+        "Manual deployment",
+        "Automated scaling and management",
+        "Slower performance",
+        "Hardware dependency"
+      ],
+      "q": "What is container orchestration benefit?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 1,
+      "explanation": "Hybrid cloud combines both environments.",
+      "level": 6,
+      "options": [
+        "Only on-prem system",
+        "Combination of cloud and on-prem virtualization",
+        "Only public cloud",
+        "Only private cloud"
+      ],
+      "q": "What is hybrid cloud virtualization?",
+      "topic": "Cloud"
+    },
+    {
+      "answer": 2,
+      "explanation": "NSX provides software-defined networking and security.",
+      "level": 7,
+      "options": [
+        "Storage virtualization",
+        "Network virtualization and SDN",
+        "CPU scheduling",
+        "Backup management"
+      ],
+      "q": "What is VMware NSX primarily used for?",
+      "topic": "SDN"
+    },
+    {
+      "answer": 1,
+      "explanation": "Micro-segmentation isolates workloads for security.",
+      "level": 7,
+      "options": [
+        "Disk partitioning",
+        "Fine-grained network security per workload",
+        "DNS routing",
+        "VM backup"
+      ],
+      "q": "What is micro-segmentation in NSX?",
+      "topic": "Security"
+    },
+    {
+      "answer": 2,
+      "explanation": "VXLAN extends Layer 2 networks over Layer 3.",
+      "level": 7,
+      "options": [
+        "CPU virtualization",
+        "Network overlay for extending Layer 2 networks",
+        "Storage replication",
+        "Firewall configuration"
+      ],
+      "q": "What is VXLAN used for?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Overlay networks abstract physical networking.",
+      "level": 7,
+      "options": [
+        "Physical switch network",
+        "Virtual network built over physical infrastructure",
+        "CPU cluster",
+        "Storage array"
+      ],
+      "q": "What is overlay network in virtualization?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Underlay is the physical network supporting overlays.",
+      "level": 7,
+      "options": [
+        "Virtual network layer",
+        "Physical IP network infrastructure",
+        "Storage layer",
+        "VM layer"
+      ],
+      "q": "What is underlay network?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 2,
+      "explanation": "vRealize provides cloud management and automation.",
+      "level": 7,
+      "options": [
+        "Firewall management",
+        "Cloud automation and monitoring",
+        "Storage encryption",
+        "DNS management"
+      ],
+      "q": "What is vRealize used for?",
+      "topic": "Automation"
+    },
+    {
+      "answer": 1,
+      "explanation": "Tanzu is VMware’s Kubernetes platform.",
+      "level": 7,
+      "options": [
+        "VM backup",
+        "Kubernetes and container platform management",
+        "DNS server",
+        "Firewall system"
+      ],
+      "q": "What is VMware Tanzu used for?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 1,
+      "explanation": "East-west traffic is internal DC communication.",
+      "level": 7,
+      "options": [
+        "Internet traffic",
+        "Traffic between internal workloads",
+        "DNS traffic",
+        "Backup traffic"
+      ],
+      "q": "What is east-west traffic in data centers?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "North-south is external client traffic.",
+      "level": 7,
+      "options": [
+        "Internal server traffic",
+        "Traffic between users and data center",
+        "Storage replication",
+        "CPU communication"
+      ],
+      "q": "What is north-south traffic?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Resource contention reduces VM performance.",
+      "level": 7,
+      "options": [
+        "High disk speed",
+        "Resource contention (CPU/RAM/IOPS)",
+        "Low network latency",
+        "Proper load balancing"
+      ],
+      "q": "What causes VM performance degradation in cluster?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "It stores VM templates centrally.",
+      "level": 7,
+      "options": [
+        "Firewall rules",
+        "Centralized template management",
+        "Network routing",
+        "Disk encryption"
+      ],
+      "q": "What is VMware Content Library used for?",
+      "topic": "VMware"
+    },
+    {
+      "answer": 1,
+      "explanation": "Tags help organize and manage resources.",
+      "level": 7,
+      "options": [
+        "CPU allocation",
+        "Logical grouping of objects",
+        "Storage encryption",
+        "Network switching"
+      ],
+      "q": "What is vSphere tagging used for?",
+      "topic": "VMware"
+    },
+    {
+      "answer": 1,
+      "explanation": "VM stun pauses VM during storage operations.",
+      "level": 7,
+      "options": [
+        "Disk crash",
+        "Temporary pause during snapshot or storage operation",
+        "Network failure",
+        "CPU overload"
+      ],
+      "q": "What is VM stun in virtualization?",
+      "topic": "Snapshots"
+    },
+    {
+      "answer": 1,
+      "explanation": "IOPS measures storage performance.",
+      "level": 7,
+      "options": [
+        "Input/output operations per second",
+        "Internet operations per system",
+        "Internal operating process speed",
+        "IP operations per second"
+      ],
+      "q": "What is storage IOPS?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "Low latency is critical for real-time apps.",
+      "level": 7,
+      "options": [
+        "Batch jobs",
+        "Real-time applications like trading systems",
+        "Backup systems",
+        "File storage"
+      ],
+      "q": "What is VM latency sensitive workload?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 2,
+      "explanation": "Multi-cloud avoids vendor dependency.",
+      "level": 8,
+      "options": [
+        "Single cloud usage",
+        "Using multiple cloud providers together",
+        "No cloud usage",
+        "Only on-prem systems"
+      ],
+      "q": "What is multi-cloud virtualization strategy?",
+      "topic": "Cloud"
+    },
+    {
+      "answer": 1,
+      "explanation": "Federation manages multiple clusters together.",
+      "level": 8,
+      "options": [
+        "Single cluster scaling",
+        "Managing multiple clusters centrally",
+        "Firewall system",
+        "DNS system"
+      ],
+      "q": "What is Kubernetes cluster federation?",
+      "topic": "Kubernetes"
+    },
+    {
+      "answer": 2,
+      "explanation": "Service mesh manages service-to-service communication.",
+      "level": 8,
+      "options": [
+        "Storage layer",
+        "Traffic control between microservices",
+        "VM layer",
+        "DNS layer"
+      ],
+      "q": "What is service mesh in Kubernetes?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 1,
+      "explanation": "Sidecar supports main container functionality.",
+      "level": 8,
+      "options": [
+        "Main application container",
+        "Helper container running alongside main container",
+        "Storage container",
+        "Firewall container"
+      ],
+      "q": "What is sidecar container?",
+      "topic": "Containers"
+    },
+    {
+      "answer": 1,
+      "explanation": "DR drill tests system recovery readiness.",
+      "level": 8,
+      "options": [
+        "Disk test",
+        "Simulated failover test",
+        "CPU benchmark",
+        "Network scan"
+      ],
+      "q": "What is disaster recovery drill?",
+      "topic": "DR"
+    },
+    {
+      "answer": 1,
+      "explanation": "Cold site requires setup after disaster.",
+      "level": 8,
+      "options": [
+        "Fully running site",
+        "Bare infrastructure with no active systems",
+        "Cloud-only site",
+        "Backup software"
+      ],
+      "q": "What is cold site in DR?",
+      "topic": "DR"
+    },
+    {
+      "answer": 1,
+      "explanation": "Warm site is partially ready for failover.",
+      "level": 8,
+      "options": [
+        "Fully active site",
+        "Partially configured DR site",
+        "No infrastructure",
+        "Cloud snapshot only"
+      ],
+      "q": "What is warm site?",
+      "topic": "DR"
+    },
+    {
+      "answer": 1,
+      "explanation": "VCF integrates compute, storage, networking.",
+      "level": 8,
+      "options": [
+        "Backup tool",
+        "Integrated cloud platform for VMware stack",
+        "DNS system",
+        "Firewall system"
+      ],
+      "q": "What is VMware cloud foundation?",
+      "topic": "Cloud"
+    },
+    {
+      "answer": 1,
+      "explanation": "Latency spikes degrade VDI performance.",
+      "level": 8,
+      "options": [
+        "Faster performance",
+        "Poor user experience",
+        "Better rendering",
+        "CPU improvement"
+      ],
+      "q": "What is latency spike impact in VDI?",
+      "topic": "Citrix"
+    },
+    {
+      "answer": 1,
+      "explanation": "Session persistence maintains user session state.",
+      "level": 8,
+      "options": [
+        "Disk storage",
+        "User session continuity across reconnections",
+        "Firewall rule",
+        "DNS rule"
+      ],
+      "q": "What is session persistence in Citrix?",
+      "topic": "Citrix"
+    },
+    {
+      "answer": 2,
+      "explanation": "Zero Trust requires continuous verification of all access.",
+      "level": 9,
+      "options": [
+        "Trust all internal networks",
+        "Verify every access request regardless of location",
+        "Disable authentication",
+        "Use single firewall only"
+      ],
+      "q": "What is Zero Trust architecture in virtualization environments?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "NSX-T enables network virtualization across clouds.",
+      "level": 9,
+      "options": [
+        "Storage management",
+        "Multi-cloud networking and security virtualization",
+        "Backup automation",
+        "DNS services"
+      ],
+      "q": "What is VMware NSX-T primarily designed for?",
+      "topic": "SDN"
+    },
+    {
+      "answer": 2,
+      "explanation": "Distributed firewall protects traffic at VM level.",
+      "level": 9,
+      "options": [
+        "Physical firewall appliance",
+        "Firewall enforced at hypervisor level per VM",
+        "DNS filter",
+        "Storage firewall"
+      ],
+      "q": "What is distributed firewall in NSX?",
+      "topic": "Security"
+    },
+    {
+      "answer": 2,
+      "explanation": "BGP routes traffic between autonomous systems and clouds.",
+      "level": 9,
+      "options": [
+        "Internal VM scheduling",
+        "Routing between networks and data centers",
+        "Storage replication",
+        "Container orchestration"
+      ],
+      "q": "What is BGP used for in cloud networking?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Control plane manages cluster decisions and orchestration.",
+      "level": 9,
+      "options": [
+        "Running containers",
+        "Managing cluster state and scheduling",
+        "Storage management",
+        "Firewall rules"
+      ],
+      "q": "What is Kubernetes control plane responsible for?",
+      "topic": "Kubernetes"
+    },
+    {
+      "answer": 2,
+      "explanation": "CrashLoopBackOff indicates repeated container failure.",
+      "level": 9,
+      "options": [
+        "Healthy application",
+        "Repeated container failure on startup",
+        "Network upgrade",
+        "Storage expansion"
+      ],
+      "q": "What causes Kubernetes pod crashloop backoff?",
+      "topic": "Kubernetes"
+    },
+    {
+      "answer": 1,
+      "explanation": "Multi-region DR ensures resilience across regions.",
+      "level": 9,
+      "options": [
+        "Single data center backup",
+        "Failover across geographically separated regions",
+        "Local disk backup",
+        "DNS caching system"
+      ],
+      "q": "What is multi-region disaster recovery?",
+      "topic": "DR"
+    },
+    {
+      "answer": 1,
+      "explanation": "Both sites handle live production traffic.",
+      "level": 9,
+      "options": [
+        "Only one active site",
+        "Both sites serve traffic simultaneously",
+        "Offline backup only",
+        "Cold storage system"
+      ],
+      "q": "What is active-active data center design?",
+      "topic": "DR"
+    },
+    {
+      "answer": 2,
+      "explanation": "Stretched clusters span multiple sites for HA.",
+      "level": 9,
+      "options": [
+        "Single host cluster",
+        "Cluster across two physical sites",
+        "Backup cluster only",
+        "Cloud-only cluster"
+      ],
+      "q": "What is stretched cluster in VMware?",
+      "topic": "VMware"
+    },
+    {
+      "answer": 2,
+      "explanation": "Witness node avoids data split decisions.",
+      "level": 9,
+      "options": [
+        "CPU monitoring",
+        "Split-brain prevention in stretched clusters",
+        "Firewall enforcement",
+        "DNS resolution"
+      ],
+      "q": "What is vSAN witness node used for?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "Eviction happens when node resources are low.",
+      "level": 9,
+      "options": [
+        "Manual deployment",
+        "Forced removal due to resource pressure",
+        "Network upgrade",
+        "DNS failure"
+      ],
+      "q": "What is pod eviction in Kubernetes?",
+      "topic": "Kubernetes"
+    },
+    {
+      "answer": 1,
+      "explanation": "HPA adjusts pod count dynamically.",
+      "level": 9,
+      "options": [
+        "Increasing VM size",
+        "Adding/removing pod replicas based on load",
+        "Disk scaling",
+        "Firewall scaling"
+      ],
+      "q": "What is horizontal pod autoscaling?",
+      "topic": "Kubernetes"
+    },
+    {
+      "answer": 2,
+      "explanation": "API gateway manages and secures API requests.",
+      "level": 9,
+      "options": [
+        "Storage controller",
+        "Entry point for managing API traffic",
+        "Firewall replacement",
+        "DNS resolver"
+      ],
+      "q": "What is API gateway in cloud architecture?",
+      "topic": "Cloud"
+    },
+    {
+      "answer": 1,
+      "explanation": "Observability helps understand system behavior.",
+      "level": 9,
+      "options": [
+        "Disk management",
+        "Monitoring logs, metrics, and traces",
+        "CPU scheduling",
+        "Network routing"
+      ],
+      "q": "What is observability in virtualization?",
+      "topic": "Monitoring"
+    },
+    {
+      "answer": 1,
+      "explanation": "Chaos engineering tests system reliability.",
+      "level": 9,
+      "options": [
+        "System backup",
+        "Intentional failure injection to test resilience",
+        "Firewall setup",
+        "DNS configuration"
+      ],
+      "q": "What is chaos engineering?",
+      "topic": "Reliability"
+    },
+    {
+      "answer": 2,
+      "explanation": "Cloud-native virtualization is built for distributed systems.",
+      "level": 10,
+      "options": [
+        "Physical servers only",
+        "Virtualization designed for cloud environments",
+        "Legacy system only",
+        "Offline computing"
+      ],
+      "q": "What is cloud-native virtualization?",
+      "topic": "Cloud"
+    },
+    {
+      "answer": 2,
+      "explanation": "Service mesh provides visibility into service traffic.",
+      "level": 10,
+      "options": [
+        "Storage monitoring",
+        "Tracking microservice communication behavior",
+        "CPU optimization",
+        "Firewall rules"
+      ],
+      "q": "What is service mesh observability?",
+      "topic": "Kubernetes"
+    },
+    {
+      "answer": 1,
+      "explanation": "Canary deployment reduces rollout risk.",
+      "level": 10,
+      "options": [
+        "Full system rollout",
+        "Gradual release to subset of users",
+        "Backup deployment",
+        "DNS routing"
+      ],
+      "q": "What is canary deployment?",
+      "topic": "DevOps"
+    },
+    {
+      "answer": 2,
+      "explanation": "Blue-green enables zero downtime deployment.",
+      "level": 10,
+      "options": [
+        "Single environment deployment",
+        "Two identical environments for safe release switching",
+        "Backup system",
+        "Firewall configuration"
+      ],
+      "q": "What is blue-green deployment?",
+      "topic": "DevOps"
+    },
+    {
+      "answer": 1,
+      "explanation": "GLB improves availability and latency.",
+      "level": 10,
+      "options": [
+        "CPU balancing",
+        "Routing users to nearest healthy region",
+        "Disk balancing",
+        "Firewall balancing"
+      ],
+      "q": "What is global load balancer role?",
+      "topic": "Cloud"
+    },
+    {
+      "answer": 1,
+      "explanation": "VM escape allows attacker to break hypervisor isolation.",
+      "level": 10,
+      "options": [
+        "Network failure",
+        "VM breaking isolation to host system",
+        "Storage issue",
+        "DNS failure"
+      ],
+      "q": "What is VM escape vulnerability?",
+      "topic": "Security"
+    },
+    {
+      "answer": 2,
+      "explanation": "Multi-cloud improves resilience and flexibility.",
+      "level": 10,
+      "options": [
+        "Vendor lock-in",
+        "High availability and flexibility",
+        "Single point failure",
+        "Limited scalability"
+      ],
+      "q": "What is multi-cloud strategy benefit?",
+      "topic": "Cloud"
+    },
+    {
+      "answer": 1,
+      "explanation": "SRE focuses on reliability engineering.",
+      "level": 10,
+      "options": [
+        "Writing applications",
+        "Ensuring reliability and uptime of systems",
+        "Designing hardware",
+        "Managing DNS"
+      ],
+      "q": "What is SRE role in virtualization?",
+      "topic": "SRE"
+    },
+    {
+      "answer": 1,
+      "explanation": "Error budget defines acceptable failure rate.",
+      "level": 10,
+      "options": [
+        "Allowed system downtime threshold",
+        "CPU allocation limit",
+        "Storage limit",
+        "Network bandwidth"
+      ],
+      "q": "What is error budget in SRE?",
+      "topic": "SRE"
+    },
+    {
+      "answer": 2,
+      "explanation": "RCA identifies performance or failure causes.",
+      "level": 10,
+      "options": [
+        "Disk cleanup",
+        "Identifying performance degradation sources",
+        "Firewall setup",
+        "DNS routing"
+      ],
+      "q": "What is virtualization bottleneck root cause analysis used for?",
+      "topic": "Troubleshooting"
+    },
+    {
+      "answer": 1,
+      "explanation": "Cloning creates a duplicate VM.",
+      "level": 2,
+      "options": [
+        "Deleting VM",
+        "Creating identical copy of a VM",
+        "Encrypting VM",
+        "Restarting VM"
+      ],
+      "q": "What is VM cloning?",
+      "topic": "VM"
+    }
+  ]
+}

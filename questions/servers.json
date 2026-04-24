@@ -1,0 +1,1903 @@
+{
+  "category": "servers",
+  "questions": [
+    {
+      "answer": 1,
+      "explanation": "Server OS is designed to manage network services like authentication, file sharing, and applications.",
+      "level": 1,
+      "options": [
+        "Gaming",
+        "Managing network services and resources",
+        "Web browsing",
+        "Graphic design"
+      ],
+      "q": "What is a server operating system primarily used for?",
+      "topic": "OS"
+    },
+    {
+      "answer": 1,
+      "explanation": "Windows Server 2019 is an enterprise server operating system.",
+      "level": 1,
+      "options": [
+        "Windows 10",
+        "Windows Server 2019",
+        "Windows XP",
+        "Windows 7"
+      ],
+      "q": "Which is a Windows Server version?",
+      "topic": "Windows"
+    },
+    {
+      "answer": 1,
+      "explanation": "Linux is an open-source operating system used widely for servers.",
+      "level": 1,
+      "options": [
+        "A database",
+        "An open-source operating system",
+        "A cloud service",
+        "A programming language"
+      ],
+      "q": "What is Linux?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "NTFS is the standard file system used in Windows for security and permissions.",
+      "level": 1,
+      "options": [
+        "Network Transfer File System",
+        "New Technology File System",
+        "Node Transfer File Service",
+        "Network Type File System"
+      ],
+      "q": "What is NTFS?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "df command shows disk usage in Linux systems.",
+      "level": 1,
+      "options": [
+        "ls",
+        "df",
+        "ping",
+        "netstat"
+      ],
+      "q": "Which command is used to check disk usage in Linux?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "Server roles define what services a server provides.",
+      "level": 1,
+      "options": [
+        "A user account",
+        "A function like DNS or AD DS",
+        "A hardware component",
+        "A firewall rule"
+      ],
+      "q": "What is a server role in Windows Server?",
+      "topic": "Windows"
+    },
+    {
+      "answer": 1,
+      "explanation": "RAM is used for temporary data storage during processing.",
+      "level": 1,
+      "options": [
+        "Long-term storage",
+        "Temporary data processing",
+        "Backup storage",
+        "Network routing"
+      ],
+      "q": "What is RAM used for in a server?",
+      "topic": "Hardware"
+    },
+    {
+      "answer": 1,
+      "explanation": "Hard disk stores data permanently.",
+      "level": 1,
+      "options": [
+        "Temporary memory",
+        "Permanent data storage",
+        "CPU processing",
+        "Network connection"
+      ],
+      "q": "What is a hard disk used for?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "ext4 is the most common Linux file system.",
+      "level": 1,
+      "options": [
+        "NTFS",
+        "ext4",
+        "FAT16",
+        "exFAT"
+      ],
+      "q": "Which file system is used in Linux?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "Virtualization allows multiple OS instances on one physical machine.",
+      "level": 1,
+      "options": [
+        "Physical hardware upgrade",
+        "Running multiple virtual machines on one physical server",
+        "Deleting servers",
+        "Installing antivirus"
+      ],
+      "q": "What is server virtualization?",
+      "topic": "Virtualization"
+    },
+    {
+      "answer": 1,
+      "explanation": "CPU executes instructions and processes data.",
+      "level": 1,
+      "options": [
+        "Storage",
+        "Processing instructions",
+        "Network traffic",
+        "Backup"
+      ],
+      "q": "What is CPU in a server responsible for?",
+      "topic": "Hardware"
+    },
+    {
+      "answer": 1,
+      "explanation": "A partition divides a physical disk into logical sections.",
+      "level": 1,
+      "options": [
+        "Network segment",
+        "Logical division of a disk",
+        "CPU cache",
+        "RAM block"
+      ],
+      "q": "What is a partition on a disk?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "Swap space is used as virtual memory when RAM is full.",
+      "level": 1,
+      "options": [
+        "Backup disk",
+        "Virtual memory",
+        "Network cache",
+        "User storage"
+      ],
+      "q": "What is swap space in Linux?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "RAID combines disks for redundancy or performance.",
+      "level": 1,
+      "options": [
+        "CPU optimization",
+        "Data redundancy and performance",
+        "Network security",
+        "User authentication"
+      ],
+      "q": "What is RAID used for?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "BIOS initializes hardware before OS loads.",
+      "level": 1,
+      "options": [
+        "User login",
+        "Hardware initialization during boot",
+        "File storage",
+        "Network configuration"
+      ],
+      "q": "What is BIOS used for?",
+      "topic": "Hardware"
+    },
+    {
+      "answer": 1,
+      "explanation": "AD provides centralized authentication and authorization.",
+      "level": 2,
+      "options": [
+        "Firewall system",
+        "Central authentication service",
+        "Backup tool",
+        "Storage system"
+      ],
+      "q": "What is Active Directory role in a server?",
+      "topic": "Windows"
+    },
+    {
+      "answer": 1,
+      "explanation": "Ports allow network services to communicate.",
+      "level": 2,
+      "options": [
+        "Hardware slot",
+        "Logical communication endpoint",
+        "Storage device",
+        "CPU function"
+      ],
+      "q": "What is a server port?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "SSH uses port 22 for secure remote login.",
+      "level": 2,
+      "options": [
+        "21",
+        "22",
+        "80",
+        "443"
+      ],
+      "q": "Which port is used for SSH?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "RDP allows remote access to Windows servers.",
+      "level": 2,
+      "options": [
+        "File transfer",
+        "Remote desktop access",
+        "Backup",
+        "DNS resolution"
+      ],
+      "q": "What is RDP used for?",
+      "topic": "Windows"
+    },
+    {
+      "answer": 1,
+      "explanation": "Services run in background to provide functionality like web or SSH.",
+      "level": 2,
+      "options": [
+        "User account",
+        "Background process providing functionality",
+        "File system",
+        "Hardware driver"
+      ],
+      "q": "What is a Linux service?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "Mount points attach file systems to directories.",
+      "level": 2,
+      "options": [
+        "CPU location",
+        "Directory where storage is attached",
+        "Network path",
+        "User folder"
+      ],
+      "q": "What is a mount point in Linux?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "Fragmentation slows disk performance.",
+      "level": 2,
+      "options": [
+        "Disk failure",
+        "Data stored non-contiguously",
+        "Memory leak",
+        "CPU overload"
+      ],
+      "q": "What is disk fragmentation?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "A crash is an unexpected failure of system operation.",
+      "level": 2,
+      "options": [
+        "Normal shutdown",
+        "Unexpected system failure",
+        "Backup process",
+        "Update installation"
+      ],
+      "q": "What is a server crash?",
+      "topic": "Troubleshooting"
+    },
+    {
+      "answer": 1,
+      "explanation": "Logs help diagnose system issues.",
+      "level": 2,
+      "options": [
+        "User creation",
+        "Tracking system events",
+        "Disk formatting",
+        "CPU upgrade"
+      ],
+      "q": "What is system logging used for?",
+      "topic": "Monitoring"
+    },
+    {
+      "answer": 1,
+      "explanation": "Logs help identify service issues.",
+      "level": 2,
+      "options": [
+        "Ignore logs",
+        "Check logs and restart service",
+        "Format disk",
+        "Delete user"
+      ],
+      "q": "What is service failure troubleshooting step?",
+      "topic": "Troubleshooting"
+    },
+    {
+      "answer": 1,
+      "explanation": "CPU bottleneck occurs when processor is overused.",
+      "level": 2,
+      "options": [
+        "Disk failure",
+        "CPU is overloaded",
+        "Network issue",
+        "RAM upgrade"
+      ],
+      "q": "What is CPU bottleneck?",
+      "topic": "Hardware"
+    },
+    {
+      "answer": 1,
+      "explanation": "Memory leak reduces available RAM over time.",
+      "level": 2,
+      "options": [
+        "Disk issue",
+        "Application consuming increasing RAM",
+        "Network issue",
+        "CPU failure"
+      ],
+      "q": "What is memory leak?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "Uptime indicates system availability.",
+      "level": 2,
+      "options": [
+        "Server speed",
+        "Time system is running without shutdown",
+        "Network speed",
+        "Disk space"
+      ],
+      "q": "What is uptime?",
+      "topic": "Monitoring"
+    },
+    {
+      "answer": 1,
+      "explanation": "Patching keeps systems secure and updated.",
+      "level": 2,
+      "options": [
+        "User management",
+        "Applying system updates",
+        "Disk cleanup",
+        "Network setup"
+      ],
+      "q": "What is patch management?",
+      "topic": "Maintenance"
+    },
+    {
+      "answer": 1,
+      "explanation": "RAID 1 mirrors data across disks for redundancy.",
+      "level": 3,
+      "options": [
+        "Striping for performance",
+        "Mirroring for redundancy",
+        "Parity-based storage",
+        "Backup scheduling"
+      ],
+      "q": "What is the purpose of RAID 1?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 3,
+      "explanation": "RAID 5 uses striping with parity for balance of performance and protection.",
+      "level": 3,
+      "options": [
+        "RAID 0",
+        "RAID 10",
+        "RAID 1",
+        "RAID 5"
+      ],
+      "q": "Which RAID level provides both performance and redundancy?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "When disk is full, applications may fail to write data.",
+      "level": 3,
+      "options": [
+        "System speeds up",
+        "System may stop writing new data",
+        "CPU increases performance",
+        "Network improves"
+      ],
+      "q": "What happens when a Linux filesystem reaches 100% usage?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "LVM allows flexible disk partition management.",
+      "level": 3,
+      "options": [
+        "User authentication",
+        "Logical volume management for flexible storage",
+        "Network configuration",
+        "Process scheduling"
+      ],
+      "q": "What is the function of LVM in Linux?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 0,
+      "explanation": "Role services are sub-components of server roles like AD DS or DNS.",
+      "level": 3,
+      "options": [
+        "A sub-feature of a server role",
+        "A user account type",
+        "A firewall rule",
+        "A hardware component"
+      ],
+      "q": "What is a Windows Server role service?",
+      "topic": "Windows"
+    },
+    {
+      "answer": 1,
+      "explanation": "Disk I/O bottleneck slows system due to storage latency.",
+      "level": 3,
+      "options": [
+        "CPU overload",
+        "Slow disk read/write performance",
+        "Memory failure",
+        "Network delay"
+      ],
+      "q": "What is disk I/O bottleneck?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "High swap usage indicates low available RAM.",
+      "level": 3,
+      "options": [
+        "Normal behavior always",
+        "Insufficient RAM",
+        "Fast CPU",
+        "Network issue"
+      ],
+      "q": "What is swap usage in Linux indicating high value?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "Event Viewer is used for monitoring system and application logs.",
+      "level": 3,
+      "options": [
+        "Install software",
+        "View system logs and errors",
+        "Manage users",
+        "Configure DNS"
+      ],
+      "q": "What is the purpose of Event Viewer in Windows?",
+      "topic": "Monitoring"
+    },
+    {
+      "answer": 1,
+      "explanation": "Kernel manages system resources and hardware communication.",
+      "level": 3,
+      "options": [
+        "User interface",
+        "Core of the operating system",
+        "File system",
+        "Network driver"
+      ],
+      "q": "What is a kernel in Linux?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "Hardening reduces attack surface of servers.",
+      "level": 3,
+      "options": [
+        "Increasing CPU speed",
+        "Securing server by reducing vulnerabilities",
+        "Installing software",
+        "Adding users"
+      ],
+      "q": "What is server hardening?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Formatting prepares storage for use.",
+      "level": 3,
+      "options": [
+        "Deleting OS",
+        "Preparing disk with file system",
+        "Adding RAM",
+        "Creating users"
+      ],
+      "q": "What is disk formatting?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "A process is a running instance of a program.",
+      "level": 3,
+      "options": [
+        "A file",
+        "A running program instance",
+        "A disk partition",
+        "A network packet"
+      ],
+      "q": "What is a process in an operating system?",
+      "topic": "OS"
+    },
+    {
+      "answer": 1,
+      "explanation": "Load average shows system demand on CPU.",
+      "level": 3,
+      "options": [
+        "Memory usage",
+        "System workload over time",
+        "Disk space",
+        "Network speed"
+      ],
+      "q": "What is CPU load average?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "Some services require others to start first.",
+      "level": 3,
+      "options": [
+        "User login requirement",
+        "Service requiring another service to run first",
+        "Disk dependency",
+        "Network dependency"
+      ],
+      "q": "What is a service dependency in Windows?",
+      "topic": "Windows"
+    },
+    {
+      "answer": 1,
+      "explanation": "SSH provides secure remote server access.",
+      "level": 3,
+      "options": [
+        "File storage",
+        "Secure remote access",
+        "Backup",
+        "DNS resolution"
+      ],
+      "q": "What is SSH used for?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "Patching fixes bugs and improves security.",
+      "level": 4,
+      "options": [
+        "Adding hardware",
+        "Applying updates and fixes",
+        "Removing users",
+        "Formatting disk"
+      ],
+      "q": "What is server patching?",
+      "topic": "Maintenance"
+    },
+    {
+      "answer": 1,
+      "explanation": "BSOD indicates serious system failure in Windows.",
+      "level": 4,
+      "options": [
+        "Network error",
+        "Critical Windows system crash",
+        "Disk format",
+        "Login screen"
+      ],
+      "q": "What is Blue Screen of Death (BSOD)?",
+      "topic": "Windows"
+    },
+    {
+      "answer": 0,
+      "explanation": "Inodes store metadata about files.",
+      "level": 4,
+      "options": [
+        "File metadata structure",
+        "User account",
+        "Network packet",
+        "Disk partition"
+      ],
+      "q": "What is inode in Linux?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "Permissions control read/write/execute access.",
+      "level": 4,
+      "options": [
+        "CPU access",
+        "Access control for files",
+        "Network rule",
+        "Disk speed"
+      ],
+      "q": "What is file permission in Linux?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "systemd manages services and startup processes.",
+      "level": 4,
+      "options": [
+        "Firewall",
+        "Service manager",
+        "File system",
+        "Kernel module"
+      ],
+      "q": "What is systemd in Linux?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "Paging moves data between RAM and disk.",
+      "level": 4,
+      "options": [
+        "Disk formatting",
+        "Virtual memory management",
+        "User login",
+        "Network routing"
+      ],
+      "q": "What is memory paging?",
+      "topic": "Memory"
+    },
+    {
+      "answer": 1,
+      "explanation": "High queue length indicates disk bottleneck.",
+      "level": 4,
+      "options": [
+        "CPU queue",
+        "Pending disk operations",
+        "User queue",
+        "Network queue"
+      ],
+      "q": "What is disk queue length?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "Registry stores system and application settings.",
+      "level": 4,
+      "options": [
+        "File system",
+        "Configuration database",
+        "Network service",
+        "Backup tool"
+      ],
+      "q": "What is Windows registry?",
+      "topic": "Windows"
+    },
+    {
+      "answer": 1,
+      "explanation": "Cron schedules automated tasks in Linux.",
+      "level": 4,
+      "options": [
+        "Windows service",
+        "Scheduled task in Linux",
+        "Disk process",
+        "User account"
+      ],
+      "q": "What is cron job?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "Dump files help analyze system crashes.",
+      "level": 4,
+      "options": [
+        "User file",
+        "Memory snapshot during crash",
+        "Backup file",
+        "Log rotation"
+      ],
+      "q": "What is system crash dump?",
+      "topic": "Windows"
+    },
+    {
+      "answer": 1,
+      "explanation": "NIC teaming improves network redundancy and speed.",
+      "level": 4,
+      "options": [
+        "Disk grouping",
+        "Combining network interfaces",
+        "CPU grouping",
+        "User grouping"
+      ],
+      "q": "What is NIC teaming?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Latency is the delay in system response.",
+      "level": 4,
+      "options": [
+        "CPU speed",
+        "Delay in response",
+        "Disk size",
+        "RAM capacity"
+      ],
+      "q": "What is latency in servers?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "Hypervisor runs and manages virtual machines.",
+      "level": 4,
+      "options": [
+        "User manager",
+        "Software managing VMs",
+        "Disk tool",
+        "Network tool"
+      ],
+      "q": "What is virtualization hypervisor?",
+      "topic": "Virtualization"
+    },
+    {
+      "answer": 1,
+      "explanation": "Monitoring ensures server is always available.",
+      "level": 4,
+      "options": [
+        "User tracking",
+        "Checking server availability",
+        "Disk formatting",
+        "Network setup"
+      ],
+      "q": "What is server uptime monitoring?",
+      "topic": "Monitoring"
+    },
+    {
+      "answer": 1,
+      "explanation": "Always analyze logs and recent changes before taking destructive actions.",
+      "level": 5,
+      "options": [
+        "Reinstall OS immediately",
+        "Check boot logs and recent changes",
+        "Replace hardware",
+        "Disable antivirus"
+      ],
+      "q": "A Windows server is booting into recovery mode repeatedly. What is the FIRST step?",
+      "topic": "Troubleshooting"
+    },
+    {
+      "answer": 0,
+      "explanation": "High disk I/O can cause slowness even if CPU is normal.",
+      "level": 5,
+      "options": [
+        "Disk I/O usage",
+        "User accounts",
+        "Firewall rules",
+        "Kernel version"
+      ],
+      "q": "A Linux server is slow and CPU usage is normal. What should you check next?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "top shows real-time CPU and process usage.",
+      "level": 5,
+      "options": [
+        "ls",
+        "top",
+        "cat",
+        "chmod"
+      ],
+      "q": "Which tool is best for real-time process monitoring in Linux?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "Degraded RAID means redundancy is reduced due to disk failure.",
+      "level": 5,
+      "options": [
+        "RAID is faster",
+        "One disk has failed or is missing",
+        "CPU failure",
+        "Network issue"
+      ],
+      "q": "A server disk shows 'degraded RAID'. What does it mean?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "Always diagnose before taking disruptive actions.",
+      "level": 5,
+      "options": [
+        "Restart immediately",
+        "Check logs and isolate root cause",
+        "Reinstall OS",
+        "Format disk"
+      ],
+      "q": "What is the safest action during production server outage?",
+      "topic": "Incident"
+    },
+    {
+      "answer": 1,
+      "explanation": "Applications or services may consume excessive memory.",
+      "level": 5,
+      "options": [
+        "Firewall rules",
+        "Memory leak or heavy services",
+        "DNS issue",
+        "Disk failure"
+      ],
+      "q": "What causes high memory usage in Windows Server?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 0,
+      "explanation": "syslog contains system-wide logs and errors.",
+      "level": 5,
+      "options": [
+        "/var/log/syslog",
+        "/home/logs",
+        "/usr/temp",
+        "/boot/log"
+      ],
+      "q": "Which log is most important for Linux system errors?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "Full disk causes application and system failures.",
+      "level": 5,
+      "options": [
+        "Faster performance",
+        "Service failures and crashes",
+        "CPU improvement",
+        "Network boost"
+      ],
+      "q": "What is the impact of full disk space on a server?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "chkdsk scans and fixes file system errors.",
+      "level": 5,
+      "options": [
+        "User management",
+        "Disk error checking and repair",
+        "Network setup",
+        "Firewall configuration"
+      ],
+      "q": "What is the purpose of 'chkdsk' in Windows?",
+      "topic": "Windows"
+    },
+    {
+      "answer": 1,
+      "explanation": "Logs provide root cause of service failure.",
+      "level": 5,
+      "options": [
+        "Reinstall OS",
+        "Event Viewer logs",
+        "Change user password",
+        "Disconnect network"
+      ],
+      "q": "A service is failing to start in Windows. What is FIRST check?",
+      "topic": "Troubleshooting"
+    },
+    {
+      "answer": 1,
+      "explanation": "Zombie processes remain in process table after termination.",
+      "level": 5,
+      "options": [
+        "Running process",
+        "Terminated process not cleaned up",
+        "Network process",
+        "Kernel process"
+      ],
+      "q": "What is zombie process in Linux?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "Load balancing improves performance and availability.",
+      "level": 5,
+      "options": [
+        "Backup storage",
+        "Distributing traffic across servers",
+        "Disk formatting",
+        "User authentication"
+      ],
+      "q": "What is server load balancing used for?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "NIC failure leads to loss of network connectivity.",
+      "level": 5,
+      "options": [
+        "High CPU usage",
+        "No network connectivity",
+        "Disk full",
+        "Memory leak"
+      ],
+      "q": "What is NIC failure symptom?",
+      "topic": "Hardware"
+    },
+    {
+      "answer": 1,
+      "explanation": "Rollback restores system after faulty update.",
+      "level": 5,
+      "options": [
+        "Deleting users",
+        "Reverting updates to previous state",
+        "Disk cleanup",
+        "Network reset"
+      ],
+      "q": "What is server patch rollback?",
+      "topic": "Maintenance"
+    },
+    {
+      "answer": 1,
+      "explanation": "Hardware RAID uses dedicated controller for disk arrays.",
+      "level": 5,
+      "options": [
+        "Software tool",
+        "Physical device managing RAID",
+        "CPU module",
+        "Network card"
+      ],
+      "q": "What is a hardware RAID controller?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "RCA identifies the real reason behind failures.",
+      "level": 6,
+      "options": [
+        "Restart server",
+        "Finding underlying cause of incident",
+        "Disk formatting",
+        "User creation"
+      ],
+      "q": "What is root cause analysis (RCA)?",
+      "topic": "Incident"
+    },
+    {
+      "answer": 1,
+      "explanation": "Unexpected restarts usually indicate hardware or kernel issues.",
+      "level": 6,
+      "options": [
+        "High disk space",
+        "Hardware or OS critical failure",
+        "User login issue",
+        "Firewall rule"
+      ],
+      "q": "A server keeps restarting unexpectedly. What is most likely cause?",
+      "topic": "Troubleshooting"
+    },
+    {
+      "answer": 0,
+      "explanation": "Snapshots capture VM state at a point in time.",
+      "level": 6,
+      "options": [
+        "Backup copy of VM state",
+        "Network configuration",
+        "User profile",
+        "Disk format"
+      ],
+      "q": "What is snapshot in virtualization?",
+      "topic": "Virtualization"
+    },
+    {
+      "answer": 1,
+      "explanation": "Kernel panic is a fatal system error in Linux.",
+      "level": 6,
+      "options": [
+        "User error",
+        "Critical Linux system failure",
+        "Disk cleanup",
+        "Service restart"
+      ],
+      "q": "What is kernel panic?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 0,
+      "explanation": "High latency means slow disk read/write response.",
+      "level": 6,
+      "options": [
+        "Slow disk response",
+        "Fast CPU",
+        "User delay",
+        "Network speed"
+      ],
+      "q": "What is disk latency issue?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "Dependent services must run before main service starts.",
+      "level": 6,
+      "options": [
+        "Disk error",
+        "Required service not running",
+        "Network failure",
+        "User issue"
+      ],
+      "q": "What is service dependency failure?",
+      "topic": "Windows"
+    },
+    {
+      "answer": 1,
+      "explanation": "Excessive swapping reduces performance.",
+      "level": 6,
+      "options": [
+        "Faster system",
+        "Slower performance",
+        "Better CPU",
+        "No effect"
+      ],
+      "q": "What is memory swapping impact?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "DFS allows shared folders across multiple servers.",
+      "level": 6,
+      "options": [
+        "Disk File System",
+        "Distributed File System",
+        "Direct File Storage",
+        "Data File Service"
+      ],
+      "q": "What is DFS in Windows Server?",
+      "topic": "Windows"
+    },
+    {
+      "answer": 1,
+      "explanation": "Packet loss affects communication reliability.",
+      "level": 6,
+      "options": [
+        "Fast network",
+        "Dropped data packets",
+        "Disk error",
+        "CPU issue"
+      ],
+      "q": "What is network packet loss?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "High interrupts often indicate hardware problems.",
+      "level": 6,
+      "options": [
+        "Normal behavior",
+        "Hardware or driver issue",
+        "Disk issue",
+        "User login issue"
+      ],
+      "q": "What is high CPU interrupt usage?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "Recovery mode helps repair system issues.",
+      "level": 6,
+      "options": [
+        "Normal boot",
+        "Repair environment for fixing OS",
+        "User login screen",
+        "Backup mode"
+      ],
+      "q": "What is server recovery mode?",
+      "topic": "Windows"
+    },
+    {
+      "answer": 1,
+      "explanation": "No inodes means no new files can be created.",
+      "level": 6,
+      "options": [
+        "CPU overload",
+        "No file creation possible in Linux",
+        "Disk failure",
+        "Network issue"
+      ],
+      "q": "What is inode exhaustion?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "Crash dumps help analyze application failures.",
+      "level": 6,
+      "options": [
+        "Backup",
+        "Debugging failures",
+        "User login",
+        "Network setup"
+      ],
+      "q": "What is application crash dump used for?",
+      "topic": "Troubleshooting"
+    },
+    {
+      "answer": 1,
+      "explanation": "Scalability issues occur under heavy load.",
+      "level": 6,
+      "options": [
+        "User error",
+        "System cannot handle increased load",
+        "Disk formatting",
+        "Firewall issue"
+      ],
+      "q": "What is server scalability issue?",
+      "topic": "Architecture"
+    },
+    {
+      "answer": 1,
+      "explanation": "You should analyze processes and logs before taking any disruptive action.",
+      "level": 7,
+      "options": [
+        "Restart the server immediately",
+        "Check running processes and performance logs",
+        "Reinstall OS",
+        "Increase RAM"
+      ],
+      "q": "A production server is experiencing intermittent high CPU spikes. What should be your FIRST step?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "Disk issues like fragmentation or failing hardware commonly slow performance.",
+      "level": 7,
+      "options": [
+        "High CPU usage",
+        "Disk fragmentation or failing disk",
+        "User login issues",
+        "DNS misconfiguration"
+      ],
+      "q": "What is a common cause of slow disk performance in production servers?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "Failover clustering ensures services move to healthy nodes.",
+      "level": 7,
+      "options": [
+        "Cluster shuts down",
+        "Services are moved to another node",
+        "Data is deleted",
+        "Network stops"
+      ],
+      "q": "In a Windows Failover Cluster, what happens if one node fails?",
+      "topic": "Clustering"
+    },
+    {
+      "answer": 1,
+      "explanation": "Quorum ensures cluster stability using majority voting.",
+      "level": 7,
+      "options": [
+        "Disk backup",
+        "Majority vote to keep cluster running",
+        "CPU allocation",
+        "Network configuration"
+      ],
+      "q": "What is quorum in a failover cluster?",
+      "topic": "Clustering"
+    },
+    {
+      "answer": 1,
+      "explanation": "Processes holding deleted files can still consume disk space.",
+      "level": 7,
+      "options": [
+        "CPU overload",
+        "Open deleted files still held by processes",
+        "Network issue",
+        "RAM issue"
+      ],
+      "q": "A Linux server is showing 100% disk usage but files are deleted. What could be the issue?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "SAN provides high-speed shared storage at block level.",
+      "level": 7,
+      "options": [
+        "Software storage",
+        "Storage Area Network",
+        "Secure Access Node",
+        "System Access Network"
+      ],
+      "q": "What is SAN storage?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 0,
+      "explanation": "NAS provides file-level storage over the network.",
+      "level": 7,
+      "options": [
+        "Network Attached Storage",
+        "New Access Storage",
+        "Node Authentication System",
+        "Network Application Service"
+      ],
+      "q": "What is NAS storage?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "Paging file extends RAM using disk space.",
+      "level": 7,
+      "options": [
+        "Backup storage",
+        "Virtual memory extension",
+        "User profiles",
+        "Network cache"
+      ],
+      "q": "What is the purpose of system paging file in Windows?",
+      "topic": "Memory"
+    },
+    {
+      "answer": 1,
+      "explanation": "Overcommitting CPU leads to performance degradation.",
+      "level": 7,
+      "options": [
+        "Better performance always",
+        "Resource contention and slowdown",
+        "Disk failure",
+        "Network boost"
+      ],
+      "q": "What is the impact of CPU overcommit in virtualization?",
+      "topic": "Virtualization"
+    },
+    {
+      "answer": 1,
+      "explanation": "Hot spare automatically replaces failed RAID disk.",
+      "level": 7,
+      "options": [
+        "Active disk",
+        "Standby disk used automatically on failure",
+        "Backup file",
+        "Cache memory"
+      ],
+      "q": "What is a hot spare disk in RAID?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "Monitoring tools help detect and prevent failures.",
+      "level": 7,
+      "options": [
+        "User creation",
+        "Detect performance and availability issues",
+        "Disk formatting",
+        "Software installation"
+      ],
+      "q": "What is the main purpose of system monitoring tools?",
+      "topic": "Monitoring"
+    },
+    {
+      "answer": 1,
+      "explanation": "Memory leaks reduce available system memory over time.",
+      "level": 7,
+      "options": [
+        "Disk error",
+        "Application not releasing memory",
+        "Network issue",
+        "CPU spike"
+      ],
+      "q": "What is a memory leak in production systems?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "Latency is delay in replication between domain controllers.",
+      "level": 7,
+      "options": [
+        "Disk delay",
+        "Time taken to sync changes between DCs",
+        "User delay",
+        "CPU delay"
+      ],
+      "q": "What is Active Directory replication latency?",
+      "topic": "AD"
+    },
+    {
+      "answer": 1,
+      "explanation": "Kernel modules extend OS functionality.",
+      "level": 7,
+      "options": [
+        "User program",
+        "Loadable driver component in Linux",
+        "Disk file",
+        "Network packet"
+      ],
+      "q": "What is a kernel module?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "Downtime means service is not available to users.",
+      "level": 7,
+      "options": [
+        "Normal operation",
+        "Period when system is unavailable",
+        "Backup time",
+        "Maintenance mode only"
+      ],
+      "q": "What is server downtime?",
+      "topic": "Monitoring"
+    },
+    {
+      "answer": 1,
+      "explanation": "Failover depends on cluster heartbeat and configuration.",
+      "level": 8,
+      "options": [
+        "User permissions",
+        "Cluster configuration and heartbeat network",
+        "Disk space",
+        "Firewall rules"
+      ],
+      "q": "A server cluster is not failing over automatically. What should you check first?",
+      "topic": "Clustering"
+    },
+    {
+      "answer": 1,
+      "explanation": "Load balancing distributes workload evenly.",
+      "level": 8,
+      "options": [
+        "Backup data",
+        "Distribute traffic across servers",
+        "Encrypt traffic",
+        "Store logs"
+      ],
+      "q": "What is the primary purpose of load balancing?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "System hang occurs when OS stops responding.",
+      "level": 8,
+      "options": [
+        "Normal shutdown",
+        "System becomes unresponsive",
+        "Backup process",
+        "Network reset"
+      ],
+      "q": "What is system hang condition?",
+      "topic": "Troubleshooting"
+    },
+    {
+      "answer": 0,
+      "explanation": "IOPS measures storage performance.",
+      "level": 8,
+      "options": [
+        "Input/output operations per second",
+        "Internet operations per second",
+        "Internal OS process speed",
+        "CPU instruction speed"
+      ],
+      "q": "What is disk IOPS?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "Too many snapshots reduce performance and storage efficiency.",
+      "level": 8,
+      "options": [
+        "Disk failure",
+        "Too many unmanaged snapshots",
+        "CPU overload",
+        "Network delay"
+      ],
+      "q": "What is snapshot sprawl in virtualization?",
+      "topic": "Virtualization"
+    },
+    {
+      "answer": 1,
+      "explanation": "Bottleneck limits system performance.",
+      "level": 8,
+      "options": [
+        "Backup system",
+        "Resource limiting component",
+        "User login issue",
+        "Firewall rule"
+      ],
+      "q": "What is system bottleneck?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "DNS failure breaks name resolution across services.",
+      "level": 8,
+      "options": [
+        "Faster access",
+        "Service communication failure",
+        "CPU improvement",
+        "Disk speed increase"
+      ],
+      "q": "What is DNS failure impact on servers?",
+      "topic": "DNS"
+    },
+    {
+      "answer": 1,
+      "explanation": "Log rotation prevents logs from consuming disk space.",
+      "level": 8,
+      "options": [
+        "Deleting OS",
+        "Managing log file size over time",
+        "User management",
+        "Network routing"
+      ],
+      "q": "What is log rotation?",
+      "topic": "Monitoring"
+    },
+    {
+      "answer": 1,
+      "explanation": "Clustering ensures system availability.",
+      "level": 8,
+      "options": [
+        "User authentication",
+        "High availability",
+        "Disk formatting",
+        "Firewall setup"
+      ],
+      "q": "What is server clustering used for?",
+      "topic": "Clustering"
+    },
+    {
+      "answer": 1,
+      "explanation": "Kernel memory leaks can destabilize system.",
+      "level": 8,
+      "options": [
+        "Improved performance",
+        "System crash risk",
+        "Network boost",
+        "Disk optimization"
+      ],
+      "q": "What is kernel memory leak impact?",
+      "topic": "Linux"
+    },
+    {
+      "answer": 1,
+      "explanation": "Provisioning assigns storage resources.",
+      "level": 8,
+      "options": [
+        "User creation",
+        "Allocating storage to systems",
+        "CPU allocation",
+        "Network setup"
+      ],
+      "q": "What is storage provisioning?",
+      "topic": "Storage"
+    },
+    {
+      "answer": 1,
+      "explanation": "Tuning improves system efficiency.",
+      "level": 8,
+      "options": [
+        "User login fix",
+        "Optimizing system resources",
+        "Disk deletion",
+        "Network reset"
+      ],
+      "q": "What is system performance tuning?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "Failover testing ensures high availability systems work correctly.",
+      "level": 8,
+      "options": [
+        "Disk format",
+        "Testing system redundancy",
+        "User testing",
+        "Backup deletion"
+      ],
+      "q": "What is failover testing?",
+      "topic": "Clustering"
+    },
+    {
+      "answer": 1,
+      "explanation": "Incident management ensures service restoration.",
+      "level": 8,
+      "options": [
+        "User creation",
+        "Handling and resolving system issues",
+        "Disk formatting",
+        "Firewall setup"
+      ],
+      "q": "What is server incident management?",
+      "topic": "Incident"
+    },
+    {
+      "answer": 1,
+      "explanation": "A disaster recovery plan depends primarily on reliable backup and restoration mechanisms.",
+      "level": 9,
+      "options": [
+        "User access control",
+        "Backup and restore strategy",
+        "Printer configuration",
+        "Desktop policies"
+      ],
+      "q": "You are designing a disaster recovery plan for a data center. What is the MOST critical component?",
+      "topic": "Disaster Recovery"
+    },
+    {
+      "answer": 0,
+      "explanation": "RTO defines the maximum acceptable downtime after failure.",
+      "level": 9,
+      "options": [
+        "Recovery Time Objective",
+        "Real Time Operation",
+        "Recovery Task Output",
+        "Restore Target Object"
+      ],
+      "q": "What is RTO in disaster recovery?",
+      "topic": "DR"
+    },
+    {
+      "answer": 1,
+      "explanation": "RPO defines how much data loss is acceptable.",
+      "level": 9,
+      "options": [
+        "Recovery Process Output",
+        "Recovery Point Objective",
+        "Remote Process Operation",
+        "Restore Policy Order"
+      ],
+      "q": "What is RPO in disaster recovery?",
+      "topic": "DR"
+    },
+    {
+      "answer": 1,
+      "explanation": "Power recovery and DR failover are top priorities.",
+      "level": 9,
+      "options": [
+        "User login services",
+        "Backup generators and DR site failover",
+        "DNS updates",
+        "Patch deployment"
+      ],
+      "q": "A data center loses power completely. What should activate first?",
+      "topic": "Disaster Recovery"
+    },
+    {
+      "answer": 1,
+      "explanation": "A hot site is fully operational and ready to take over immediately.",
+      "level": 9,
+      "options": [
+        "A backup server room",
+        "Fully operational DR environment",
+        "Cold storage",
+        "User workstation"
+      ],
+      "q": "What is a hot site in disaster recovery?",
+      "topic": "DR"
+    },
+    {
+      "answer": 1,
+      "explanation": "Cold sites require setup before becoming operational.",
+      "level": 9,
+      "options": [
+        "Fully active environment",
+        "Basic infrastructure without active systems",
+        "Cloud server",
+        "Backup software"
+      ],
+      "q": "What is a cold site?",
+      "topic": "DR"
+    },
+    {
+      "answer": 1,
+      "explanation": "Active-active means all nodes handle traffic simultaneously.",
+      "level": 9,
+      "options": [
+        "Only one server active",
+        "All nodes active and serving traffic",
+        "Backup mode only",
+        "DNS clustering"
+      ],
+      "q": "What is active-active clustering?",
+      "topic": "Clustering"
+    },
+    {
+      "answer": 1,
+      "explanation": "Passive nodes activate only when primary fails.",
+      "level": 9,
+      "options": [
+        "All servers active",
+        "One active, others standby",
+        "No redundancy",
+        "DNS failover only"
+      ],
+      "q": "What is active-passive clustering?",
+      "topic": "Clustering"
+    },
+    {
+      "answer": 1,
+      "explanation": "SPOF is any critical component without redundancy.",
+      "level": 9,
+      "options": [
+        "Backup system",
+        "Component that causes full system failure if it fails",
+        "Redundant server",
+        "Load balancer"
+      ],
+      "q": "What is a single point of failure (SPOF)?",
+      "topic": "Architecture"
+    },
+    {
+      "answer": 1,
+      "explanation": "Scalability ensures system growth support.",
+      "level": 9,
+      "options": [
+        "Disk cleanup",
+        "Ability to handle increased load",
+        "User management",
+        "Backup process"
+      ],
+      "q": "What is infrastructure scalability?",
+      "topic": "Architecture"
+    },
+    {
+      "answer": 1,
+      "explanation": "Health checks ensure traffic is sent to healthy servers.",
+      "level": 9,
+      "options": [
+        "User login test",
+        "Checking backend server availability",
+        "Disk test",
+        "CPU upgrade"
+      ],
+      "q": "What is load balancer health check?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Capacity planning ensures infrastructure growth readiness.",
+      "level": 9,
+      "options": [
+        "User creation",
+        "Estimating future resource needs",
+        "Disk formatting",
+        "Firewall setup"
+      ],
+      "q": "What is capacity planning?",
+      "topic": "Architecture"
+    },
+    {
+      "answer": 1,
+      "explanation": "Monitoring systems detect failures and performance issues.",
+      "level": 9,
+      "options": [
+        "User authentication",
+        "Tracking system health and alerts",
+        "Disk formatting",
+        "Software installation"
+      ],
+      "q": "What is enterprise monitoring system used for?",
+      "topic": "Monitoring"
+    },
+    {
+      "answer": 1,
+      "explanation": "Compliance ensures systems are properly patched.",
+      "level": 9,
+      "options": [
+        "User login check",
+        "Ensuring all systems are updated",
+        "Disk check",
+        "Network routing"
+      ],
+      "q": "What is patch compliance?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Zero downtime ensures continuous service availability.",
+      "level": 9,
+      "options": [
+        "Server shutdown",
+        "Deploying updates without service interruption",
+        "Disk formatting",
+        "Backup restore"
+      ],
+      "q": "What is zero downtime deployment?",
+      "topic": "DevOps"
+    },
+    {
+      "answer": 1,
+      "explanation": "Isolation helps identify exact failure source.",
+      "level": 10,
+      "options": [
+        "Restart server",
+        "Identifying exact failing component",
+        "User deletion",
+        "Disk formatting"
+      ],
+      "q": "What is root cause isolation in incident management?",
+      "topic": "Incident"
+    },
+    {
+      "answer": 1,
+      "explanation": "IaC automates infrastructure provisioning.",
+      "level": 10,
+      "options": [
+        "Manual server setup",
+        "Managing infrastructure using code",
+        "Disk partitioning",
+        "User management"
+      ],
+      "q": "What is infrastructure as code (IaC)?",
+      "topic": "Automation"
+    },
+    {
+      "answer": 1,
+      "explanation": "Drift occurs when systems are not consistent with baseline.",
+      "level": 10,
+      "options": [
+        "Backup failure",
+        "Systems deviating from baseline config",
+        "CPU failure",
+        "Network outage"
+      ],
+      "q": "What is configuration drift?",
+      "topic": "Architecture"
+    },
+    {
+      "answer": 1,
+      "explanation": "Hybrid cloud combines local and cloud resources.",
+      "level": 10,
+      "options": [
+        "Only on-prem systems",
+        "Combination of cloud and on-prem systems",
+        "Only cloud systems",
+        "Only virtual machines"
+      ],
+      "q": "What is hybrid cloud infrastructure?",
+      "topic": "Cloud"
+    },
+    {
+      "answer": 1,
+      "explanation": "Failback restores operations to primary site.",
+      "level": 10,
+      "options": [
+        "Initial failover",
+        "Returning to primary site after recovery",
+        "Backup deletion",
+        "System shutdown"
+      ],
+      "q": "What is disaster recovery failback?",
+      "topic": "DR"
+    },
+    {
+      "answer": 1,
+      "explanation": "Federation allows single identity across systems.",
+      "level": 10,
+      "options": [
+        "Local login only",
+        "Cross-system authentication trust",
+        "Disk sharing",
+        "Backup system"
+      ],
+      "q": "What is identity federation in enterprise systems?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "PAM secures administrative access.",
+      "level": 10,
+      "options": [
+        "User login system",
+        "Controlling admin-level access securely",
+        "Disk encryption",
+        "Network routing"
+      ],
+      "q": "What is privileged access management (PAM)?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Chaos engineering tests system resilience under failure.",
+      "level": 10,
+      "options": [
+        "System shutdown",
+        "Testing system resilience by introducing failures",
+        "Disk formatting",
+        "User testing"
+      ],
+      "q": "What is chaos engineering?",
+      "topic": "Reliability"
+    },
+    {
+      "answer": 1,
+      "explanation": "Service mesh manages service-to-service communication.",
+      "level": 10,
+      "options": [
+        "Storage system",
+        "Communication layer between services",
+        "Backup tool",
+        "User system"
+      ],
+      "q": "What is service mesh in infrastructure?",
+      "topic": "Cloud"
+    },
+    {
+      "answer": 1,
+      "explanation": "SLA defines service expectations between provider and customer.",
+      "level": 10,
+      "options": [
+        "System Log Analysis",
+        "Service Level Agreement",
+        "Server Load Adjustment",
+        "System Login Access"
+      ],
+      "q": "What is SLA in IT operations?",
+      "topic": "Operations"
+    },
+    {
+      "answer": 1,
+      "explanation": "Observability helps understand system behavior.",
+      "level": 10,
+      "options": [
+        "User monitoring",
+        "Understanding system internal state via logs, metrics, traces",
+        "Disk formatting",
+        "Network setup"
+      ],
+      "q": "What is observability in modern infrastructure?",
+      "topic": "Monitoring"
+    },
+    {
+      "answer": 1,
+      "explanation": "Microservices split applications into independent services.",
+      "level": 10,
+      "options": [
+        "Single large application",
+        "Small independent services architecture",
+        "Hardware system",
+        "Database system"
+      ],
+      "q": "What is microservices architecture?",
+      "topic": "Architecture"
+    },
+    {
+      "answer": 1,
+      "explanation": "Blue-green deployment reduces downtime during releases.",
+      "level": 10,
+      "options": [
+        "Disk switching",
+        "Two environments for zero downtime release",
+        "User switching",
+        "Network switching"
+      ],
+      "q": "What is blue-green deployment?",
+      "topic": "DevOps"
+    },
+    {
+      "answer": 1,
+      "explanation": "Hardening improves server security posture.",
+      "level": 10,
+      "options": [
+        "Installing apps",
+        "Reducing attack surface with security controls",
+        "Disk formatting",
+        "User creation"
+      ],
+      "q": "What is server hardening at enterprise level?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Boot process initializes system and loads OS.",
+      "level": 2,
+      "options": [
+        "User login",
+        "Starting OS from hardware initialization",
+        "File copy",
+        "Network setup"
+      ],
+      "q": "What is system boot process?",
+      "topic": "OS"
+    }
+  ]
+}

@@ -1,0 +1,1474 @@
+{
+  "category": "m365",
+  "questions": [
+    {
+      "answer": 1,
+      "explanation": "Microsoft 365 combines Office apps with cloud services like Exchange, Teams, SharePoint, OneDrive, and security features.",
+      "level": 1,
+      "options": [
+        "A single email service",
+        "A subscription-based suite of productivity and cloud services",
+        "Only Microsoft Office apps",
+        "A Windows Server replacement"
+      ],
+      "q": "What is Microsoft 365?",
+      "topic": "M365 Basics"
+    },
+    {
+      "answer": 1,
+      "explanation": "Exchange Online is the cloud-based email and calendaring service in Microsoft 365.",
+      "level": 1,
+      "options": [
+        "SharePoint Online",
+        "Exchange Online",
+        "Teams",
+        "OneDrive"
+      ],
+      "q": "Which service provides email in Microsoft 365?",
+      "topic": "Exchange Online"
+    },
+    {
+      "answer": 1,
+      "explanation": "Teams provides chat, meetings, calling, and collaboration features.",
+      "level": 1,
+      "options": [
+        "File backups",
+        "Chat, meetings, and collaboration",
+        "Email hosting",
+        "Device management"
+      ],
+      "q": "What is Microsoft Teams primarily used for?",
+      "topic": "Teams"
+    },
+    {
+      "answer": 2,
+      "explanation": "OneDrive for Business provides personal cloud storage for users.",
+      "level": 1,
+      "options": [
+        "SharePoint",
+        "Exchange",
+        "OneDrive for Business",
+        "Teams"
+      ],
+      "q": "Which service is used for personal file storage in M365?",
+      "topic": "OneDrive"
+    },
+    {
+      "answer": 1,
+      "explanation": "SharePoint Online is used for team sites, intranets, and document management.",
+      "level": 1,
+      "options": [
+        "Instant messaging",
+        "Team websites and document collaboration",
+        "Email routing",
+        "Device compliance"
+      ],
+      "q": "SharePoint Online is mainly used for?",
+      "topic": "SharePoint"
+    },
+    {
+      "answer": 1,
+      "explanation": "The Microsoft 365 Admin Center is the main management portal.",
+      "level": 1,
+      "options": [
+        "Azure Portal",
+        "Microsoft 365 Admin Center",
+        "Exchange Console",
+        "PowerShell only"
+      ],
+      "q": "Which portal is used to manage Microsoft 365?",
+      "topic": "Administration"
+    },
+    {
+      "answer": 1,
+      "explanation": "Microsoft 365 uses Microsoft Entra ID (Azure AD) for identity.",
+      "level": 1,
+      "options": [
+        "Active Directory only",
+        "Azure AD (Entra ID)",
+        "LDAP",
+        "Okta"
+      ],
+      "q": "What identity service does Microsoft 365 use?",
+      "topic": "Identity"
+    },
+    {
+      "answer": 1,
+      "explanation": "Microsoft Teams supports video meetings.",
+      "level": 1,
+      "options": [
+        "OneDrive",
+        "Teams",
+        "Outlook only",
+        "Planner"
+      ],
+      "q": "Which app is used for video meetings?",
+      "topic": "Teams"
+    },
+    {
+      "answer": 2,
+      "explanation": "Most Exchange Online plans provide a 50 GB mailbox.",
+      "level": 1,
+      "options": [
+        "2 GB",
+        "10 GB",
+        "50 GB",
+        "Unlimited"
+      ],
+      "q": "What is the default mailbox size in Exchange Online (most plans)?",
+      "topic": "Exchange Online"
+    },
+    {
+      "answer": 1,
+      "explanation": "OneDrive for Business is built on SharePoint Online.",
+      "level": 1,
+      "options": [
+        "File server",
+        "SharePoint",
+        "DFS",
+        "FTP"
+      ],
+      "q": "OneDrive is based on which technology?",
+      "topic": "OneDrive"
+    },
+    {
+      "answer": 1,
+      "explanation": "Microsoft 365 Groups provide shared membership for Teams, Outlook, and SharePoint.",
+      "level": 2,
+      "options": [
+        "A security boundary",
+        "A unified group used across M365 services",
+        "An Exchange-only object",
+        "A SharePoint permission level"
+      ],
+      "q": "What is a Microsoft 365 Group?",
+      "topic": "Groups"
+    },
+    {
+      "answer": 1,
+      "explanation": "Exchange Online provides shared mailboxes and calendars.",
+      "level": 2,
+      "options": [
+        "Teams",
+        "Exchange Online",
+        "SharePoint",
+        "Planner"
+      ],
+      "q": "Which service provides shared calendars and mailboxes?",
+      "topic": "Exchange Online"
+    },
+    {
+      "answer": 1,
+      "explanation": "Every Team is backed by a Microsoft 365 Group.",
+      "level": 2,
+      "options": [
+        "Security Group",
+        "Microsoft 365 Group",
+        "Distribution List",
+        "Dynamic Group"
+      ],
+      "q": "What is a Team backed by?",
+      "topic": "Teams"
+    },
+    {
+      "answer": 2,
+      "explanation": "A modern SharePoint Team site is created.",
+      "level": 2,
+      "options": [
+        "Classic site",
+        "Communication site",
+        "Team site",
+        "Hub site"
+      ],
+      "q": "Which SharePoint site is created for every Team?",
+      "topic": "SharePoint"
+    },
+    {
+      "answer": 2,
+      "explanation": "OneDrive usually provides 1 TB per user.",
+      "level": 2,
+      "options": [
+        "100 GB",
+        "500 GB",
+        "1 TB",
+        "Unlimited"
+      ],
+      "q": "What is OneDrive's default storage per user (most plans)?",
+      "topic": "OneDrive"
+    },
+    {
+      "answer": 1,
+      "explanation": "SPMT is used to migrate file shares to SharePoint.",
+      "level": 2,
+      "options": [
+        "Robocopy",
+        "SharePoint Migration Tool",
+        "XCopy",
+        "ADMT"
+      ],
+      "q": "Which tool migrates files to SharePoint?",
+      "topic": "Migration"
+    },
+    {
+      "answer": 1,
+      "explanation": "Outlook is the primary email client.",
+      "level": 2,
+      "options": [
+        "Teams",
+        "Outlook",
+        "OneDrive",
+        "Word"
+      ],
+      "q": "Which client is used to manage emails locally?",
+      "topic": "Exchange Online"
+    },
+    {
+      "answer": 0,
+      "explanation": "Azure AD was renamed to Microsoft Entra ID.",
+      "level": 3,
+      "options": [
+        "Azure Active Directory",
+        "Windows AD",
+        "LDAP",
+        "Identity Manager"
+      ],
+      "q": "What is Microsoft Entra ID formerly known as?",
+      "topic": "Identity"
+    },
+    {
+      "answer": 1,
+      "explanation": "Conditional Access controls access based on conditions like location and device.",
+      "level": 3,
+      "options": [
+        "Firewall rule",
+        "Policy-based access control",
+        "VPN configuration",
+        "Mailbox permission"
+      ],
+      "q": "What is Conditional Access?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "MFA requires two or more authentication factors.",
+      "level": 3,
+      "options": [
+        "Multiple Functional Access",
+        "Multi-Factor Authentication",
+        "Microsoft Federated Access",
+        "Managed File Access"
+      ],
+      "q": "What does MFA stand for?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Azure AD Connect syncs on-prem identities.",
+      "level": 3,
+      "options": [
+        "ADUC",
+        "AAD Connect",
+        "DFS",
+        "SCOM"
+      ],
+      "q": "Which sync tool connects on-prem AD with Entra ID?",
+      "topic": "Hybrid Identity"
+    },
+    {
+      "answer": 1,
+      "explanation": "If OWA works but Outlook does not, the issue is client-side – commonly Outlook profile corruption or faulty add-ins.",
+      "level": 5,
+      "options": [
+        "Exchange Online outage",
+        "Corrupted Outlook profile or Add-in issue",
+        "Mailbox quota exceeded",
+        "Incorrect MX record"
+      ],
+      "q": "A user reports emails stuck in Outbox in Outlook. OWA works fine. What is the MOST likely cause?",
+      "topic": "Exchange Online Troubleshooting"
+    },
+    {
+      "answer": 2,
+      "explanation": "Anti-phishing policies with impersonation protection defend against domain and user impersonation attacks.",
+      "level": 5,
+      "options": [
+        "Anti-spam policy",
+        "Safe Attachments",
+        "Anti-phishing policy with impersonation protection",
+        "Transport rule"
+      ],
+      "q": "Which Exchange feature prevents phishing using look‑alike domains?",
+      "topic": "Email Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Shared mailboxes use delegated permissions like FullAccess or SendAs.",
+      "level": 5,
+      "options": [
+        "Assign a license",
+        "Use mailbox delegation",
+        "Convert to user mailbox",
+        "Enable litigation hold"
+      ],
+      "q": "How do you grant access to a shared mailbox?",
+      "topic": "Exchange Administration"
+    },
+    {
+      "answer": 0,
+      "explanation": "Message trace tracks email flow through Exchange Online.",
+      "level": 5,
+      "options": [
+        "Message trace",
+        "Audit log",
+        "Compliance search",
+        "MX lookup"
+      ],
+      "q": "Which tool traces email delivery issues?",
+      "topic": "Exchange Troubleshooting"
+    },
+    {
+      "answer": 2,
+      "explanation": "When quota is exceeded, mailbox cannot receive new emails.",
+      "level": 5,
+      "options": [
+        "Auto delete emails",
+        "Send-only disabled",
+        "Receive-only disabled",
+        "Mailbox locked"
+      ],
+      "q": "What happens if a mailbox exceeds quota?",
+      "topic": "Exchange Online"
+    },
+    {
+      "answer": 1,
+      "explanation": "MX records define where email is delivered.",
+      "level": 5,
+      "options": [
+        "CNAME",
+        "MX",
+        "TXT",
+        "SRV"
+      ],
+      "q": "Which record is REQUIRED for email flow?",
+      "topic": "DNS & Mail Flow"
+    },
+    {
+      "answer": 1,
+      "explanation": "Team creation is controlled via Microsoft 365 Groups / Entra ID policies.",
+      "level": 6,
+      "options": [
+        "Teams firewall rules",
+        "Azure AD Teams creation policy",
+        "Exchange license",
+        "OneDrive storage"
+      ],
+      "q": "Users cannot create Teams. What should you check FIRST?",
+      "topic": "Teams Governance"
+    },
+    {
+      "answer": 0,
+      "explanation": "PSTN calling requires Calling Plans or Direct Routing.",
+      "level": 6,
+      "options": [
+        "Calling Plans or Direct Routing",
+        "Exchange Online",
+        "OneDrive",
+        "SharePoint"
+      ],
+      "q": "Which component enables PSTN calling in Teams?",
+      "topic": "Teams Voice"
+    },
+    {
+      "answer": 1,
+      "explanation": "Meeting recordings are stored in OneDrive or SharePoint.",
+      "level": 6,
+      "options": [
+        "Exchange",
+        "SharePoint / OneDrive",
+        "Teams",
+        "Stream only"
+      ],
+      "q": "Meeting recordings are stored where?",
+      "topic": "Teams Meetings"
+    },
+    {
+      "answer": 1,
+      "explanation": "Teams Admin role manages Teams-specific settings.",
+      "level": 6,
+      "options": [
+        "Global Admin",
+        "Teams Administrator",
+        "Exchange Admin",
+        "Security Admin"
+      ],
+      "q": "Which role manages Teams settings?",
+      "topic": "RBAC"
+    },
+    {
+      "answer": 2,
+      "explanation": "Versioning protects against accidental deletions and overwrites.",
+      "level": 7,
+      "options": [
+        "Disable delete",
+        "Enable retention policy",
+        "Enable versioning",
+        "Move to OneDrive"
+      ],
+      "q": "Users complain they accidentally delete SharePoint files. What is the BEST solution?",
+      "topic": "SharePoint Governance"
+    },
+    {
+      "answer": 1,
+      "explanation": "External sharing is controlled in SharePoint admin settings.",
+      "level": 7,
+      "options": [
+        "Teams policy",
+        "SharePoint admin center",
+        "Azure firewall",
+        "Exchange transport"
+      ],
+      "q": "What controls external sharing?",
+      "topic": "SharePoint Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "DLP detects and blocks sensitive data exfiltration.",
+      "level": 8,
+      "options": [
+        "Retention policy",
+        "DLP policy",
+        "Sensitivity label",
+        "Secure score"
+      ],
+      "q": "Which feature prevents data leakage via email?",
+      "topic": "Compliance"
+    },
+    {
+      "answer": 1,
+      "explanation": "Sensitivity labels apply encryption automatically.",
+      "level": 8,
+      "options": [
+        "DLP",
+        "Sensitivity labels",
+        "Defender policy",
+        "Retention"
+      ],
+      "q": "Which policy encrypts documents automatically?",
+      "topic": "Information Protection"
+    },
+    {
+      "answer": 1,
+      "explanation": "Conditional Access integrates with Intune compliance policies.",
+      "level": 9,
+      "options": [
+        "DLP",
+        "Conditional Access with Intune",
+        "RBAC",
+        "Secure score"
+      ],
+      "q": "A device needs compliance before accessing M365. Which feature is used?",
+      "topic": "Intune"
+    },
+    {
+      "answer": 2,
+      "explanation": "MAM without enrollment protects app data on BYOD.",
+      "level": 9,
+      "options": [
+        "Autopilot",
+        "MDM only",
+        "MAM without enrollment",
+        "Hybrid join"
+      ],
+      "q": "Which enrollment supports personal BYOD?",
+      "topic": "BYOD"
+    },
+    {
+      "answer": 1,
+      "explanation": "ExchangeOnlineManagement module is used for modern Exchange PowerShell.",
+      "level": 10,
+      "options": [
+        "AzureAD",
+        "ExchangeOnlineManagement",
+        "MSOnline",
+        "GraphOnly"
+      ],
+      "q": "Which module manages Exchange Online via PowerShell?",
+      "topic": "PowerShell"
+    },
+    {
+      "answer": 1,
+      "explanation": "Microsoft Graph PowerShell SDK is the future direction.",
+      "level": 10,
+      "options": [
+        "MSOL",
+        "Graph PowerShell SDK",
+        "EXO V1",
+        "ADUC"
+      ],
+      "q": "What is the FUTURE replacement for older AzureAD PowerShell?",
+      "topic": "Automation"
+    },
+    {
+      "answer": 1,
+      "explanation": "Microsoft Purview is the centralized compliance portal for DLP, retention, audit, and eDiscovery.",
+      "level": 2,
+      "options": [
+        "Microsoft Defender",
+        "Microsoft Purview",
+        "Azure Monitor",
+        "Secure Score"
+      ],
+      "q": "Which Microsoft 365 service is used for compliance, eDiscovery, and data governance?",
+      "topic": "Compliance"
+    },
+    {
+      "answer": 1,
+      "explanation": "DLP policies detect sensitive data like credit card numbers and can block external sharing.",
+      "level": 6,
+      "options": [
+        "Retention Policy",
+        "DLP Policy",
+        "Sensitivity Label without encryption",
+        "Audit Logging"
+      ],
+      "q": "A user accidentally shares a file containing credit card numbers externally. Which feature can PREVENT this?",
+      "topic": "Data Loss Prevention"
+    },
+    {
+      "answer": 2,
+      "explanation": "Sensitivity labels can apply encryption and access restrictions automatically.",
+      "level": 4,
+      "options": [
+        "DLP Policy",
+        "Retention Policy",
+        "Sensitivity Label",
+        "Conditional Access"
+      ],
+      "q": "Which policy automatically encrypts documents labeled as Confidential?",
+      "topic": "Information Protection"
+    },
+    {
+      "answer": 1,
+      "explanation": "Conditional Access evaluates signals such as device state, user risk, location, and app.",
+      "level": 5,
+      "options": [
+        "Mailbox size",
+        "User risk, device compliance, location",
+        "SharePoint permissions",
+        "License type"
+      ],
+      "q": "What does Conditional Access evaluate BEFORE granting access?",
+      "topic": "Identity Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Conditional Access supports location-aware MFA enforcement.",
+      "level": 6,
+      "options": [
+        "Security Defaults",
+        "Conditional Access with named locations",
+        "DLP",
+        "Defender policy"
+      ],
+      "q": "An admin wants MFA only when users log in from outside the corporate network. What should be used?",
+      "topic": "Conditional Access"
+    },
+    {
+      "answer": 2,
+      "explanation": "Safe Attachments detonate files in a sandbox environment to detect malware.",
+      "level": 5,
+      "options": [
+        "Safe Links",
+        "Anti-spam",
+        "Safe Attachments",
+        "Transport Rules"
+      ],
+      "q": "Which Microsoft Defender feature protects against malicious email attachments?",
+      "topic": "Defender for Office 365"
+    },
+    {
+      "answer": 1,
+      "explanation": "Threat Explorer allows investigation and remediation of malicious emails.",
+      "level": 7,
+      "options": [
+        "Delete user accounts",
+        "Run threat explorer / email purge",
+        "Reset tenant",
+        "Disable Exchange"
+      ],
+      "q": "A phishing email was reported AFTER some users clicked the link. What should you do FIRST?",
+      "topic": "Incident Response"
+    },
+    {
+      "answer": 0,
+      "explanation": "Retention policies preserve content for compliance and legal requirements.",
+      "level": 4,
+      "options": [
+        "Retention Policy",
+        "Sensitivity Label",
+        "DLP Policy",
+        "Conditional Access"
+      ],
+      "q": "Which policy keeps emails for legal investigations even if users delete them?",
+      "topic": "Retention"
+    },
+    {
+      "answer": 1,
+      "explanation": "Secure Score measures security configuration and provides improvement actions.",
+      "level": 3,
+      "options": [
+        "Block attacks automatically",
+        "Measure tenant security posture",
+        "Encrypt data",
+        "Replace Defender"
+      ],
+      "q": "What is the PRIMARY purpose of Microsoft Secure Score?",
+      "topic": "Security Posture"
+    },
+    {
+      "answer": 1,
+      "explanation": "Unified Audit Log tracks activities across all Microsoft 365 services.",
+      "level": 5,
+      "options": [
+        "Activity Explorer",
+        "Unified Audit Log",
+        "Message Trace",
+        "Sign-in Logs"
+      ],
+      "q": "Which audit feature records user and admin activity across M365?",
+      "topic": "Auditing"
+    },
+    {
+      "answer": 1,
+      "explanation": "Insider Risk Management detects risky user behavior patterns.",
+      "level": 8,
+      "options": [
+        "DLP",
+        "Insider Risk Management",
+        "Secure Score",
+        "Retention"
+      ],
+      "q": "A manager wants alerts when an employee downloads大量 data before resignation. Which solution fits BEST?",
+      "topic": "Insider Risk"
+    },
+    {
+      "answer": 1,
+      "explanation": "SharePoint external access expiration controls external sharing duration.",
+      "level": 6,
+      "options": [
+        "Sensitivity Label",
+        "SharePoint expiration policy",
+        "Retention Label",
+        "Conditional Access"
+      ],
+      "q": "Which feature removes access to files AFTER external sharing expires?",
+      "topic": "Data Sharing Control"
+    },
+    {
+      "answer": 1,
+      "explanation": "Compliance Administrators manage DLP, retention, and eDiscovery.",
+      "level": 3,
+      "options": [
+        "Global Administrator",
+        "Compliance Administrator",
+        "Exchange Administrator",
+        "Billing Administrator"
+      ],
+      "q": "Which role can manage DLP policies without full admin rights?",
+      "topic": "RBAC"
+    },
+    {
+      "answer": 1,
+      "explanation": "DLP policies start with selecting locations and sensitive data types.",
+      "level": 6,
+      "options": [
+        "Enable alerting",
+        "Choose locations and sensitive info types",
+        "Create user training",
+        "Run PowerShell"
+      ],
+      "q": "What is the FIRST step when creating a DLP policy?",
+      "topic": "DLP Configuration"
+    },
+    {
+      "answer": 1,
+      "explanation": "App Protection Policies restrict data movement on unmanaged devices.",
+      "level": 7,
+      "options": [
+        "DLP",
+        "MAM App Protection Policies",
+        "CASB Connector",
+        "Retention"
+      ],
+      "q": "Which feature prevents users from copying sensitive data to unmanaged apps?",
+      "topic": "Endpoint Security"
+    },
+    {
+      "answer": 0,
+      "explanation": "Core eDiscovery supports search and export for investigations.",
+      "level": 5,
+      "options": [
+        "Core eDiscovery",
+        "Premium eDiscovery",
+        "Audit Only",
+        "Insider Risk"
+      ],
+      "q": "What type of eDiscovery allows keyword searches and exports?",
+      "topic": "eDiscovery"
+    },
+    {
+      "answer": 1,
+      "explanation": "Microsoft Entra ID Identity Protection detects risky sign-ins and users.",
+      "level": 6,
+      "options": [
+        "Defender for Office",
+        "Identity Protection",
+        "DLP",
+        "SharePoint audit"
+      ],
+      "q": "Which feature detects risky sign-ins automatically?",
+      "topic": "Identity Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Sensitivity labels enforce encryption even for external users.",
+      "level": 7,
+      "options": [
+        "DLP",
+        "Sensitivity Labels with encryption",
+        "Retention policy",
+        "Safe Links"
+      ],
+      "q": "A company requires encryption for files shared externally. Which control meets this requirement?",
+      "topic": "Information Protection"
+    },
+    {
+      "answer": 1,
+      "explanation": "Mailbox access is logged in the Unified Audit Log.",
+      "level": 6,
+      "options": [
+        "Message trace",
+        "Unified Audit Log",
+        "Mailbox size report",
+        "Conditional Access logs"
+      ],
+      "q": "Which log helps investigate mailbox access by admins?",
+      "topic": "Auditing"
+    },
+    {
+      "answer": 0,
+      "explanation": "Security Defaults enforce MFA and block legacy authentication globally.",
+      "level": 4,
+      "options": [
+        "All legacy protocols blocked and MFA enforced",
+        "Only admin MFA",
+        "DLP enabled",
+        "Secure Score resets"
+      ],
+      "q": "What happens when Security Defaults are enabled?",
+      "topic": "Tenant Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Microsoft Entra ID is the new name for Azure Active Directory.",
+      "level": 1,
+      "options": [
+        "Active Directory Domain Services",
+        "Azure Active Directory",
+        "Azure IAM",
+        "Windows Identity Manager"
+      ],
+      "q": "What is Microsoft Entra ID formerly known as?",
+      "topic": "Entra ID Basics"
+    },
+    {
+      "answer": 1,
+      "explanation": "The Azure Portal is used to manage Entra ID identities, applications, and access policies.",
+      "level": 1,
+      "options": [
+        "Microsoft 365 Admin Center",
+        "Azure Portal",
+        "Exchange Admin Center",
+        "Defender Portal"
+      ],
+      "q": "Which portal is primarily used to manage users, groups, and app registrations?",
+      "topic": "Azure Admin Center"
+    },
+    {
+      "answer": 1,
+      "explanation": "SSO allows users to authenticate once and access multiple applications securely.",
+      "level": 2,
+      "options": [
+        "Reduce licensing cost",
+        "Allow one login access to multiple applications",
+        "Encrypt user passwords",
+        "Block external users"
+      ],
+      "q": "What is the main purpose of Single Sign-On (SSO)?",
+      "topic": "SSO"
+    },
+    {
+      "answer": 1,
+      "explanation": "Enterprise Applications represent service principals used for SSO and access control.",
+      "level": 3,
+      "options": [
+        "Application Registration",
+        "Enterprise Application",
+        "Security Group",
+        "Managed Identity"
+      ],
+      "q": "Which object is created when you configure SSO for a SaaS app?",
+      "topic": "Enterprise Applications"
+    },
+    {
+      "answer": 1,
+      "explanation": "App Registrations define how applications integrate with Entra ID and APIs.",
+      "level": 3,
+      "options": [
+        "User authentication only",
+        "Registering applications to use Entra ID for auth and Graph API",
+        "Managing licenses",
+        "Creating Teams"
+      ],
+      "q": "What is an App Registration used for?",
+      "topic": "App Registration"
+    },
+    {
+      "answer": 2,
+      "explanation": "OAuth 2.0 and OpenID Connect are modern cloud authentication protocols.",
+      "level": 4,
+      "options": [
+        "LDAP",
+        "Kerberos",
+        "OAuth 2.0 / OpenID Connect",
+        "NTLM"
+      ],
+      "q": "Which protocol is MOST commonly used for modern authentication in Entra ID?",
+      "topic": "Authentication Protocols"
+    },
+    {
+      "answer": 1,
+      "explanation": "App Registration defines the application, while the Enterprise App is its service principal in the tenant.",
+      "level": 5,
+      "options": [
+        "They are the same",
+        "App Registration defines the app, Enterprise App is its instance",
+        "Enterprise App is for users only",
+        "App Registration is deprecated"
+      ],
+      "q": "What is the difference between App Registration and Enterprise Application?",
+      "topic": "Application Architecture"
+    },
+    {
+      "answer": 1,
+      "explanation": "Enterprise apps require explicit user or group assignment.",
+      "level": 5,
+      "options": [
+        "Application permissions",
+        "User assignment in Enterprise Application",
+        "License status",
+        "Azure subscription"
+      ],
+      "q": "A user cannot access a SaaS app despite being assigned. What should you check FIRST?",
+      "topic": "SSO Troubleshooting"
+    },
+    {
+      "answer": 2,
+      "explanation": "Conditional Access enforces context-aware access decisions.",
+      "level": 4,
+      "options": [
+        "RBAC",
+        "Security Defaults",
+        "Conditional Access",
+        "Identity Governance"
+      ],
+      "q": "Which feature allows controlling access based on device, location, or risk?",
+      "topic": "Conditional Access"
+    },
+    {
+      "answer": 1,
+      "explanation": "OAuth issues access tokens used to call APIs like Microsoft Graph.",
+      "level": 5,
+      "options": [
+        "Kerberos ticket",
+        "Access token",
+        "DNS token",
+        "API key"
+      ],
+      "q": "What token is issued after successful authentication using OAuth 2.0?",
+      "topic": "OAuth"
+    },
+    {
+      "answer": 1,
+      "explanation": "Microsoft Graph provides a single API endpoint for Microsoft 365 services.",
+      "level": 3,
+      "options": [
+        "Azure REST API",
+        "Microsoft Graph API",
+        "Exchange EWS",
+        "SharePoint SOAP"
+      ],
+      "q": "Which API provides unified access to Microsoft 365 data?",
+      "topic": "Microsoft Graph"
+    },
+    {
+      "answer": 1,
+      "explanation": "Application permissions allow daemon or background services.",
+      "level": 6,
+      "options": [
+        "Delegated permission",
+        "Application permission",
+        "User permission",
+        "Admin permission only"
+      ],
+      "q": "Which permission type allows an app to act without a signed-in user?",
+      "topic": "Graph Permissions"
+    },
+    {
+      "answer": 1,
+      "explanation": "Admin consent is required for tenant-wide or sensitive permissions.",
+      "level": 6,
+      "options": [
+        "To reduce licensing cost",
+        "To approve high-privilege API permissions",
+        "To reset passwords",
+        "To activate MFA"
+      ],
+      "q": "Why is Admin Consent required in some app registrations?",
+      "topic": "Consent Framework"
+    },
+    {
+      "answer": 0,
+      "explanation": "401 usually indicates token or authentication issues.",
+      "level": 7,
+      "options": [
+        "Expired or missing access token",
+        "Wrong tenant",
+        "DNS issue",
+        "Service outage"
+      ],
+      "q": "A Graph API call returns 401 Unauthorized. What is the MOST likely cause?",
+      "topic": "Graph Troubleshooting"
+    },
+    {
+      "answer": 1,
+      "explanation": "Identity Protection analyzes sign-in risk using machine learning.",
+      "level": 6,
+      "options": [
+        "Conditional Access",
+        "Identity Protection",
+        "Audit Logs",
+        "RBAC"
+      ],
+      "q": "Which feature tracks risky sign-ins automatically?",
+      "topic": "Identity Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Managed Identities provide secure, credential-free authentication for Azure services.",
+      "level": 5,
+      "options": [
+        "User authentication",
+        "Passwordless access for Azure resources",
+        "External user access",
+        "Conditional Access"
+      ],
+      "q": "What is the purpose of Managed Identity?",
+      "topic": "Managed Identity"
+    },
+    {
+      "answer": 1,
+      "explanation": "Sign-in logs show Conditional Access evaluation details.",
+      "level": 6,
+      "options": [
+        "Audit logs",
+        "Sign-in logs",
+        "Activity logs",
+        "Secure Score"
+      ],
+      "q": "Which log helps diagnose why Conditional Access blocked access?",
+      "topic": "Troubleshooting"
+    },
+    {
+      "answer": 2,
+      "explanation": "Legacy auth bypasses MFA and is vulnerable to attacks.",
+      "level": 4,
+      "options": [
+        "Improved performance",
+        "Higher security",
+        "Increased risk of password spray attacks",
+        "Better compatibility"
+      ],
+      "q": "What happens if legacy authentication is NOT blocked?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Application Administrators manage apps without full tenant control.",
+      "level": 3,
+      "options": [
+        "Global Administrator",
+        "Application Administrator",
+        "Security Administrator",
+        "Billing Administrator"
+      ],
+      "q": "Which role is BEST for managing app registrations without full control?",
+      "topic": "RBAC"
+    },
+    {
+      "answer": 1,
+      "explanation": "SCIM automates user provisioning and de-provisioning.",
+      "level": 7,
+      "options": [
+        "SSO",
+        "SCIM provisioning",
+        "Graph API",
+        "RBAC"
+      ],
+      "q": "A company wants automatic provisioning of users into SaaS apps. Which feature is used?",
+      "topic": "Provisioning"
+    },
+    {
+      "answer": 1,
+      "explanation": "The tenant is the primary identity and security boundary.",
+      "level": 4,
+      "options": [
+        "Subscription",
+        "Tenant",
+        "Resource Group",
+        "Domain"
+      ],
+      "q": "What is the PRIMARY identity boundary in Entra ID?",
+      "topic": "Architecture"
+    },
+    {
+      "answer": 1,
+      "explanation": "Graph consolidates APIs and supports modern authentication.",
+      "level": 5,
+      "options": [
+        "It requires licenses",
+        "Unified endpoint and modern auth",
+        "Faster internet",
+        "Legacy compatibility"
+      ],
+      "q": "Why is Microsoft Graph preferred over older APIs?",
+      "topic": "Architecture"
+    },
+    {
+      "answer": 1,
+      "explanation": "Identity Protection detects risky sign-ins using ML-based analysis.",
+      "level": 6,
+      "options": [
+        "Conditional Access",
+        "Identity Protection",
+        "Audit Logs",
+        "RBAC"
+      ],
+      "q": "Which Entra ID feature detects impossible travel and risky sign-ins?",
+      "topic": "Identity Protection"
+    },
+    {
+      "answer": 1,
+      "explanation": "Legacy authentication does not support MFA and is vulnerable to attacks.",
+      "level": 5,
+      "options": [
+        "It improves performance",
+        "It bypasses MFA protections",
+        "It breaks SSO",
+        "It increases licensing cost"
+      ],
+      "q": "Why should legacy authentication be disabled?",
+      "topic": "Authentication Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Access tokens are presented to APIs like Microsoft Graph.",
+      "level": 5,
+      "options": [
+        "ID Token",
+        "Access Token",
+        "Refresh Token",
+        "Kerberos Ticket"
+      ],
+      "q": "Which token proves the app's permission to call Microsoft Graph?",
+      "topic": "OAuth Tokens"
+    },
+    {
+      "answer": 1,
+      "explanation": "Daemon or background apps require Application permissions.",
+      "level": 6,
+      "options": [
+        "When a user is logged in",
+        "When the app runs without user interaction",
+        "For SSO only",
+        "For MFA enforcement"
+      ],
+      "q": "When should Application permissions be used instead of Delegated?",
+      "topic": "Graph Permissions"
+    },
+    {
+      "answer": 2,
+      "explanation": "PIM provides just-in-time privileged role activation.",
+      "level": 7,
+      "options": [
+        "RBAC",
+        "Conditional Access",
+        "Privileged Identity Management",
+        "Identity Protection"
+      ],
+      "q": "Which feature ensures temporary elevation for Global Admins?",
+      "topic": "Privileged Access"
+    },
+    {
+      "answer": 1,
+      "explanation": "Microsoft Entra ID provides cloud-based identity, authentication, and access control.",
+      "level": 1,
+      "options": [
+        "On-premises Active Directory",
+        "Cloud-based identity and access management service",
+        "File storage service",
+        "License management tool"
+      ],
+      "q": "What is Microsoft Entra ID?",
+      "topic": "Basics"
+    },
+    {
+      "answer": 1,
+      "explanation": "The Azure Portal is the primary management interface for Entra ID.",
+      "level": 1,
+      "options": [
+        "Microsoft 365 Admin Center",
+        "Azure Portal",
+        "Exchange Admin Center",
+        "Defender Portal"
+      ],
+      "q": "Which portal is used to manage Entra ID users and applications?",
+      "topic": "Administration"
+    },
+    {
+      "answer": 1,
+      "explanation": "SSO allows a user to authenticate once and access multiple applications.",
+      "level": 2,
+      "options": [
+        "Lower licensing cost",
+        "One authentication for multiple apps",
+        "Password encryption",
+        "Guest access control"
+      ],
+      "q": "What is the main benefit of Single Sign-On (SSO)?",
+      "topic": "SSO"
+    },
+    {
+      "answer": 1,
+      "explanation": "Enterprise Applications are service principals representing apps in a tenant.",
+      "level": 3,
+      "options": [
+        "App Registration",
+        "Enterprise Application",
+        "Security Group",
+        "Managed Identity"
+      ],
+      "q": "Which object represents a SaaS application inside your tenant?",
+      "topic": "Enterprise Applications"
+    },
+    {
+      "answer": 1,
+      "explanation": "App Registration defines authentication, permissions, and API access.",
+      "level": 3,
+      "options": [
+        "Assign licenses",
+        "Define how an app integrates with Entra ID and APIs",
+        "Create Teams",
+        "Manage mailboxes"
+      ],
+      "q": "What is the purpose of App Registration?",
+      "topic": "App Registration"
+    },
+    {
+      "answer": 2,
+      "explanation": "OAuth 2.0 and OpenID Connect are modern authentication standards.",
+      "level": 4,
+      "options": [
+        "Kerberos",
+        "NTLM",
+        "OAuth 2.0 / OpenID Connect",
+        "LDAP"
+      ],
+      "q": "Which protocol is used for modern authentication?",
+      "topic": "Authentication"
+    },
+    {
+      "answer": 1,
+      "explanation": "App Registration defines the app; Enterprise Application is its instance in the tenant.",
+      "level": 5,
+      "options": [
+        "They are identical",
+        "Enterprise App is the service principal of App Registration",
+        "One replaces the other",
+        "Enterprise App is legacy"
+      ],
+      "q": "What is the relationship between App Registration and Enterprise Application?",
+      "topic": "Architecture"
+    },
+    {
+      "answer": 1,
+      "explanation": "Enterprise Applications often require explicit user or group assignment.",
+      "level": 5,
+      "options": [
+        "Conditional Access",
+        "User assignment to the Enterprise Application",
+        "License availability",
+        "Firewall rules"
+      ],
+      "q": "Users cannot access an assigned app. What should be checked FIRST?",
+      "topic": "SSO Troubleshooting"
+    },
+    {
+      "answer": 1,
+      "explanation": "Conditional Access evaluates multiple signals before granting access.",
+      "level": 4,
+      "options": [
+        "RBAC",
+        "Conditional Access",
+        "Security Defaults",
+        "Identity Governance"
+      ],
+      "q": "Which feature enforces access rules based on location, device, or risk?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Access tokens authorize API requests such as Microsoft Graph calls.",
+      "level": 5,
+      "options": [
+        "ID Token",
+        "Access Token",
+        "Refresh Token",
+        "Kerberos Ticket"
+      ],
+      "q": "Which token is used to call Microsoft Graph API?",
+      "topic": "OAuth"
+    },
+    {
+      "answer": 1,
+      "explanation": "Microsoft Graph provides a unified API to access M365 services.",
+      "level": 3,
+      "options": [
+        "Managing Azure resources only",
+        "Unified access to Microsoft 365 and Entra ID data",
+        "Email transport",
+        "Device imaging"
+      ],
+      "q": "What is Microsoft Graph API used for?",
+      "topic": "Microsoft Graph"
+    },
+    {
+      "answer": 1,
+      "explanation": "Delegated permissions act on behalf of a signed-in user.",
+      "level": 5,
+      "options": [
+        "Application",
+        "Delegated",
+        "Admin",
+        "Custom"
+      ],
+      "q": "Which permission type requires a signed-in user?",
+      "topic": "Permissions"
+    },
+    {
+      "answer": 1,
+      "explanation": "Application permissions allow apps to run without user interaction.",
+      "level": 6,
+      "options": [
+        "Delegated",
+        "Application",
+        "User.Read",
+        "OpenID"
+      ],
+      "q": "Which permission type is used by background services?",
+      "topic": "Permissions"
+    },
+    {
+      "answer": 1,
+      "explanation": "Admin consent approves sensitive or tenant-wide permissions.",
+      "level": 6,
+      "options": [
+        "Enable MFA",
+        "Approve high-privilege API access",
+        "Reset passwords",
+        "Assign licenses"
+      ],
+      "q": "Why is admin consent required?",
+      "topic": "Consent"
+    },
+    {
+      "answer": 2,
+      "explanation": "403 indicates insufficient permissions to access the resource.",
+      "level": 7,
+      "options": [
+        "Network issue",
+        "Expired token",
+        "Missing permissions",
+        "Tenant outage"
+      ],
+      "q": "A Graph API call returns 403 Forbidden. What is the MOST likely cause?",
+      "topic": "Graph Troubleshooting"
+    },
+    {
+      "answer": 1,
+      "explanation": "Sign-in logs show Conditional Access policy evaluation results.",
+      "level": 6,
+      "options": [
+        "Audit logs",
+        "Sign-in logs",
+        "Activity logs",
+        "Secure Score"
+      ],
+      "q": "Which log explains why Conditional Access blocked a sign-in?",
+      "topic": "Troubleshooting"
+    },
+    {
+      "answer": 1,
+      "explanation": "Legacy protocols do not support MFA and increase attack risk.",
+      "level": 4,
+      "options": [
+        "Performance degradation",
+        "MFA bypass",
+        "License abuse",
+        "Token expiry"
+      ],
+      "q": "What is the main risk of legacy authentication?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Application Administrators manage apps without full tenant control.",
+      "level": 3,
+      "options": [
+        "Global Administrator",
+        "Application Administrator",
+        "Billing Administrator",
+        "Helpdesk Administrator"
+      ],
+      "q": "Which role can manage app registrations with limited tenant access?",
+      "topic": "RBAC"
+    },
+    {
+      "answer": 1,
+      "explanation": "SCIM automates user provisioning and de‑provisioning.",
+      "level": 7,
+      "options": [
+        "SSO",
+        "SCIM Provisioning",
+        "Microsoft Graph",
+        "RBAC"
+      ],
+      "q": "Which feature automates provisioning users into SaaS apps?",
+      "topic": "Provisioning"
+    },
+    {
+      "answer": 1,
+      "explanation": "The tenant is the primary security and identity boundary.",
+      "level": 4,
+      "options": [
+        "Subscription",
+        "Tenant",
+        "Resource group",
+        "Domain"
+      ],
+      "q": "What is the primary identity boundary in Entra ID?",
+      "topic": "Architecture"
+    },
+    {
+      "answer": 2,
+      "explanation": "PIM provides temporary elevation of privileged roles.",
+      "level": 7,
+      "options": [
+        "Conditional Access",
+        "RBAC",
+        "Privileged Identity Management",
+        "Identity Protection"
+      ],
+      "q": "Which feature provides just-in-time admin access?",
+      "topic": "PIM"
+    },
+    {
+      "answer": 1,
+      "explanation": "Managed Identities eliminate the need for credentials.",
+      "level": 6,
+      "options": [
+        "Service Principal",
+        "Managed Identity",
+        "Guest account",
+        "Security Group"
+      ],
+      "q": "Which identity type allows Azure services to authenticate without secrets?",
+      "topic": "Managed Identity"
+    },
+    {
+      "answer": 1,
+      "explanation": "Access tokens are short-lived for security reasons.",
+      "level": 5,
+      "options": [
+        "App deletion",
+        "Short token lifetime by design",
+        "User password reset only",
+        "Graph outage"
+      ],
+      "q": "What causes Access Token expiration?",
+      "topic": "OAuth"
+    },
+    {
+      "answer": 1,
+      "explanation": "Secure Score measures identity and tenant security posture.",
+      "level": 3,
+      "options": [
+        "Azure Advisor",
+        "Microsoft Secure Score",
+        "Defender Antivirus",
+        "Intune"
+      ],
+      "q": "Which tool helps assess identity security posture?",
+      "topic": "Security Posture"
+    },
+    {
+      "answer": 1,
+      "explanation": "Identity Protection detects risky user behavior.",
+      "level": 6,
+      "options": [
+        "Conditional Access",
+        "Identity Protection",
+        "Audit Logs",
+        "SCIM"
+      ],
+      "q": "Which feature evaluates risky users automatically?",
+      "topic": "Identity Protection"
+    },
+    {
+      "answer": 1,
+      "explanation": "Deleting Enterprise Application removes only the service principal.",
+      "level": 6,
+      "options": [
+        "App registration is deleted",
+        "Only service principal is removed",
+        "Users are deleted",
+        "Tenant is impacted"
+      ],
+      "q": "What happens when an Enterprise Application is deleted?",
+      "topic": "Lifecycle"
+    },
+    {
+      "answer": 1,
+      "explanation": "Microsoft Purview provides compliance and data governance.",
+      "level": 4,
+      "options": [
+        "Exchange Admin Center",
+        "Microsoft Purview",
+        "Teams Admin Center",
+        "Azure Portal"
+      ],
+      "q": "Which service manages compliance in M365?",
+      "topic": "Compliance"
+    }
+  ]
+}

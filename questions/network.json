@@ -1,0 +1,1916 @@
+{
+  "category": "network",
+  "questions": [
+    {
+      "answer": 1,
+      "explanation": "TCP is a connection-oriented protocol used for reliable communication.",
+      "level": 1,
+      "options": [
+        "Transfer Control Protocol",
+        "Transmission Control Protocol",
+        "Transport Communication Protocol",
+        "Terminal Control Process"
+      ],
+      "q": "What does TCP stand for?",
+      "topic": "TCP/IP"
+    },
+    {
+      "answer": 1,
+      "explanation": "Network layer handles routing and logical addressing (IP).",
+      "level": 1,
+      "options": [
+        "Transport layer",
+        "Network layer",
+        "Data link layer",
+        "Session layer"
+      ],
+      "q": "Which layer of OSI model is responsible for routing?",
+      "topic": "OSI"
+    },
+    {
+      "answer": 2,
+      "explanation": "HTTP uses port 80 for communication.",
+      "level": 1,
+      "options": [
+        "21",
+        "443",
+        "80",
+        "25"
+      ],
+      "q": "What is the default port of HTTP?",
+      "topic": "Protocols"
+    },
+    {
+      "answer": 1,
+      "explanation": "IP uniquely identifies devices on a network.",
+      "level": 1,
+      "options": [
+        "User login",
+        "Device identification on network",
+        "Disk storage",
+        "File transfer"
+      ],
+      "q": "What is IP address used for?",
+      "topic": "IP"
+    },
+    {
+      "answer": 2,
+      "explanation": "UDP does not establish a connection before sending data.",
+      "level": 1,
+      "options": [
+        "TCP",
+        "HTTP",
+        "UDP",
+        "FTP"
+      ],
+      "q": "Which protocol is connectionless?",
+      "topic": "TCP/IP"
+    },
+    {
+      "answer": 1,
+      "explanation": "Subnet mask separates network and host parts of IP address.",
+      "level": 1,
+      "options": [
+        "Encrypt data",
+        "Divide network and host portion",
+        "Routing packets",
+        "DNS resolution"
+      ],
+      "q": "What is subnet mask used for?",
+      "topic": "IP"
+    },
+    {
+      "answer": 1,
+      "explanation": "DNS resolves domain names into IP addresses.",
+      "level": 1,
+      "options": [
+        "Encrypt traffic",
+        "Translate domain names to IP addresses",
+        "Route packets",
+        "Store files"
+      ],
+      "q": "What does DNS do?",
+      "topic": "DNS"
+    },
+    {
+      "answer": 1,
+      "explanation": "Switch operates at Data Link Layer.",
+      "level": 1,
+      "options": [
+        "Router",
+        "Switch",
+        "Firewall",
+        "Gateway"
+      ],
+      "q": "Which device operates at Layer 2?",
+      "topic": "Switching"
+    },
+    {
+      "answer": 1,
+      "explanation": "MAC is a unique hardware identifier.",
+      "level": 1,
+      "options": [
+        "Logical address",
+        "Physical hardware address",
+        "IP address",
+        "DNS record"
+      ],
+      "q": "What is MAC address?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 2,
+      "explanation": "HTTPS uses encryption via SSL/TLS.",
+      "level": 1,
+      "options": [
+        "HTTP",
+        "FTP",
+        "HTTPS",
+        "SMTP"
+      ],
+      "q": "Which protocol is used for secure web browsing?",
+      "topic": "Protocols"
+    },
+    {
+      "answer": 0,
+      "explanation": "Routers connect different networks together.",
+      "level": 1,
+      "options": [
+        "Connecting networks",
+        "Storing files",
+        "User authentication",
+        "Running applications"
+      ],
+      "q": "What is a router used for?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "Ping checks network reachability.",
+      "level": 1,
+      "options": [
+        "File transfer",
+        "Check connectivity between devices",
+        "DNS setup",
+        "User login"
+      ],
+      "q": "What is ping used for?",
+      "topic": "Troubleshooting"
+    },
+    {
+      "answer": 0,
+      "explanation": "DHCP automatically assigns IP addresses.",
+      "level": 1,
+      "options": [
+        "Assign IP addresses automatically",
+        "Encrypt traffic",
+        "Route packets",
+        "Block traffic"
+      ],
+      "q": "What does DHCP do?",
+      "topic": "IP"
+    },
+    {
+      "answer": 1,
+      "explanation": "SMTP is used to send emails.",
+      "level": 1,
+      "options": [
+        "FTP",
+        "SMTP",
+        "POP3",
+        "IMAP"
+      ],
+      "q": "Which protocol is used for email sending?",
+      "topic": "Protocols"
+    },
+    {
+      "answer": 0,
+      "explanation": "ARP maps IP addresses to MAC addresses.",
+      "level": 1,
+      "options": [
+        "IP to MAC resolution",
+        "DNS resolution",
+        "Routing",
+        "Encryption"
+      ],
+      "q": "What is ARP used for?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 0,
+      "explanation": "VLAN logically segments networks.",
+      "level": 2,
+      "options": [
+        "Virtual LAN",
+        "Very Large Network",
+        "Virtual Link Access Node",
+        "Verified LAN Adapter"
+      ],
+      "q": "What is a VLAN?",
+      "topic": "Switching"
+    },
+    {
+      "answer": 1,
+      "explanation": "Data Link layer handles error detection.",
+      "level": 2,
+      "options": [
+        "Transport",
+        "Data Link",
+        "Network",
+        "Session"
+      ],
+      "q": "Which layer handles error detection in OSI?",
+      "topic": "OSI"
+    },
+    {
+      "answer": 1,
+      "explanation": "Gateway routes traffic outside local network.",
+      "level": 2,
+      "options": [
+        "Printer IP",
+        "Router IP for external traffic",
+        "DNS server",
+        "Switch IP"
+      ],
+      "q": "What is default gateway?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "NAT translates private IPs to public IPs.",
+      "level": 2,
+      "options": [
+        "Network Access Tool",
+        "Network Address Translation",
+        "New Address Table",
+        "Node Access Type"
+      ],
+      "q": "What is NAT?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Switch connects devices within same network.",
+      "level": 2,
+      "options": [
+        "Routing between networks",
+        "Connecting devices in LAN",
+        "DNS resolution",
+        "Firewalling"
+      ],
+      "q": "What is the purpose of switch?",
+      "topic": "Switching"
+    },
+    {
+      "answer": 1,
+      "explanation": "Packets carry data across networks.",
+      "level": 2,
+      "options": [
+        "Hardware device",
+        "Unit of data transmission",
+        "Network cable",
+        "Server process"
+      ],
+      "q": "What is packet?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Latency is delay in communication.",
+      "level": 2,
+      "options": [
+        "Speed of CPU",
+        "Delay in data transfer",
+        "Disk speed",
+        "Memory usage"
+      ],
+      "q": "What is latency in networking?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "Bandwidth is maximum data transfer rate.",
+      "level": 2,
+      "options": [
+        "Storage size",
+        "Data transfer capacity",
+        "CPU speed",
+        "RAM size"
+      ],
+      "q": "What is bandwidth?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Firewall controls network traffic based on rules.",
+      "level": 2,
+      "options": [
+        "Network cable",
+        "Security system to filter traffic",
+        "Router",
+        "Switch"
+      ],
+      "q": "What is firewall?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Ports identify services on a device.",
+      "level": 2,
+      "options": [
+        "Hardware slot",
+        "Logical communication endpoint",
+        "Cable type",
+        "IP address"
+      ],
+      "q": "What is port in networking?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "FTP is used for file transfers.",
+      "level": 2,
+      "options": [
+        "SMTP",
+        "FTP",
+        "HTTP",
+        "DNS"
+      ],
+      "q": "Which protocol is used for file transfer?",
+      "topic": "Protocols"
+    },
+    {
+      "answer": 1,
+      "explanation": "ICMP is used in ping and network diagnostics.",
+      "level": 2,
+      "options": [
+        "File transfer",
+        "Network diagnostics",
+        "Email sending",
+        "DNS resolution"
+      ],
+      "q": "What is ICMP used for?",
+      "topic": "Protocols"
+    },
+    {
+      "answer": 1,
+      "explanation": "Packet switching sends data in small packets.",
+      "level": 2,
+      "options": [
+        "Fixed path communication",
+        "Data sent in packets over network",
+        "Disk operation",
+        "CPU scheduling"
+      ],
+      "q": "What is packet switching?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Collisions occur in shared networks.",
+      "level": 2,
+      "options": [
+        "CPU crash",
+        "Two devices sending data at same time",
+        "Disk failure",
+        "Memory error"
+      ],
+      "q": "What is collision in networking?",
+      "topic": "Switching"
+    },
+    {
+      "answer": 1,
+      "explanation": "Subnetting divides networks to improve efficiency and management.",
+      "level": 3,
+      "options": [
+        "Increase internet speed",
+        "Divide a large network into smaller networks",
+        "Replace DNS",
+        "Encrypt network traffic"
+      ],
+      "q": "What is the purpose of subnetting?",
+      "topic": "Subnetting"
+    },
+    {
+      "answer": 2,
+      "explanation": "RIP uses distance-vector routing algorithm.",
+      "level": 3,
+      "options": [
+        "OSPF",
+        "BGP",
+        "RIP",
+        "IS-IS"
+      ],
+      "q": "Which routing protocol is considered a distance-vector protocol?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "OSPF is a link-state routing protocol used for efficient internal routing.",
+      "level": 3,
+      "options": [
+        "Email transfer",
+        "Shortest path routing within an autonomous system",
+        "File sharing",
+        "User authentication"
+      ],
+      "q": "What is the main function of OSPF?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "Switches map MAC addresses to ports for forwarding frames.",
+      "level": 3,
+      "options": [
+        "IP to MAC mappings",
+        "Port to MAC address mappings",
+        "DNS records",
+        "Routing tables"
+      ],
+      "q": "What does a switch MAC address table store?",
+      "topic": "Switching"
+    },
+    {
+      "answer": 1,
+      "explanation": "Trunking allows multiple VLANs to pass through one physical link.",
+      "level": 3,
+      "options": [
+        "Encrypt traffic",
+        "Carry multiple VLANs over a single link",
+        "Increase CPU speed",
+        "Assign IP addresses"
+      ],
+      "q": "What is the purpose of VLAN trunking?",
+      "topic": "VLAN"
+    },
+    {
+      "answer": 2,
+      "explanation": "Default route handles traffic when no specific route exists.",
+      "level": 3,
+      "options": [
+        "Local traffic only",
+        "Backup DNS",
+        "Forwarding unknown destination traffic",
+        "Switch configuration"
+      ],
+      "q": "What is a default route used for?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "TTL prevents packets from circulating indefinitely.",
+      "level": 3,
+      "options": [
+        "Time to load",
+        "Time to live (hop limit)",
+        "Transmission transfer link",
+        "Traffic timing log"
+      ],
+      "q": "What does TTL in a packet represent?",
+      "topic": "IP"
+    },
+    {
+      "answer": 1,
+      "explanation": "ARP cache stores resolved MAC addresses.",
+      "level": 3,
+      "options": [
+        "Store DNS records",
+        "Store IP-to-MAC mappings temporarily",
+        "Store routing tables",
+        "Store firewall rules"
+      ],
+      "q": "What is ARP cache used for?",
+      "topic": "ARP"
+    },
+    {
+      "answer": 1,
+      "explanation": "STP prevents switching loops in LAN networks.",
+      "level": 3,
+      "options": [
+        "Secure Transfer Protocol",
+        "Spanning Tree Protocol",
+        "Session Transfer Protocol",
+        "Switch Table Protocol"
+      ],
+      "q": "What is STP in networking?",
+      "topic": "Switching"
+    },
+    {
+      "answer": 1,
+      "explanation": "STP prevents broadcast storms caused by loops.",
+      "level": 3,
+      "options": [
+        "IP conflict",
+        "Network loops",
+        "DNS failure",
+        "CPU overload"
+      ],
+      "q": "What problem does STP solve?",
+      "topic": "Switching"
+    },
+    {
+      "answer": 1,
+      "explanation": "Collision domains define where data collisions happen.",
+      "level": 3,
+      "options": [
+        "Area where DNS resolves",
+        "Network segment where packet collisions can occur",
+        "Routing table area",
+        "Firewall zone"
+      ],
+      "q": "What is a collision domain?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 0,
+      "explanation": "Broadcast domain is where broadcast packets are sent.",
+      "level": 3,
+      "options": [
+        "Area where broadcast traffic is forwarded",
+        "DNS zone",
+        "Routing table",
+        "Firewall group"
+      ],
+      "q": "What is broadcast domain?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Load balancing improves performance and availability.",
+      "level": 3,
+      "options": [
+        "DNS mapping",
+        "Distributing traffic across multiple servers",
+        "Encrypting traffic",
+        "Assigning IP addresses"
+      ],
+      "q": "What is load balancing in networking?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "PAT allows multiple devices to share one public IP.",
+      "level": 3,
+      "options": [
+        "Static NAT",
+        "PAT (Port Address Translation)",
+        "Dynamic routing",
+        "DNS mapping"
+      ],
+      "q": "What is NAT overload also called?",
+      "topic": "NAT"
+    },
+    {
+      "answer": 1,
+      "explanation": "Hop count defines router traversal.",
+      "level": 3,
+      "options": [
+        "CPU cycle",
+        "Number of routers a packet passes through",
+        "DNS lookup",
+        "Firewall rule"
+      ],
+      "q": "What is hop in networking?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "BGP is used for inter-domain routing across the internet.",
+      "level": 4,
+      "options": [
+        "Internal routing only",
+        "Internet-wide routing between ISPs",
+        "File transfer",
+        "DNS resolution"
+      ],
+      "q": "Why is BGP used in large networks?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "Traffic flows in different paths in asymmetric routing.",
+      "level": 4,
+      "options": [
+        "Same path both directions",
+        "Different paths for inbound and outbound traffic",
+        "No routing",
+        "DNS routing"
+      ],
+      "q": "What is asymmetric routing?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 0,
+      "explanation": "Link aggregation increases bandwidth and redundancy.",
+      "level": 4,
+      "options": [
+        "Combining multiple network links into one logical link",
+        "Encrypting traffic",
+        "IP assignment",
+        "DNS resolution"
+      ],
+      "q": "What is link aggregation?",
+      "topic": "Switching"
+    },
+    {
+      "answer": 1,
+      "explanation": "MPLS speeds up routing decisions in ISP networks.",
+      "level": 4,
+      "options": [
+        "Email routing",
+        "Efficient packet forwarding in service provider networks",
+        "User authentication",
+        "File transfer"
+      ],
+      "q": "What is MPLS used for?",
+      "topic": "WAN"
+    },
+    {
+      "answer": 1,
+      "explanation": "Port mirroring copies traffic for monitoring.",
+      "level": 4,
+      "options": [
+        "Load balancing",
+        "Network traffic analysis",
+        "DNS resolution",
+        "Routing optimization"
+      ],
+      "q": "What is port mirroring used for?",
+      "topic": "Switching"
+    },
+    {
+      "answer": 1,
+      "explanation": "Stateful firewalls track active connections.",
+      "level": 4,
+      "options": [
+        "Checks only IP",
+        "Tracks connection state of traffic",
+        "DNS filtering",
+        "Disk scanning"
+      ],
+      "q": "What is firewall stateful inspection?",
+      "topic": "Security"
+    },
+    {
+      "answer": 0,
+      "explanation": "QoS prioritizes network traffic types.",
+      "level": 4,
+      "options": [
+        "Quality of Service",
+        "Quick output system",
+        "Query operation service",
+        "Queue optimization system"
+      ],
+      "q": "What is QoS in networking?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Jitter affects real-time communication quality.",
+      "level": 4,
+      "options": [
+        "Packet loss",
+        "Variation in packet delay",
+        "CPU delay",
+        "Disk delay"
+      ],
+      "q": "What is jitter in networking?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 0,
+      "explanation": "LACP manages link aggregation dynamically.",
+      "level": 4,
+      "options": [
+        "Link Aggregation Control Protocol",
+        "Local Access Control Protocol",
+        "Logical Address Control Protocol",
+        "Layer Access Communication Protocol"
+      ],
+      "q": "What is LACP?",
+      "topic": "Switching"
+    },
+    {
+      "answer": 1,
+      "explanation": "Convergence is time for network to reach stable state.",
+      "level": 4,
+      "options": [
+        "Server shutdown",
+        "Time taken for routing tables to stabilize",
+        "DNS failure",
+        "Disk sync"
+      ],
+      "q": "What is network convergence?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "Backbone carries major traffic between networks.",
+      "level": 4,
+      "options": [
+        "Home network",
+        "Core network connecting multiple segments",
+        "WiFi network",
+        "VPN network"
+      ],
+      "q": "What is a backbone network?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "ICMP redirect improves routing efficiency.",
+      "level": 4,
+      "options": [
+        "DNS failure alert",
+        "Router suggesting better route",
+        "Firewall block",
+        "Server error"
+      ],
+      "q": "What is ICMP redirect message?",
+      "topic": "ICMP"
+    },
+    {
+      "answer": 1,
+      "explanation": "Private IPs are used within local networks.",
+      "level": 4,
+      "options": [
+        "Public internet IPs",
+        "Internal network IPs",
+        "DNS IPs",
+        "Firewall IPs"
+      ],
+      "q": "What is private IP range?",
+      "topic": "IP"
+    },
+    {
+      "answer": 1,
+      "explanation": "Public IP is accessible over the internet.",
+      "level": 4,
+      "options": [
+        "Internal network IP",
+        "Internet-routable IP",
+        "Switch IP",
+        "DNS server IP"
+      ],
+      "q": "What is public IP address?",
+      "topic": "IP"
+    },
+    {
+      "answer": 1,
+      "explanation": "OSPF areas help reduce routing complexity and improve efficiency.",
+      "level": 5,
+      "options": [
+        "Increase CPU speed",
+        "Reduce routing table size and improve scalability",
+        "Encrypt traffic",
+        "Assign IP addresses"
+      ],
+      "q": "What is the main purpose of OSPF areas?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "BGP is used for routing between ISPs and autonomous systems.",
+      "level": 5,
+      "options": [
+        "Interior Gateway Protocol",
+        "Exterior Gateway Protocol used on the internet",
+        "LAN switching protocol",
+        "Encryption protocol"
+      ],
+      "q": "What is BGP best described as?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "VPN creates secure encrypted tunnels over public networks.",
+      "level": 5,
+      "options": [
+        "Faster CPU performance",
+        "Secure communication over public networks",
+        "Disk encryption",
+        "DNS resolution"
+      ],
+      "q": "What is a VPN primarily used for?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "IPSec provides strong encryption for VPNs.",
+      "level": 5,
+      "options": [
+        "FTP",
+        "IPSec",
+        "Telnet",
+        "HTTP"
+      ],
+      "q": "Which VPN protocol is most secure?",
+      "topic": "VPN"
+    },
+    {
+      "answer": 1,
+      "explanation": "Split tunneling allows selective routing via VPN.",
+      "level": 5,
+      "options": [
+        "Encrypt all traffic",
+        "Some traffic goes through VPN, some directly to internet",
+        "Block all traffic",
+        "DNS tunneling"
+      ],
+      "q": "What is split tunneling in VPN?",
+      "topic": "VPN"
+    },
+    {
+      "answer": 1,
+      "explanation": "IDS detects malicious network activity.",
+      "level": 5,
+      "options": [
+        "Internet Data System",
+        "Intrusion Detection System",
+        "Internal DNS Service",
+        "Interface Delivery System"
+      ],
+      "q": "What is IDS in networking?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "IPS actively blocks malicious traffic.",
+      "level": 5,
+      "options": [
+        "Internet Protocol Service",
+        "Intrusion Prevention System",
+        "Internal Packet Switch",
+        "Integrated Protocol System"
+      ],
+      "q": "What is IPS in networking?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "DMZ isolates public-facing services from internal network.",
+      "level": 5,
+      "options": [
+        "Internal LAN zone",
+        "Demilitarized zone between internet and internal network",
+        "DNS zone",
+        "Router zone"
+      ],
+      "q": "What is firewall DMZ?",
+      "topic": "Security"
+    },
+    {
+      "answer": 0,
+      "explanation": "NAT overload (PAT) allows many devices to share one IP.",
+      "level": 5,
+      "options": [
+        "One public IP for multiple private devices",
+        "DNS mapping",
+        "Routing tables",
+        "Firewall blocking"
+      ],
+      "q": "What is NAT overload used for?",
+      "topic": "NAT"
+    },
+    {
+      "answer": 1,
+      "explanation": "Port forwarding allows external access to internal services.",
+      "level": 5,
+      "options": [
+        "Encrypt traffic",
+        "Redirect external traffic to internal host",
+        "Increase bandwidth",
+        "Assign IP addresses"
+      ],
+      "q": "What is port forwarding?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 0,
+      "explanation": "ACL defines rules for permitting or denying traffic.",
+      "level": 5,
+      "options": [
+        "Access Control List",
+        "Automatic Connection Layer",
+        "Advanced Communication Link",
+        "Address Control Layer"
+      ],
+      "q": "What is network ACL?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Asymmetric routing can break stateful firewalls.",
+      "level": 5,
+      "options": [
+        "Same path both directions",
+        "Different path for request and response causing issues",
+        "No routing",
+        "DNS failure"
+      ],
+      "q": "What is asymmetric routing problem?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "Summarization reduces routing table size.",
+      "level": 5,
+      "options": [
+        "Deleting routes",
+        "Combining multiple routes into one",
+        "Encrypting routes",
+        "Blocking routes"
+      ],
+      "q": "What is route summarization?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "Detects when a network link goes down.",
+      "level": 5,
+      "options": [
+        "User login check",
+        "Detecting broken network links",
+        "Disk failure",
+        "CPU failure"
+      ],
+      "q": "What is link failure detection?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Convergence is how fast routing tables update.",
+      "level": 5,
+      "options": [
+        "Backup time",
+        "Time taken for network to stabilize after change",
+        "DNS time",
+        "CPU time"
+      ],
+      "q": "What is convergence time in routing?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "MPLS speeds up routing using label switching.",
+      "level": 6,
+      "options": [
+        "File transfer",
+        "Fast packet forwarding using labels",
+        "DNS resolution",
+        "User authentication"
+      ],
+      "q": "What is MPLS used for in ISP networks?",
+      "topic": "WAN"
+    },
+    {
+      "answer": 1,
+      "explanation": "QoS ensures important traffic gets priority.",
+      "level": 6,
+      "options": [
+        "Backup data",
+        "Prioritizing critical network traffic",
+        "Disk storage",
+        "Firewall rules"
+      ],
+      "q": "What is QoS priority queue used for?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "DDoS floods system with traffic to make it unavailable.",
+      "level": 6,
+      "options": [
+        "DNS failure",
+        "Distributed denial of service attack",
+        "Disk overload",
+        "CPU upgrade"
+      ],
+      "q": "What is DDoS attack?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Traffic shaping controls bandwidth usage.",
+      "level": 6,
+      "options": [
+        "Blocking users",
+        "Controlling network traffic flow rate",
+        "Encrypting data",
+        "Routing packets"
+      ],
+      "q": "What is traffic shaping?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Redundancy ensures availability during failure.",
+      "level": 6,
+      "options": [
+        "Single link",
+        "Multiple backup paths for failover",
+        "DNS configuration",
+        "User authentication"
+      ],
+      "q": "What is network redundancy?",
+      "topic": "Architecture"
+    },
+    {
+      "answer": 1,
+      "explanation": "HSRP provides gateway redundancy.",
+      "level": 6,
+      "options": [
+        "High Speed Routing Protocol",
+        "Hot Standby Router Protocol",
+        "Host System Routing Process",
+        "Hybrid Switching Routing Protocol"
+      ],
+      "q": "What is HSRP?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "VRRP provides router failover capability.",
+      "level": 6,
+      "options": [
+        "Virtual Routing Redundancy Protocol",
+        "Virtual Router Redundancy Protocol",
+        "Verified Routing Response Protocol",
+        "Virtual Remote Routing Process"
+      ],
+      "q": "What is VRRP?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "Packet sniffing is used in network diagnostics.",
+      "level": 6,
+      "options": [
+        "File transfer",
+        "Capturing network packets for analysis",
+        "DNS mapping",
+        "Routing traffic"
+      ],
+      "q": "What is packet sniffing?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Throttling limits network bandwidth usage.",
+      "level": 6,
+      "options": [
+        "Increasing speed",
+        "Limiting network speed",
+        "DNS resolution",
+        "Disk usage"
+      ],
+      "q": "What is bandwidth throttling?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Zero trust assumes no implicit trust in network.",
+      "level": 6,
+      "options": [
+        "Trust all devices",
+        "Never trust, always verify",
+        "Open network",
+        "No security model"
+      ],
+      "q": "What is zero trust network model?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "DNS poisoning redirects traffic to malicious sites.",
+      "level": 6,
+      "options": [
+        "Disk failure",
+        "Corrupting DNS cache with fake records",
+        "Routing issue",
+        "Firewall rule"
+      ],
+      "q": "What is DNS poisoning?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Real-time apps require low latency.",
+      "level": 6,
+      "options": [
+        "Email system",
+        "Real-time apps like VoIP or gaming",
+        "File storage",
+        "Backup system"
+      ],
+      "q": "What is latency-sensitive application?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "Segmentation improves security and performance.",
+      "level": 6,
+      "options": [
+        "Combining networks",
+        "Dividing network into isolated zones",
+        "Removing firewall",
+        "Increasing speed"
+      ],
+      "q": "What is network segmentation?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Backbone failure affects large portions of network.",
+      "level": 6,
+      "options": [
+        "Only one user affected",
+        "Entire network outage",
+        "Disk failure",
+        "CPU slowdown"
+      ],
+      "q": "What is backbone failure impact?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Incorrect static routing can create loops in packet forwarding.",
+      "level": 7,
+      "options": [
+        "Correct subnetting",
+        "Misconfigured static routes",
+        "High bandwidth",
+        "DNS failure"
+      ],
+      "q": "What is the main reason for routing loop in a network?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "TTL prevents packets from circulating forever.",
+      "level": 7,
+      "options": [
+        "Encrypt data",
+        "Limit packet lifetime in network",
+        "Increase speed",
+        "Assign IP address"
+      ],
+      "q": "What is the purpose of TTL in IP packets?",
+      "topic": "IP"
+    },
+    {
+      "answer": 1,
+      "explanation": "MTU mismatch causes fragmentation issues.",
+      "level": 7,
+      "options": [
+        "DNS resolution failure",
+        "Packet fragmentation or drop",
+        "User authentication failure",
+        "CPU overload"
+      ],
+      "q": "Which issue is most likely caused by MTU mismatch?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Distribution layer aggregates access switches.",
+      "level": 7,
+      "options": [
+        "Connect end devices",
+        "Aggregate access layer switches",
+        "Provide internet access",
+        "Run DNS services"
+      ],
+      "q": "What is the role of a distribution switch in enterprise networks?",
+      "topic": "Switching"
+    },
+    {
+      "answer": 1,
+      "explanation": "Encapsulation adds headers at each OSI layer.",
+      "level": 7,
+      "options": [
+        "Deleting packets",
+        "Wrapping data with protocol headers",
+        "Encrypting storage",
+        "Routing packets"
+      ],
+      "q": "What is packet encapsulation?",
+      "topic": "OSI"
+    },
+    {
+      "answer": 1,
+      "explanation": "Corrupted ARP cache leads to incorrect communication.",
+      "level": 7,
+      "options": [
+        "Disk failure",
+        "Incorrect IP-to-MAC mapping",
+        "CPU slowdown",
+        "DNS speed increase"
+      ],
+      "q": "What happens when ARP cache is corrupted?",
+      "topic": "ARP"
+    },
+    {
+      "answer": 1,
+      "explanation": "Broadcast storms overload network due to loops.",
+      "level": 7,
+      "options": [
+        "Normal traffic",
+        "Excessive broadcast traffic in a looped network",
+        "Encrypted traffic",
+        "Firewall blocking"
+      ],
+      "q": "What is a broadcast storm?",
+      "topic": "Switching"
+    },
+    {
+      "answer": 1,
+      "explanation": "Gateway routes traffic between different networks.",
+      "level": 7,
+      "options": [
+        "Switch traffic locally",
+        "Connect different networks",
+        "Store data",
+        "Monitor CPU"
+      ],
+      "q": "What is the role of a gateway?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "DNS translates domain names into IP addresses.",
+      "level": 7,
+      "options": [
+        "FTP",
+        "DNS",
+        "ARP",
+        "SMTP"
+      ],
+      "q": "Which protocol resolves hostname to IP?",
+      "topic": "DNS"
+    },
+    {
+      "answer": 1,
+      "explanation": "Too many connections exhaust available ports.",
+      "level": 7,
+      "options": [
+        "CPU failure",
+        "No available TCP/UDP ports",
+        "Disk full",
+        "DNS failure"
+      ],
+      "q": "What is port exhaustion?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Asymmetric encryption is used for secure communication setup.",
+      "level": 7,
+      "options": [
+        "Fast routing",
+        "Secure key exchange",
+        "Disk storage",
+        "Bandwidth control"
+      ],
+      "q": "What is asymmetric encryption used for?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Routing table determines packet forwarding paths.",
+      "level": 7,
+      "options": [
+        "DNS database",
+        "List of network routes",
+        "Firewall rules",
+        "Switch MAC list"
+      ],
+      "q": "What is a routing table?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "Packet loss causes TCP retransmissions.",
+      "level": 7,
+      "options": [
+        "High CPU usage",
+        "Packet loss or congestion",
+        "Fast network",
+        "Low latency"
+      ],
+      "q": "What causes high retransmission in TCP?",
+      "topic": "TCP/IP"
+    },
+    {
+      "answer": 1,
+      "explanation": "Core switches handle high-speed backbone traffic.",
+      "level": 7,
+      "options": [
+        "End device connection",
+        "High-speed backbone switching",
+        "Firewall control",
+        "DNS resolution"
+      ],
+      "q": "What is the role of core switch?",
+      "topic": "Switching"
+    },
+    {
+      "answer": 1,
+      "explanation": "Saturation occurs when link reaches max capacity.",
+      "level": 7,
+      "options": [
+        "CPU overload",
+        "Network link fully utilized",
+        "Disk failure",
+        "DNS issue"
+      ],
+      "q": "What is bandwidth saturation?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "Route flapping causes instability in internet routing.",
+      "level": 8,
+      "options": [
+        "Stable routing",
+        "Frequent route changes causing instability",
+        "DNS failure",
+        "Firewall blocking"
+      ],
+      "q": "What is BGP route flapping?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "SD-WAN optimizes WAN traffic using software control.",
+      "level": 8,
+      "options": [
+        "Disk optimization",
+        "Smart WAN traffic management",
+        "User login system",
+        "DNS server replacement"
+      ],
+      "q": "What is purpose of SD-WAN?",
+      "topic": "WAN"
+    },
+    {
+      "answer": 1,
+      "explanation": "Micro-segmentation improves security at workload level.",
+      "level": 8,
+      "options": [
+        "Large network grouping",
+        "Fine-grained network isolation",
+        "Router replacement",
+        "DNS tuning"
+      ],
+      "q": "What is micro-segmentation?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "GRE tunnels encapsulate packets for transmission.",
+      "level": 8,
+      "options": [
+        "Encryption protocol",
+        "Encapsulation method for routing traffic",
+        "DNS system",
+        "Switch protocol"
+      ],
+      "q": "What is GRE tunnel?",
+      "topic": "Tunneling"
+    },
+    {
+      "answer": 1,
+      "explanation": "Packet delay variation is also called jitter.",
+      "level": 8,
+      "options": [
+        "Disk latency",
+        "Jitter in packet arrival time",
+        "CPU usage",
+        "Firewall delay"
+      ],
+      "q": "What is packet delay variation?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "During convergence, routing may be unstable.",
+      "level": 8,
+      "options": [
+        "Faster network",
+        "Temporary packet loss or instability",
+        "Improved DNS",
+        "Increased CPU speed"
+      ],
+      "q": "What is routing convergence delay impact?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "MAC flooding overloads switch CAM table.",
+      "level": 8,
+      "options": [
+        "DNS attack",
+        "Switch table overflow attack",
+        "Disk attack",
+        "CPU attack"
+      ],
+      "q": "What is MAC flooding attack?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "LSA is used in OSPF routing updates.",
+      "level": 8,
+      "options": [
+        "Firewall rule",
+        "OSPF update message",
+        "DNS query",
+        "Switch broadcast"
+      ],
+      "q": "What is link state advertisement?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "ISP bottlenecks occur in backbone congestion.",
+      "level": 8,
+      "options": [
+        "User device issue",
+        "Congestion in backbone links",
+        "Disk failure",
+        "CPU overheating"
+      ],
+      "q": "What is network bottleneck at ISP level?",
+      "topic": "WAN"
+    },
+    {
+      "answer": 1,
+      "explanation": "Route poisoning prevents routing loops.",
+      "level": 8,
+      "options": [
+        "Firewall blocking",
+        "Marking route as unreachable",
+        "DNS attack",
+        "Disk failure"
+      ],
+      "q": "What is route poisoning?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "SLA violation means service quality dropped below agreement.",
+      "level": 8,
+      "options": [
+        "CPU overload",
+        "Failure to meet service uptime/latency guarantee",
+        "Disk full",
+        "DNS error"
+      ],
+      "q": "What is network SLA violation?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Port security limits unauthorized device access.",
+      "level": 8,
+      "options": [
+        "Firewall feature",
+        "Restrict MAC addresses on switch port",
+        "DNS feature",
+        "Routing feature"
+      ],
+      "q": "What is port security in switches?",
+      "topic": "Switching"
+    },
+    {
+      "answer": 1,
+      "explanation": "Traceroute shows hop-by-hop path.",
+      "level": 8,
+      "options": [
+        "File transfer",
+        "Tracing packet path across network",
+        "DNS setup",
+        "Firewall configuration"
+      ],
+      "q": "What is traceroute used for?",
+      "topic": "Troubleshooting"
+    },
+    {
+      "answer": 1,
+      "explanation": "Redundancy ensures alternate paths exist.",
+      "level": 8,
+      "options": [
+        "Single link design",
+        "Backup path for network availability",
+        "CPU backup",
+        "DNS backup"
+      ],
+      "q": "What is link failure redundancy design?",
+      "topic": "Architecture"
+    },
+    {
+      "answer": 1,
+      "explanation": "BGP is used for routing between different autonomous systems on the internet.",
+      "level": 9,
+      "options": [
+        "Encrypt traffic between users",
+        "Exchange routing information between autonomous systems",
+        "Assign IP addresses dynamically",
+        "Detect network loops automatically"
+      ],
+      "q": "What is the primary function of BGP in the internet backbone?",
+      "topic": "BGP"
+    },
+    {
+      "answer": 1,
+      "explanation": "AS Path helps prevent loops by listing AS sequence.",
+      "level": 9,
+      "options": [
+        "Encrypt packets",
+        "Prevent routing loops by tracking AS traversal",
+        "Assign VLANs",
+        "Resolve DNS names"
+      ],
+      "q": "What is BGP AS Path used for?",
+      "topic": "BGP"
+    },
+    {
+      "answer": 1,
+      "explanation": "Route reflectors reduce complexity in iBGP networks.",
+      "level": 9,
+      "options": [
+        "Encrypting routes",
+        "Reducing iBGP full mesh requirement",
+        "Blocking routes",
+        "Assigning IPs"
+      ],
+      "q": "What is route reflection in BGP?",
+      "topic": "BGP"
+    },
+    {
+      "answer": 1,
+      "explanation": "MPLS forwards packets using labels instead of IP lookup.",
+      "level": 9,
+      "options": [
+        "DNS optimization",
+        "Faster packet forwarding based on labels",
+        "CPU acceleration",
+        "Firewall bypass"
+      ],
+      "q": "What is MPLS label switching advantage?",
+      "topic": "MPLS"
+    },
+    {
+      "answer": 1,
+      "explanation": "Traffic engineering improves network efficiency and utilization.",
+      "level": 9,
+      "options": [
+        "User authentication process",
+        "Optimizing network paths for performance",
+        "Disk management",
+        "IP assignment"
+      ],
+      "q": "What is traffic engineering in networks?",
+      "topic": "WAN"
+    },
+    {
+      "answer": 1,
+      "explanation": "Anycast directs traffic to nearest available node.",
+      "level": 9,
+      "options": [
+        "Single source routing",
+        "Routing to nearest server among multiple locations",
+        "Blocking traffic",
+        "DNS encryption"
+      ],
+      "q": "What is Anycast routing used for?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "ISPs filter attack traffic before reaching target.",
+      "level": 9,
+      "options": [
+        "Increasing CPU speed",
+        "Filtering malicious traffic at backbone level",
+        "DNS caching",
+        "Switch replacement"
+      ],
+      "q": "What is DDoS mitigation at ISP level?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Route dampening reduces impact of flapping routes.",
+      "level": 9,
+      "options": [
+        "Speeding routing updates",
+        "Suppressing unstable routes",
+        "Encrypting routes",
+        "Assigning IPs"
+      ],
+      "q": "What is route dampening in BGP?",
+      "topic": "BGP"
+    },
+    {
+      "answer": 1,
+      "explanation": "SDN centralizes control plane logic.",
+      "level": 9,
+      "options": [
+        "Hardware switching",
+        "Centralized network control and automation",
+        "DNS resolution",
+        "Firewall replacement"
+      ],
+      "q": "What is SDN controller role?",
+      "topic": "SDN"
+    },
+    {
+      "answer": 1,
+      "explanation": "Northbound APIs connect SDN apps to controller.",
+      "level": 9,
+      "options": [
+        "Hardware interface",
+        "Interface between controller and applications",
+        "Switch port",
+        "Routing table"
+      ],
+      "q": "What is northbound API in SDN?",
+      "topic": "SDN"
+    },
+    {
+      "answer": 1,
+      "explanation": "Southbound APIs control network devices.",
+      "level": 9,
+      "options": [
+        "User interface",
+        "Communication between controller and network devices",
+        "DNS interface",
+        "Firewall rule"
+      ],
+      "q": "What is southbound API in SDN?",
+      "topic": "SDN"
+    },
+    {
+      "answer": 1,
+      "explanation": "Trading systems require ultra-low latency and zero loss.",
+      "level": 9,
+      "options": [
+        "Email systems",
+        "Financial trading networks",
+        "File storage only",
+        "DNS systems"
+      ],
+      "q": "What is zero packet loss requirement used in?",
+      "topic": "Performance"
+    },
+    {
+      "answer": 1,
+      "explanation": "Fiber provides high-speed long-distance communication.",
+      "level": 9,
+      "options": [
+        "Low cost only",
+        "High bandwidth and low latency",
+        "Easy installation",
+        "Wireless capability"
+      ],
+      "q": "What is optical fiber advantage in backbone networks?",
+      "topic": "WAN"
+    },
+    {
+      "answer": 1,
+      "explanation": "Peering allows ISPs to exchange traffic directly.",
+      "level": 9,
+      "options": [
+        "User login system",
+        "Exchange of traffic between ISPs",
+        "Firewall blocking",
+        "DNS resolution"
+      ],
+      "q": "What is peering in ISP networks?",
+      "topic": "ISP"
+    },
+    {
+      "answer": 1,
+      "explanation": "Backbone routers handle core traffic routing.",
+      "level": 9,
+      "options": [
+        "End device connection",
+        "High-speed inter-network routing",
+        "DNS server",
+        "Firewall device"
+      ],
+      "q": "What is backbone router role?",
+      "topic": "Routing"
+    },
+    {
+      "answer": 1,
+      "explanation": "Microservices allow scalable distributed systems.",
+      "level": 10,
+      "options": [
+        "Monolithic design",
+        "Independent service communication",
+        "Single point failure",
+        "No network required"
+      ],
+      "q": "What is microservice network architecture benefit?",
+      "topic": "Architecture"
+    },
+    {
+      "answer": 1,
+      "explanation": "Chaos engineering tests system reliability under failure.",
+      "level": 10,
+      "options": [
+        "Random DNS changes",
+        "Intentional failure injection to test resilience",
+        "Firewall removal",
+        "IP assignment testing"
+      ],
+      "q": "What is chaos engineering in networks?",
+      "topic": "Reliability"
+    },
+    {
+      "answer": 1,
+      "explanation": "Multi-homing improves internet availability.",
+      "level": 10,
+      "options": [
+        "Single ISP connection",
+        "Multiple ISP connections for redundancy",
+        "DNS backup only",
+        "Switch redundancy only"
+      ],
+      "q": "What is multi-homing in enterprise networks?",
+      "topic": "WAN"
+    },
+    {
+      "answer": 1,
+      "explanation": "Blackhole routing discards unwanted traffic.",
+      "level": 10,
+      "options": [
+        "Traffic encryption",
+        "Dropping malicious traffic intentionally",
+        "Routing optimization",
+        "DNS resolution"
+      ],
+      "q": "What is blackhole routing?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "IBN automates network behavior using intent policies.",
+      "level": 10,
+      "options": [
+        "Manual configuration",
+        "Automated network based on business intent",
+        "Static routing",
+        "DNS configuration"
+      ],
+      "q": "What is intent-based networking?",
+      "topic": "SDN"
+    },
+    {
+      "answer": 1,
+      "explanation": "GLB distributes users across global infrastructure.",
+      "level": 10,
+      "options": [
+        "CPU balancing",
+        "Distributing traffic across global data centers",
+        "Disk balancing",
+        "Switch balancing"
+      ],
+      "q": "What is global load balancing?",
+      "topic": "Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "Backbone failure can impact large-scale internet access.",
+      "level": 10,
+      "options": [
+        "Single user outage",
+        "Regional or global internet disruption",
+        "DNS speed increase",
+        "Firewall reset"
+      ],
+      "q": "What is backbone failure impact in ISP?",
+      "topic": "ISP"
+    },
+    {
+      "answer": 1,
+      "explanation": "Network slicing creates isolated virtual networks.",
+      "level": 10,
+      "options": [
+        "Switch configuration",
+        "Virtual network partitions over same infrastructure",
+        "DNS splitting",
+        "Firewall rules"
+      ],
+      "q": "What is network slicing in 5G?",
+      "topic": "5G"
+    },
+    {
+      "answer": 1,
+      "explanation": "Edge computing reduces latency by local processing.",
+      "level": 10,
+      "options": [
+        "Centralized processing",
+        "Reduced latency by processing near source",
+        "Disk storage increase",
+        "Switch optimization"
+      ],
+      "q": "What is edge computing benefit in networking?",
+      "topic": "Architecture"
+    },
+    {
+      "answer": 1,
+      "explanation": "Observability helps track network health and issues.",
+      "level": 10,
+      "options": [
+        "IP assignment",
+        "Monitoring and understanding network behavior",
+        "DNS resolution",
+        "Firewall blocking"
+      ],
+      "q": "What is network observability?",
+      "topic": "Monitoring"
+    },
+    {
+      "answer": 1,
+      "explanation": "Zero trust enforces strict access control per identity.",
+      "level": 10,
+      "options": [
+        "Open network access",
+        "Strict identity-based network access control",
+        "DNS-based routing",
+        "Switch aggregation"
+      ],
+      "q": "What is zero trust segmentation?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Telemetry provides real-time network insights.",
+      "level": 10,
+      "options": [
+        "DNS service",
+        "Real-time network data collection",
+        "Firewall rule set",
+        "IP assignment system"
+      ],
+      "q": "What is network telemetry?",
+      "topic": "Monitoring"
+    },
+    {
+      "answer": 1,
+      "explanation": "Hyperscale refers to massive cloud infrastructure networks.",
+      "level": 10,
+      "options": [
+        "Small office network",
+        "Large distributed cloud-scale infrastructure",
+        "Home network setup",
+        "Single router network"
+      ],
+      "q": "What is hyperscale networking?",
+      "topic": "Architecture"
+    },
+    {
+      "answer": 1,
+      "explanation": "Intent verification ensures policy compliance.",
+      "level": 10,
+      "options": [
+        "Manual routing check",
+        "Ensuring network matches defined intent",
+        "DNS verification",
+        "Firewall testing"
+      ],
+      "q": "What is intent verification in SDN?",
+      "topic": "SDN"
+    },
+    {
+      "answer": 1,
+      "explanation": "Automation improves speed and reliability.",
+      "level": 10,
+      "options": [
+        "More manual work",
+        "Faster configuration and reduced human error",
+        "Slower deployment",
+        "Increased downtime"
+      ],
+      "q": "What is network automation advantage?",
+      "topic": "Automation"
+    },
+    {
+      "answer": 1,
+      "explanation": "Full duplex allows sending and receiving simultaneously.",
+      "level": 2,
+      "options": [
+        "One-way communication",
+        "Two-way simultaneous communication",
+        "No communication",
+        "Broadcast only"
+      ],
+      "q": "What is full duplex communication?",
+      "topic": "Networking"
+    }
+  ]
+}

@@ -1,0 +1,964 @@
+{
+  "category": "aws",
+  "questions": [
+    {
+      "answer": 1,
+      "explanation": "EC2 stands for Elastic Compute Cloud, a scalable virtual server service.",
+      "level": 1,
+      "options": [
+        "Elastic Cloud Compute",
+        "Elastic Compute Cloud",
+        "Extended Cloud Computing",
+        "Elastic Container Cloud"
+      ],
+      "q": "What does Amazon EC2 stand for?",
+      "topic": "EC2 Basics"
+    },
+    {
+      "answer": 2,
+      "explanation": "Reserved Instances provide the lowest cost for long-term commitments.",
+      "level": 1,
+      "options": [
+        "On-Demand",
+        "Spot Instances",
+        "Reserved Instances",
+        "Free Tier"
+      ],
+      "q": "Which EC2 pricing model offers the lowest cost for long-term usage?",
+      "topic": "EC2 Pricing"
+    },
+    {
+      "answer": 0,
+      "explanation": "AMI is a template used to launch EC2 instances.",
+      "level": 1,
+      "options": [
+        "Amazon Machine Image",
+        "Advanced Machine Instance",
+        "Automated Managed Instance",
+        "Amazon Managed Infrastructure"
+      ],
+      "q": "What is an AMI in AWS EC2?",
+      "topic": "EC2 Basics"
+    },
+    {
+      "answer": 0,
+      "explanation": "EBS provides block storage attached to EC2 instances.",
+      "level": 1,
+      "options": [
+        "EBS",
+        "S3",
+        "Glacier",
+        "EFS"
+      ],
+      "q": "Which storage is directly attached to EC2 instance?",
+      "topic": "EC2 Storage"
+    },
+    {
+      "answer": 0,
+      "explanation": "Security Groups act as virtual firewalls for EC2 instances.",
+      "level": 1,
+      "options": [
+        "Firewall for instances",
+        "Storage group",
+        "Load balancer",
+        "DNS group"
+      ],
+      "q": "What is a Security Group in EC2?",
+      "topic": "EC2 Security"
+    },
+    {
+      "answer": 0,
+      "explanation": "S3 stands for Simple Storage Service.",
+      "level": 1,
+      "options": [
+        "Simple Storage Service",
+        "Secure Storage System",
+        "Standard Storage Service",
+        "Simple Secure Storage"
+      ],
+      "q": "What does S3 stand for?",
+      "topic": "S3 Basics"
+    },
+    {
+      "answer": 1,
+      "explanation": "S3 supports objects up to 5 TB.",
+      "level": 2,
+      "options": [
+        "5 GB",
+        "5 TB",
+        "500 GB",
+        "50 TB"
+      ],
+      "q": "What is the maximum size of an S3 object?",
+      "topic": "S3 Limits"
+    },
+    {
+      "answer": 2,
+      "explanation": "Glacier is used for long-term archival storage.",
+      "level": 2,
+      "options": [
+        "Standard",
+        "Intelligent-Tiering",
+        "Glacier",
+        "One Zone-IA"
+      ],
+      "q": "Which S3 storage class is cheapest for archival?",
+      "topic": "S3 Storage Classes"
+    },
+    {
+      "answer": 0,
+      "explanation": "VPC is a logically isolated network in AWS.",
+      "level": 1,
+      "options": [
+        "Virtual Private Cloud",
+        "Virtual Public Cloud",
+        "Verified Private Cluster",
+        "Virtual Protected Cloud"
+      ],
+      "q": "What is a VPC?",
+      "topic": "VPC Basics"
+    },
+    {
+      "answer": 1,
+      "explanation": "Internet Gateway allows communication between VPC and internet.",
+      "level": 1,
+      "options": [
+        "DNS server",
+        "Connects VPC to internet",
+        "Firewall",
+        "Subnet router"
+      ],
+      "q": "What is an Internet Gateway in VPC?",
+      "topic": "VPC Networking"
+    },
+    {
+      "answer": 1,
+      "explanation": "IAM manages users, roles, and permissions.",
+      "level": 1,
+      "options": [
+        "Identity Access Management",
+        "Identity and Access Management",
+        "Internet Access Module",
+        "Integrated Account Management"
+      ],
+      "q": "What does IAM stand for?",
+      "topic": "IAM Basics"
+    },
+    {
+      "answer": 1,
+      "explanation": "Roles are used to grant temporary permissions.",
+      "level": 2,
+      "options": [
+        "A user account",
+        "A permission set assumed by AWS services",
+        "A security group",
+        "A VPC component"
+      ],
+      "q": "What is an IAM Role?",
+      "topic": "IAM Roles"
+    },
+    {
+      "answer": 1,
+      "explanation": "AWS Lambda runs code without managing servers.",
+      "level": 1,
+      "options": [
+        "EC2",
+        "Lambda",
+        "ECS",
+        "Beanstalk"
+      ],
+      "q": "Which AWS service provides serverless compute?",
+      "topic": "Lambda Basics"
+    },
+    {
+      "answer": 2,
+      "explanation": "Lambda maximum timeout is 15 minutes.",
+      "level": 2,
+      "options": [
+        "5 minutes",
+        "10 minutes",
+        "15 minutes",
+        "60 minutes"
+      ],
+      "q": "Maximum execution time of AWS Lambda?",
+      "topic": "Lambda Limits"
+    },
+    {
+      "answer": 1,
+      "explanation": "CloudFormation is used to define infrastructure as code.",
+      "level": 1,
+      "options": [
+        "Monitoring",
+        "Infrastructure as Code",
+        "Storage",
+        "Networking"
+      ],
+      "q": "What is AWS CloudFormation used for?",
+      "topic": "CloudFormation Basics"
+    },
+    {
+      "answer": 1,
+      "explanation": "Auto Scaling adjusts EC2 capacity automatically.",
+      "level": 2,
+      "options": [
+        "Backup",
+        "Automatic instance scaling",
+        "Security",
+        "Storage management"
+      ],
+      "q": "What is EC2 Auto Scaling used for?",
+      "topic": "EC2 Scaling"
+    },
+    {
+      "answer": 0,
+      "explanation": "ELB distributes incoming traffic across multiple targets.",
+      "level": 2,
+      "options": [
+        "Distributes traffic across instances",
+        "Firewall service",
+        "Storage service",
+        "Database service"
+      ],
+      "q": "What is Elastic Load Balancer (ELB)?",
+      "topic": "Load Balancing"
+    },
+    {
+      "answer": 2,
+      "explanation": "S3 Standard stores data across multiple Availability Zones.",
+      "level": 2,
+      "options": [
+        "Versioning",
+        "Cross-region replication",
+        "S3 Standard",
+        "Lifecycle policy"
+      ],
+      "q": "Which S3 feature ensures data protection across multiple AZs?",
+      "topic": "S3 Reliability"
+    },
+    {
+      "answer": 1,
+      "explanation": "NAT Gateway allows private subnet instances to access internet.",
+      "level": 2,
+      "options": [
+        "Inbound internet access",
+        "Outbound internet access for private subnets",
+        "DNS routing",
+        "Load balancing"
+      ],
+      "q": "What is a NAT Gateway used for?",
+      "topic": "VPC Networking"
+    },
+        {
+      "q": "Which AWS service is used to launch virtual servers?",
+      "options": ["S3", "EC2", "IAM", "RDS"],
+      "answer": 1,
+      "explanation": "EC2 is used to launch and manage virtual servers.",
+      "topic": "EC2 Basics",
+      "level": 1
+    },
+    {
+      "q": "What does S3 primarily provide?",
+      "options": ["Compute", "Object Storage", "Networking", "Database"],
+      "answer": 1,
+      "explanation": "S3 provides scalable object storage.",
+      "topic": "S3 Basics",
+      "level": 1
+    },
+    {
+      "q": "Which AWS service manages users and permissions?",
+      "options": ["VPC", "IAM", "Lambda", "CloudWatch"],
+      "answer": 1,
+      "explanation": "IAM manages identities and access control.",
+      "topic": "IAM Basics",
+      "level": 1
+    },
+    {
+      "q": "What is the main purpose of a VPC?",
+      "options": ["Storage", "Virtual Network Isolation", "Compute", "Backup"],
+      "answer": 1,
+      "explanation": "VPC provides isolated virtual networking.",
+      "topic": "VPC Basics",
+      "level": 1
+    },
+    {
+      "q": "Which service runs code without servers?",
+      "options": ["EC2", "Lambda", "EBS", "S3"],
+      "answer": 1,
+      "explanation": "Lambda is serverless compute service.",
+      "topic": "Lambda Basics",
+      "level": 1
+    },
+    {
+      "q": "What is an AMI used for?",
+      "options": ["Database backup", "Instance template", "Firewall rule", "Storage bucket"],
+      "answer": 1,
+      "explanation": "AMI is a template for EC2 instances.",
+      "topic": "EC2 Basics",
+      "level": 1
+    },
+    {
+      "q": "Which storage is block-based in AWS?",
+      "options": ["S3", "EBS", "Glacier", "CloudFront"],
+      "answer": 1,
+      "explanation": "EBS provides block storage for EC2.",
+      "topic": "Storage",
+      "level": 1
+    },
+    {
+      "q": "Which service is used for monitoring AWS resources?",
+      "options": ["CloudWatch", "IAM", "VPC", "Route53"],
+      "answer": 0,
+      "explanation": "CloudWatch monitors AWS resources.",
+      "topic": "Monitoring",
+      "level": 1
+    },
+    {
+      "q": "What is the default region-based DNS service?",
+      "options": ["CloudFront", "Route53", "S3", "VPC"],
+      "answer": 1,
+      "explanation": "Route53 provides DNS services.",
+      "topic": "Networking",
+      "level": 1
+    },
+    {
+      "q": "Which service is used for messaging queues?",
+      "options": ["SNS", "SQS", "Lambda", "EC2"],
+      "answer": 1,
+      "explanation": "SQS provides message queuing.",
+      "topic": "Messaging",
+      "level": 1
+    },
+    {
+      "q": "What does SNS stand for?",
+      "options": ["Simple Notification Service", "Secure Network Service", "Simple Node System", "Storage Notification System"],
+      "answer": 0,
+      "explanation": "SNS is Simple Notification Service.",
+      "topic": "Messaging",
+      "level": 1
+    },
+    {
+      "q": "Which service provides relational databases?",
+      "options": ["DynamoDB", "RDS", "S3", "EFS"],
+      "answer": 1,
+      "explanation": "RDS provides managed relational databases.",
+      "topic": "Databases",
+      "level": 1
+    },
+    {
+      "q": "Which service is used for NoSQL database?",
+      "options": ["RDS", "DynamoDB", "Aurora", "Redshift"],
+      "answer": 1,
+      "explanation": "DynamoDB is a NoSQL database service.",
+      "topic": "Databases",
+      "level": 1
+    },
+    {
+      "q": "Which service delivers content globally?",
+      "options": ["CloudFront", "VPC", "IAM", "EC2"],
+      "answer": 0,
+      "explanation": "CloudFront is a CDN service.",
+      "topic": "CDN",
+      "level": 1
+    },
+    {
+      "q": "Which service is used for infrastructure as code?",
+      "options": ["CloudTrail", "CloudFormation", "CloudWatch", "IAM"],
+      "answer": 1,
+      "explanation": "CloudFormation defines infrastructure as code.",
+      "topic": "DevOps",
+      "level": 1
+    },
+
+    {
+      "q": "What is Auto Scaling used for?",
+      "options": ["Backup", "Instance scaling", "Storage encryption", "DNS management"],
+      "answer": 1,
+      "explanation": "Auto Scaling adjusts EC2 capacity automatically.",
+      "topic": "Scaling",
+      "level": 2
+    },
+    {
+      "q": "Which service balances traffic across EC2 instances?",
+      "options": ["ELB", "IAM", "S3", "Lambda"],
+      "answer": 0,
+      "explanation": "ELB distributes traffic across targets.",
+      "topic": "Networking",
+      "level": 2
+    },
+    {
+      "q": "What is EFS used for?",
+      "options": ["Block storage", "File storage", "Object storage", "Backup"],
+      "answer": 1,
+      "explanation": "EFS provides shared file storage.",
+      "topic": "Storage",
+      "level": 2
+    },
+    {
+      "q": "Which service logs API calls in AWS?",
+      "options": ["CloudTrail", "CloudWatch", "IAM", "S3"],
+      "answer": 0,
+      "explanation": "CloudTrail records API activity.",
+      "topic": "Security",
+      "level": 2
+    },
+    {
+      "q": "What is the use of NAT Gateway?",
+      "options": ["Inbound traffic", "Outbound internet access", "DNS routing", "Load balancing"],
+      "answer": 1,
+      "explanation": "NAT Gateway allows outbound internet for private subnets.",
+      "topic": "VPC",
+      "level": 2
+    },
+
+    {
+      "q": "Which service encrypts AWS resources?",
+      "options": ["KMS", "IAM", "S3", "VPC"],
+      "answer": 0,
+      "explanation": "KMS manages encryption keys.",
+      "topic": "Security",
+      "level": 3
+    },
+    {
+      "q": "What is VPC Peering?",
+      "options": ["DNS connection", "Private network connection between VPCs", "Firewall rule", "Storage link"],
+      "answer": 1,
+      "explanation": "VPC Peering connects two VPCs privately.",
+      "topic": "Networking",
+      "level": 3
+    },
+    {
+      "q": "Which service is used for Docker containers?",
+      "options": ["ECS", "S3", "IAM", "CloudTrail"],
+      "answer": 0,
+      "explanation": "ECS runs containerized applications.",
+      "topic": "Containers",
+      "level": 3
+    },
+    {
+      "q": "Which service is Kubernetes in AWS?",
+      "options": ["EKS", "ECS", "Lambda", "CloudFormation"],
+      "answer": 0,
+      "explanation": "EKS is managed Kubernetes.",
+      "topic": "Containers",
+      "level": 3
+    },
+    {
+      "q": "What is S3 versioning used for?",
+      "options": ["Delete objects", "Maintain multiple object versions", "Encrypt data", "Compress files"],
+      "answer": 1,
+      "explanation": "Versioning keeps multiple object versions.",
+      "topic": "S3",
+      "level": 3
+    },
+
+    {
+      "q": "Which service tracks configuration changes?",
+      "options": ["Config", "CloudWatch", "IAM", "S3"],
+      "answer": 0,
+      "explanation": "AWS Config tracks resource changes.",
+      "topic": "Governance",
+      "level": 4
+    },
+    {
+      "q": "What is CloudFormation stack?",
+      "options": ["IAM role", "Collection of AWS resources", "Security group", "Subnet"],
+      "answer": 1,
+      "explanation": "Stack is a set of AWS resources.",
+      "topic": "Infrastructure",
+      "level": 4
+    },
+    {
+      "q": "Which service provides email sending?",
+      "options": ["SES", "SNS", "SQS", "Lambda"],
+      "answer": 0,
+      "explanation": "SES is Simple Email Service.",
+      "topic": "Communication",
+      "level": 4
+    },
+    {
+      "q": "Which database is in-memory?",
+      "options": ["RDS", "DynamoDB", "ElastiCache", "S3"],
+      "answer": 2,
+      "explanation": "ElastiCache provides in-memory caching.",
+      "topic": "Databases",
+      "level": 4
+    },
+    {
+      "q": "What is Route53 health check used for?",
+      "options": ["DNS failover monitoring", "Storage backup", "IAM control", "Logging"],
+      "answer": 0,
+      "explanation": "It monitors endpoint health.",
+      "topic": "DNS",
+      "level": 4
+    },
+        {
+      "q": "What is AWS KMS primarily used for?",
+      "options": [
+        "Monitoring logs",
+        "Key management and encryption",
+        "Load balancing",
+        "DNS routing"
+      ],
+      "answer": 1,
+      "explanation": "KMS manages encryption keys used to secure AWS data.",
+      "topic": "Security",
+      "level": 5
+    },
+    {
+      "q": "What is the purpose of a VPC Endpoint?",
+      "options": [
+        "Connect VPC to internet",
+        "Enable private connectivity to AWS services without internet",
+        "Manage EC2 scaling",
+        "Create DNS zones"
+      ],
+      "answer": 1,
+      "explanation": "VPC Endpoints allow private access to AWS services.",
+      "topic": "VPC",
+      "level": 5
+    },
+    {
+      "q": "Which service detects malicious activity in AWS accounts?",
+      "options": [
+        "GuardDuty",
+        "CloudWatch",
+        "Config",
+        "IAM"
+      ],
+      "answer": 0,
+      "explanation": "GuardDuty uses machine learning to detect threats.",
+      "topic": "Security",
+      "level": 5
+    },
+    {
+      "q": "What is AWS WAF used for?",
+      "options": [
+        "Firewall for web applications",
+        "Database encryption",
+        "Storage backup",
+        "Compute scaling"
+      ],
+      "answer": 0,
+      "explanation": "WAF protects web applications from attacks.",
+      "topic": "Security",
+      "level": 5
+    },
+    {
+      "q": "Which service provides content delivery rules at edge locations?",
+      "options": [
+        "S3",
+        "CloudFront",
+        "VPC",
+        "IAM"
+      ],
+      "answer": 1,
+      "explanation": "CloudFront delivers content using edge locations.",
+      "topic": "CDN",
+      "level": 5
+    },
+    {
+      "q": "What is AWS STS used for?",
+      "options": [
+        "Long-term storage",
+        "Temporary security credentials",
+        "DNS management",
+        "Load balancing"
+      ],
+      "answer": 1,
+      "explanation": "STS provides temporary credentials for AWS access.",
+      "topic": "Security",
+      "level": 5
+    },
+    {
+      "q": "Which service enables serverless workflows?",
+      "options": [
+        "Step Functions",
+        "EC2",
+        "S3",
+        "EBS"
+      ],
+      "answer": 0,
+      "explanation": "Step Functions orchestrate serverless workflows.",
+      "topic": "Serverless",
+      "level": 5
+    },
+    {
+      "q": "What is AWS EventBridge used for?",
+      "options": [
+        "Event-driven architecture routing",
+        "Storage backup",
+        "Database scaling",
+        "IAM authentication"
+      ],
+      "answer": 0,
+      "explanation": "EventBridge connects applications using events.",
+      "topic": "Serverless",
+      "level": 5
+    },
+    {
+      "q": "What does AWS Shield provide?",
+      "options": [
+        "DDoS protection",
+        "Database backup",
+        "IAM roles",
+        "File storage"
+      ],
+      "answer": 0,
+      "explanation": "Shield protects against DDoS attacks.",
+      "topic": "Security",
+      "level": 5
+    },
+    {
+      "q": "Which service manages user authentication for web apps?",
+      "options": [
+        "Cognito",
+        "IAM",
+        "STS",
+        "KMS"
+      ],
+      "answer": 0,
+      "explanation": "Cognito handles user sign-up and authentication.",
+      "topic": "Security",
+      "level": 5
+    },
+    {
+      "q": "What is a Transit Gateway used for?",
+      "options": [
+        "Connecting multiple VPCs and on-prem networks",
+        "Encrypting data",
+        "Monitoring logs",
+        "Storing objects"
+      ],
+      "answer": 0,
+      "explanation": "Transit Gateway simplifies network connectivity.",
+      "topic": "Networking",
+      "level": 5
+    },
+    {
+      "q": "Which AWS service provides API management?",
+      "options": [
+        "API Gateway",
+        "CloudFront",
+        "S3",
+        "IAM"
+      ],
+      "answer": 0,
+      "explanation": "API Gateway manages APIs at scale.",
+      "topic": "Serverless",
+      "level": 5
+    },
+    {
+      "q": "What is S3 Lifecycle policy used for?",
+      "options": [
+        "Deleting or transitioning objects automatically",
+        "Encrypting data",
+        "Managing IAM users",
+        "Routing DNS traffic"
+      ],
+      "answer": 0,
+      "explanation": "Lifecycle policies automate storage class transitions.",
+      "topic": "S3",
+      "level": 5
+    },
+    {
+      "q": "Which service helps visualize AWS architecture?",
+      "options": [
+        "AWS Config",
+        "AWS X-Ray",
+        "AWS Architecture Center",
+        "AWS IAM"
+      ],
+      "answer": 2,
+      "explanation": "Architecture Center provides reference designs.",
+      "topic": "Architecture",
+      "level": 5
+    },
+    {
+      "q": "What is AWS X-Ray used for?",
+      "options": [
+        "Distributed tracing of applications",
+        "DNS routing",
+        "Storage management",
+        "User authentication"
+      ],
+      "answer": 0,
+      "explanation": "X-Ray helps debug distributed applications.",
+      "topic": "Monitoring",
+      "level": 5
+    },
+        {
+      "q": "What is AWS Organizations used for?",
+      "options": [
+        "Managing multiple AWS accounts centrally",
+        "Encrypting S3 buckets",
+        "Deploying EC2 instances",
+        "Monitoring logs"
+      ],
+      "answer": 0,
+      "explanation": "AWS Organizations helps manage multiple AWS accounts under one structure.",
+      "topic": "Governance",
+      "level": 6
+    },
+    {
+      "q": "What does SCP in AWS Organizations stand for?",
+      "options": [
+        "Secure Cloud Policy",
+        "Service Control Policy",
+        "System Control Protocol",
+        "Security Compliance Policy"
+      ],
+      "answer": 1,
+      "explanation": "SCPs define permissions boundaries for accounts in an organization.",
+      "topic": "Governance",
+      "level": 6
+    },
+    {
+      "q": "Which service is used for hybrid connectivity between on-premises and AWS with dedicated bandwidth?",
+      "options": [
+        "VPN",
+        "Direct Connect",
+        "Transit Gateway",
+        "VPC Peering"
+      ],
+      "answer": 1,
+      "explanation": "Direct Connect provides dedicated private network connectivity.",
+      "topic": "Networking",
+      "level": 6
+    },
+    {
+      "q": "What is Amazon ECR used for?",
+      "options": [
+        "Container image storage",
+        "Database hosting",
+        "DNS management",
+        "Monitoring logs"
+      ],
+      "answer": 0,
+      "explanation": "ECR stores Docker container images.",
+      "topic": "Containers",
+      "level": 6
+    },
+    {
+      "q": "Which AWS service is a managed Kubernetes platform?",
+      "options": [
+        "EKS",
+        "ECS",
+        "Lambda",
+        "Beanstalk"
+      ],
+      "answer": 0,
+      "explanation": "EKS is Amazon’s managed Kubernetes service.",
+      "topic": "Containers",
+      "level": 6
+    },
+    {
+      "q": "What is Amazon Aurora?",
+      "options": [
+        "Object storage service",
+        "High-performance relational database",
+        "NoSQL database",
+        "Caching service"
+      ],
+      "answer": 1,
+      "explanation": "Aurora is a high-performance MySQL/PostgreSQL-compatible database.",
+      "topic": "Databases",
+      "level": 6
+    },
+    {
+      "q": "What is AWS Systems Manager used for?",
+      "options": [
+        "Managing and automating EC2 and on-prem resources",
+        "DNS routing",
+        "Data encryption",
+        "Load balancing"
+      ],
+      "answer": 0,
+      "explanation": "SSM helps manage infrastructure at scale.",
+      "topic": "Management",
+      "level": 6
+    },
+    {
+      "q": "What is Amazon Redshift used for?",
+      "options": [
+        "Data warehousing",
+        "Object storage",
+        "Container orchestration",
+        "DNS service"
+      ],
+      "answer": 0,
+      "explanation": "Redshift is a data warehouse service.",
+      "topic": "Analytics",
+      "level": 6
+    },
+    {
+      "q": "Which DynamoDB feature supports global replication?",
+      "options": [
+        "DynamoDB Streams",
+        "Global Tables",
+        "Indexes",
+        "Backup"
+      ],
+      "answer": 1,
+      "explanation": "Global Tables replicate data across regions.",
+      "topic": "Databases",
+      "level": 6
+    },
+    {
+      "q": "What is SQS Visibility Timeout?",
+      "options": [
+        "Time message is hidden after being received",
+        "Time message is deleted",
+        "Time queue is created",
+        "Time SNS sends messages"
+      ],
+      "answer": 0,
+      "explanation": "It prevents multiple consumers from processing the same message.",
+      "topic": "Messaging",
+      "level": 6
+    },
+    {
+      "q": "What is SNS Fanout pattern?",
+      "options": [
+        "Single consumer model",
+        "One message to multiple subscribers",
+        "Database replication",
+        "Load balancing"
+      ],
+      "answer": 1,
+      "explanation": "SNS fanout sends messages to multiple endpoints.",
+      "topic": "Messaging",
+      "level": 6
+    },
+    {
+      "q": "What is AWS CloudHSM used for?",
+      "options": [
+        "Hardware-based key storage",
+        "Monitoring logs",
+        "DNS routing",
+        "Storage backup"
+      ],
+      "answer": 0,
+      "explanation": "CloudHSM provides dedicated hardware security modules.",
+      "topic": "Security",
+      "level": 6
+    },
+    {
+      "q": "What is AWS Well-Architected Framework used for?",
+      "options": [
+        "Designing secure and efficient cloud systems",
+        "Managing EC2 pricing",
+        "Creating IAM users",
+        "Deploying Lambda only"
+      ],
+      "answer": 0,
+      "explanation": "It provides best practices for architecture design.",
+      "topic": "Architecture",
+      "level": 6
+    },
+    {
+      "q": "Which Route53 routing policy balances traffic based on latency?",
+      "options": [
+        "Simple routing",
+        "Failover routing",
+        "Latency-based routing",
+        "Geolocation routing"
+      ],
+      "answer": 2,
+      "explanation": "Latency-based routing sends users to lowest latency region.",
+      "topic": "Networking",
+      "level": 6
+    },
+    {
+      "q": "What is AWS VPN used for?",
+      "options": [
+        "Encrypted connection between on-prem and AWS",
+        "DNS resolution",
+        "Storage replication",
+        "Load balancing"
+      ],
+      "answer": 0,
+      "explanation": "VPN provides secure tunnel over internet to AWS.",
+      "topic": "Networking",
+      "level": 6
+    },
+
+    {
+      "q": "What does EC2 stand for?",
+      "options": [
+        "Elastic Compute Cloud",
+        "Elastic Cloud Container",
+        "Extended Compute Cluster",
+        "Elastic Container Cloud"
+      ],
+      "answer": 0,
+      "explanation": "EC2 means Elastic Compute Cloud.",
+      "topic": "EC2 Basics",
+      "level": 2
+    },
+    {
+      "q": "Which service stores objects in AWS?",
+      "options": [
+        "EBS",
+        "S3",
+        "EC2",
+        "VPC"
+      ],
+      "answer": 1,
+      "explanation": "S3 is object storage.",
+      "topic": "Storage",
+      "level": 2
+    },
+    {
+      "q": "Which IAM component defines permissions?",
+      "options": [
+        "Policy",
+        "Subnet",
+        "Bucket",
+        "Instance"
+      ],
+      "answer": 0,
+      "explanation": "IAM policies define permissions.",
+      "topic": "IAM",
+      "level": 2
+    },
+    {
+      "q": "Which service is serverless compute?",
+      "options": [
+        "Lambda",
+        "EC2",
+        "ECS",
+        "RDS"
+      ],
+      "answer": 0,
+      "explanation": "Lambda runs code without servers.",
+      "topic": "Lambda",
+      "level": 2
+    },
+    {
+      "q": "What is a VPC used for?",
+      "options": [
+        "Isolated virtual network",
+        "Database storage",
+        "File storage",
+        "DNS routing"
+      ],
+      "answer": 0,
+      "explanation": "VPC provides isolated networking.",
+      "topic": "VPC",
+      "level": 2
+    },
+    {
+      "answer": 0,
+      "explanation": "CloudWatch monitors AWS resources and applications.",
+      "level": 1,
+      "options": [
+        "Logging and monitoring",
+        "Storage",
+        "Networking",
+        "IAM management"
+      ],
+      "q": "What is AWS CloudWatch used for?",
+      "topic": "Monitoring"
+    }
+  ]
+}

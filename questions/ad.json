@@ -1,0 +1,1955 @@
+{
+  "category": "ad",
+  "questions": [
+    {
+      "answer": 0,
+      "explanation": "AD DS is the core role in Windows Server that provides directory services and authentication.",
+      "level": 1,
+      "options": [
+        "Active Directory Domain Services",
+        "Active Directory Data Storage",
+        "Advanced Directory Domain System",
+        "Authentication Domain Directory Services"
+      ],
+      "q": "What does AD DS stand for?",
+      "topic": "AD Basics"
+    },
+    {
+      "answer": 1,
+      "explanation": "Active Directory centralizes authentication, authorization, and directory services in a network.",
+      "level": 1,
+      "options": [
+        "File storage",
+        "Centralized identity and access management",
+        "Web hosting",
+        "Database management"
+      ],
+      "q": "What is Active Directory primarily used for?",
+      "topic": "AD Basics"
+    },
+    {
+      "answer": 1,
+      "explanation": "A domain is a logical container for users, computers, and other objects sharing a common database.",
+      "level": 1,
+      "options": [
+        "A physical server",
+        "A logical grouping of objects sharing a database",
+        "A network cable",
+        "A DNS record"
+      ],
+      "q": "What is a Domain in Active Directory?",
+      "topic": "AD Structure"
+    },
+    {
+      "answer": 1,
+      "explanation": "A Domain Controller hosts AD DS and handles authentication and directory services.",
+      "level": 1,
+      "options": [
+        "A firewall device",
+        "A server running AD DS",
+        "A DNS client",
+        "A switch"
+      ],
+      "q": "What is a Domain Controller?",
+      "topic": "AD Basics"
+    },
+    {
+      "answer": 1,
+      "explanation": "Active Directory Users and Computers (ADUC) is the standard tool for managing AD objects.",
+      "level": 1,
+      "options": [
+        "Device Manager",
+        "ADUC",
+        "Task Manager",
+        "Event Viewer"
+      ],
+      "q": "Which tool is commonly used to manage AD users?",
+      "topic": "Tools"
+    },
+    {
+      "answer": 1,
+      "explanation": "An OU is used to organize objects and apply Group Policies.",
+      "level": 1,
+      "options": [
+        "Operating Unit",
+        "Organizational Unit",
+        "Object Utility",
+        "Operational User"
+      ],
+      "q": "What is an OU in Active Directory?",
+      "topic": "AD Structure"
+    },
+    {
+      "answer": 2,
+      "explanation": "LDAP is used to query and manage directory information.",
+      "level": 1,
+      "options": [
+        "HTTP",
+        "FTP",
+        "LDAP",
+        "SMTP"
+      ],
+      "q": "Which protocol is used for directory queries in AD?",
+      "topic": "Protocols"
+    },
+    {
+      "answer": 0,
+      "explanation": "LDAP uses port 389 by default.",
+      "level": 1,
+      "options": [
+        "389",
+        "443",
+        "21",
+        "110"
+      ],
+      "q": "What is the default LDAP port?",
+      "topic": "Protocols"
+    },
+    {
+      "answer": 1,
+      "explanation": "Kerberos is the primary authentication protocol used in AD.",
+      "level": 1,
+      "options": [
+        "File transfer",
+        "Authentication",
+        "DNS resolution",
+        "Routing"
+      ],
+      "q": "What is Kerberos used for?",
+      "topic": "Authentication"
+    },
+    {
+      "answer": 1,
+      "explanation": "Security groups are used to assign permissions to multiple users efficiently.",
+      "level": 1,
+      "options": [
+        "A firewall rule",
+        "A group used for permissions",
+        "A DNS zone",
+        "A replication service"
+      ],
+      "q": "What is a Security Group?",
+      "topic": "AD Objects"
+    },
+    {
+      "answer": 1,
+      "explanation": "SYSVOL stores Group Policy and logon scripts and is replicated across DCs.",
+      "level": 1,
+      "options": [
+        "User home directory",
+        "Shared folder for GPOs",
+        "DNS storage",
+        "Backup folder"
+      ],
+      "q": "What is the SYSVOL folder?",
+      "topic": "AD Structure"
+    },
+    {
+      "answer": 1,
+      "explanation": "A forest is the top-level container in AD with shared schema and configuration.",
+      "level": 1,
+      "options": [
+        "Single domain",
+        "Collection of domains sharing schema",
+        "Network cable",
+        "Security group"
+      ],
+      "q": "What is a Forest?",
+      "topic": "AD Structure"
+    },
+    {
+      "answer": 1,
+      "explanation": "A tree is a group of domains connected in a hierarchical namespace.",
+      "level": 1,
+      "options": [
+        "Hardware topology",
+        "Group of domains sharing namespace",
+        "DNS record",
+        "OU container"
+      ],
+      "q": "What is a Tree in AD?",
+      "topic": "AD Structure"
+    },
+    {
+      "answer": 1,
+      "explanation": "Authentication verifies who a user is.",
+      "level": 1,
+      "options": [
+        "Granting permissions",
+        "Verifying identity",
+        "Encrypting data",
+        "Routing traffic"
+      ],
+      "q": "What is authentication?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "The Global Catalog stores a partial replica of all objects in the forest for fast searches.",
+      "level": 2,
+      "options": [
+        "A full backup of AD",
+        "A partial replica of all objects in a forest",
+        "A DNS service",
+        "A firewall component"
+      ],
+      "q": "What is the Global Catalog (GC)?",
+      "topic": "AD Structure"
+    },
+    {
+      "answer": 1,
+      "explanation": "Group Policy allows administrators to enforce configurations and security settings.",
+      "level": 2,
+      "options": [
+        "Managing DNS",
+        "Applying settings to users and computers",
+        "Creating domains",
+        "Monitoring logs"
+      ],
+      "q": "What is Group Policy used for?",
+      "topic": "Group Policy"
+    },
+    {
+      "answer": 0,
+      "explanation": "FSMO roles are specialized domain controller tasks handled by specific servers.",
+      "level": 2,
+      "options": [
+        "Flexible Single Master Operations",
+        "File System Management Object",
+        "Forest Service Management Option",
+        "Fast System Maintenance Operation"
+      ],
+      "q": "What does FSMO stand for?",
+      "topic": "AD Roles"
+    },
+    {
+      "answer": 2,
+      "explanation": "There are 5 FSMO roles: Schema Master, Domain Naming Master, RID Master, PDC Emulator, Infrastructure Master.",
+      "level": 2,
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "q": "How many FSMO roles exist?",
+      "topic": "AD Roles"
+    },
+    {
+      "answer": 1,
+      "explanation": "PDC Emulator is responsible for time sync and password updates.",
+      "level": 2,
+      "options": [
+        "RID Master",
+        "PDC Emulator",
+        "Schema Master",
+        "Infrastructure Master"
+      ],
+      "q": "Which FSMO role handles time synchronization?",
+      "topic": "FSMO"
+    },
+    {
+      "answer": 1,
+      "explanation": "Sites represent physical network topology for replication control.",
+      "level": 2,
+      "options": [
+        "A domain",
+        "A physical network representation",
+        "A security group",
+        "A DNS zone"
+      ],
+      "q": "What is an AD Site?",
+      "topic": "Sites & Services"
+    },
+    {
+      "answer": 1,
+      "explanation": "Replication ensures AD data consistency across all DCs.",
+      "level": 2,
+      "options": [
+        "User authentication",
+        "Copying data between domain controllers",
+        "Backing up data",
+        "Encrypting traffic"
+      ],
+      "q": "What is replication in AD?",
+      "topic": "Replication"
+    },
+    {
+      "answer": 1,
+      "explanation": "KDC (Key Distribution Center) issues Kerberos tickets.",
+      "level": 2,
+      "options": [
+        "DNS",
+        "KDC",
+        "FTP",
+        "SMTP"
+      ],
+      "q": "Which service handles authentication tickets in AD?",
+      "topic": "Authentication"
+    },
+    {
+      "answer": 1,
+      "explanation": "Trusts allow access between domains or forests.",
+      "level": 2,
+      "options": [
+        "A DNS mapping",
+        "A relationship between domains",
+        "A backup method",
+        "A group policy"
+      ],
+      "q": "What is a Trust in AD?",
+      "topic": "Trusts"
+    },
+    {
+      "answer": 1,
+      "explanation": "It forces reapplication of all GPOs.",
+      "level": 2,
+      "options": [
+        "Restart server",
+        "Apply Group Policy immediately",
+        "Delete GPO",
+        "Backup AD"
+      ],
+      "q": "What is 'gpupdate /force' used for?",
+      "topic": "Group Policy"
+    },
+    {
+      "answer": 1,
+      "explanation": "RID Master allocates unique identifiers to objects.",
+      "level": 2,
+      "options": [
+        "Time sync",
+        "Assigning unique security IDs",
+        "Managing DNS",
+        "Handling GPOs"
+      ],
+      "q": "What is the RID Master responsible for?",
+      "topic": "FSMO"
+    },
+    {
+      "answer": 1,
+      "explanation": "LDAP is used to query directory services.",
+      "level": 2,
+      "options": [
+        "Routing",
+        "Directory queries",
+        "File transfer",
+        "Backup"
+      ],
+      "q": "What is LDAP used for?",
+      "topic": "Protocols"
+    },
+    {
+      "answer": 1,
+      "explanation": "Functional levels determine available AD features.",
+      "level": 2,
+      "options": [
+        "Security level",
+        "Feature availability level",
+        "User permission level",
+        "Password level"
+      ],
+      "q": "What is a domain functional level?",
+      "topic": "AD Concepts"
+    },
+    {
+      "answer": 1,
+      "explanation": "GPO links connect policies to containers like OUs.",
+      "level": 2,
+      "options": [
+        "Network connection",
+        "Association of GPO to OU/domain",
+        "DNS link",
+        "User login script"
+      ],
+      "q": "What is a GPO link?",
+      "topic": "Group Policy"
+    },
+    {
+      "answer": 1,
+      "explanation": "SYSVOL replicates policies and scripts across DCs.",
+      "level": 2,
+      "options": [
+        "User profiles",
+        "GPO and script distribution",
+        "DNS zones",
+        "Logs"
+      ],
+      "q": "What is SYSVOL replication used for?",
+      "topic": "Replication"
+    },
+    {
+      "answer": 1,
+      "explanation": "NTDS.dit stores all Active Directory data.",
+      "level": 3,
+      "options": [
+        "DNS file",
+        "AD database file",
+        "Log file",
+        "Backup file"
+      ],
+      "q": "What is NTDS.dit?",
+      "topic": "AD Database"
+    },
+    {
+      "answer": 1,
+      "explanation": "Schema defines object types and attributes.",
+      "level": 3,
+      "options": [
+        "Authentication",
+        "Defines object structure",
+        "Handles replication",
+        "Manages DNS"
+      ],
+      "q": "What is the purpose of the Schema in AD?",
+      "topic": "Schema"
+    },
+    {
+      "answer": 1,
+      "explanation": "SPNs uniquely identify services for Kerberos authentication.",
+      "level": 3,
+      "options": [
+        "User password",
+        "Service identity in Kerberos",
+        "DNS entry",
+        "GPO setting"
+      ],
+      "q": "What is a Service Principal Name (SPN)?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Delegation allows limited administrative control.",
+      "level": 3,
+      "options": [
+        "Replication",
+        "Assigning admin rights",
+        "Backup",
+        "DNS resolution"
+      ],
+      "q": "What is delegation in AD?",
+      "topic": "Administration"
+    },
+    {
+      "answer": 1,
+      "explanation": "Allows multiple password policies in a domain.",
+      "level": 3,
+      "options": [
+        "Global password setting",
+        "Different policies for users/groups",
+        "DNS policy",
+        "Firewall rule"
+      ],
+      "q": "What is fine-grained password policy?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Allows recovery of deleted AD objects.",
+      "level": 3,
+      "options": [
+        "Backup system",
+        "Restore deleted objects",
+        "Log storage",
+        "Replication tool"
+      ],
+      "q": "What is AD Recycle Bin?",
+      "topic": "Recovery"
+    },
+    {
+      "answer": 1,
+      "explanation": "LDAPS secures LDAP communication using SSL/TLS.",
+      "level": 3,
+      "options": [
+        "LDAP without encryption",
+        "LDAP over SSL",
+        "DNS protocol",
+        "Backup protocol"
+      ],
+      "q": "What is LDAPS?",
+      "topic": "Protocols"
+    },
+    {
+      "answer": 1,
+      "explanation": "UPN is a user login format like email.",
+      "level": 3,
+      "options": [
+        "User Password Name",
+        "User Principal Name",
+        "Unique Policy Number",
+        "Universal Private Network"
+      ],
+      "q": "What is a UPN?",
+      "topic": "Authentication"
+    },
+    {
+      "answer": 1,
+      "explanation": "Snapshots allow viewing AD at a previous state.",
+      "level": 3,
+      "options": [
+        "Backup file",
+        "Point-in-time copy",
+        "Log file",
+        "Replication object"
+      ],
+      "q": "What is an AD snapshot?",
+      "topic": "Backup"
+    },
+    {
+      "answer": 1,
+      "explanation": "Tombstones mark deleted objects before removal.",
+      "level": 3,
+      "options": [
+        "Active user",
+        "Deleted object placeholder",
+        "DNS record",
+        "Security group"
+      ],
+      "q": "What is a tombstone object?",
+      "topic": "Replication"
+    },
+    {
+      "answer": 1,
+      "explanation": "KCC automatically builds replication topology.",
+      "level": 3,
+      "options": [
+        "Kerberos Control Center",
+        "Knowledge Consistency Checker",
+        "Key Certificate Chain",
+        "Kernel Control Center"
+      ],
+      "q": "What is KCC?",
+      "topic": "Replication"
+    },
+    {
+      "answer": 1,
+      "explanation": "Site links define replication routes.",
+      "level": 3,
+      "options": [
+        "DNS mapping",
+        "Replication path between sites",
+        "User login",
+        "GPO setting"
+      ],
+      "q": "What is a site link?",
+      "topic": "Sites & Services"
+    },
+    {
+      "answer": 1,
+      "explanation": "DFS provides unified file access across servers.",
+      "level": 3,
+      "options": [
+        "Authentication",
+        "Distributed file access",
+        "DNS resolution",
+        "Replication control"
+      ],
+      "q": "What is DFS used for?",
+      "topic": "File Services"
+    },
+    {
+      "answer": 0,
+      "explanation": "SID uniquely identifies users and groups.",
+      "level": 3,
+      "options": [
+        "Security Identifier",
+        "System ID",
+        "Server Index Data",
+        "Secure Internet Domain"
+      ],
+      "q": "What is SID?",
+      "topic": "Security"
+    },
+    {
+      "answer": 0,
+      "explanation": "GPMC is used to manage Group Policies.",
+      "level": 3,
+      "options": [
+        "Group Policy Management Console",
+        "Global Policy Management Center",
+        "Group Permission Control",
+        "General Policy Manager"
+      ],
+      "q": "What is GPMC?",
+      "topic": "Tools"
+    },
+    {
+      "answer": 1,
+      "explanation": "Schema Master controls all updates and modifications to the AD schema.",
+      "level": 4,
+      "options": [
+        "RID Master",
+        "Schema Master",
+        "PDC Emulator",
+        "Infrastructure Master"
+      ],
+      "q": "Which FSMO role is responsible for schema updates?",
+      "topic": "FSMO"
+    },
+    {
+      "answer": 1,
+      "explanation": "GC is required for universal group membership and forest-wide searches.",
+      "level": 4,
+      "options": [
+        "Users cannot log in",
+        "Forest-wide searches and logins may fail",
+        "DNS stops working",
+        "Replication stops"
+      ],
+      "q": "What happens if the Global Catalog is unavailable?",
+      "topic": "AD Structure"
+    },
+    {
+      "answer": 1,
+      "explanation": "The command 'netdom query fsmo' displays FSMO role holders.",
+      "level": 4,
+      "options": [
+        "netstat",
+        "netdom query fsmo",
+        "ipconfig",
+        "dcdiag"
+      ],
+      "q": "Which command is used to check FSMO roles?",
+      "topic": "Tools"
+    },
+    {
+      "answer": 1,
+      "explanation": "dcdiag is used to analyze domain controller health and issues.",
+      "level": 4,
+      "options": [
+        "Check DNS",
+        "Diagnose domain controller health",
+        "Reset passwords",
+        "Create users"
+      ],
+      "q": "What is the purpose of 'dcdiag'?",
+      "topic": "Troubleshooting"
+    },
+    {
+      "answer": 1,
+      "explanation": "repadmin helps monitor and troubleshoot AD replication.",
+      "level": 4,
+      "options": [
+        "User management",
+        "Replication troubleshooting",
+        "DNS configuration",
+        "GPO editing"
+      ],
+      "q": "What is 'repadmin' used for?",
+      "topic": "Replication"
+    },
+    {
+      "answer": 2,
+      "explanation": "The default tombstone lifetime is 180 days in newer Windows versions.",
+      "level": 4,
+      "options": [
+        "30 days",
+        "60 days",
+        "180 days",
+        "365 days"
+      ],
+      "q": "What is the default tombstone lifetime in modern AD?",
+      "topic": "Replication"
+    },
+    {
+      "answer": 0,
+      "explanation": "Loopback allows user settings based on the computer they log into.",
+      "level": 4,
+      "options": [
+        "Applies user GPO based on computer",
+        "Applies computer GPO to user",
+        "Disables GPO",
+        "Backs up GPO"
+      ],
+      "q": "What is a loopback processing mode in GPO?",
+      "topic": "Group Policy"
+    },
+    {
+      "answer": 2,
+      "explanation": "New-ADUser is used to create users in Active Directory.",
+      "level": 4,
+      "options": [
+        "New-User",
+        "Add-ADUser",
+        "New-ADUser",
+        "Create-User"
+      ],
+      "q": "Which PowerShell cmdlet creates a new AD user?",
+      "topic": "PowerShell"
+    },
+    {
+      "answer": 1,
+      "explanation": "gpresult shows which GPOs are applied to a user/computer.",
+      "level": 4,
+      "options": [
+        "Apply GPO",
+        "View applied policies",
+        "Delete GPO",
+        "Backup GPO"
+      ],
+      "q": "What is the purpose of 'gpresult'?",
+      "topic": "Group Policy"
+    },
+    {
+      "answer": 1,
+      "explanation": "Authoritative restore forces restored objects to replicate across DCs.",
+      "level": 4,
+      "options": [
+        "Restore DNS",
+        "Restore AD and mark objects as authoritative",
+        "Backup files",
+        "Restart DC"
+      ],
+      "q": "What is an authoritative restore?",
+      "topic": "Recovery"
+    },
+    {
+      "answer": 0,
+      "explanation": "Non-authoritative restore updates restored data from replication partners.",
+      "level": 4,
+      "options": [
+        "Restores and updates from other DCs",
+        "Deletes AD",
+        "Backs up system",
+        "Resets password"
+      ],
+      "q": "What is non-authoritative restore?",
+      "topic": "Recovery"
+    },
+    {
+      "answer": 1,
+      "explanation": "It updates references to objects in other domains.",
+      "level": 4,
+      "options": [
+        "Schema changes",
+        "Tracking cross-domain references",
+        "Password sync",
+        "RID allocation"
+      ],
+      "q": "What is the Infrastructure Master role responsible for?",
+      "topic": "FSMO"
+    },
+    {
+      "answer": 1,
+      "explanation": "Kerberos uses port 88.",
+      "level": 4,
+      "options": [
+        "389",
+        "88",
+        "443",
+        "636"
+      ],
+      "q": "Which port does Kerberos use?",
+      "topic": "Protocols"
+    },
+    {
+      "answer": 1,
+      "explanation": "Writable DC allows modifications to AD database.",
+      "level": 4,
+      "options": [
+        "Read-only server",
+        "DC that allows changes",
+        "DNS server",
+        "Backup server"
+      ],
+      "q": "What is a writable DC?",
+      "topic": "AD Basics"
+    },
+    {
+      "answer": 0,
+      "explanation": "RODC hosts a read-only copy of AD database.",
+      "level": 4,
+      "options": [
+        "Read Only Domain Controller",
+        "Remote Object Data Controller",
+        "Replication Only DC",
+        "Root Object DC"
+      ],
+      "q": "What is RODC?",
+      "topic": "AD Basics"
+    },
+    {
+      "answer": 1,
+      "explanation": "USN rollback occurs when a DC improperly reuses update sequence numbers.",
+      "level": 5,
+      "options": [
+        "Backup issue",
+        "Replication inconsistency issue",
+        "DNS failure",
+        "GPO error"
+      ],
+      "q": "What is USN rollback?",
+      "topic": "Replication"
+    },
+    {
+      "answer": 1,
+      "explanation": "Lingering objects remain due to replication failures.",
+      "level": 5,
+      "options": [
+        "Active user",
+        "Deleted object not replicated properly",
+        "DNS record",
+        "Group policy"
+      ],
+      "q": "What is lingering object?",
+      "topic": "Replication"
+    },
+    {
+      "answer": 1,
+      "explanation": "repadmin command is used to clean lingering objects.",
+      "level": 5,
+      "options": [
+        "dcdiag",
+        "repadmin /removelingeringobjects",
+        "netdom",
+        "gpupdate"
+      ],
+      "q": "Which tool removes lingering objects?",
+      "topic": "Replication"
+    },
+    {
+      "answer": 0,
+      "explanation": "AD LDS provides directory services without domain dependencies.",
+      "level": 5,
+      "options": [
+        "Lightweight directory service",
+        "DNS server",
+        "Backup system",
+        "Replication tool"
+      ],
+      "q": "What is AD LDS?",
+      "topic": "AD Services"
+    },
+    {
+      "answer": 1,
+      "explanation": "Delegation allows services to authenticate users to other services.",
+      "level": 5,
+      "options": [
+        "User login",
+        "Allowing service to act on behalf of user",
+        "DNS resolution",
+        "Replication"
+      ],
+      "q": "What is Kerberos delegation?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Constrained delegation limits which services can be delegated.",
+      "level": 5,
+      "options": [
+        "Unlimited delegation",
+        "Restricted delegation to specific services",
+        "No delegation",
+        "DNS delegation"
+      ],
+      "q": "What is constrained delegation?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "SID history helps maintain access after migration.",
+      "level": 5,
+      "options": [
+        "Old password",
+        "Stores previous SIDs for migration",
+        "DNS record",
+        "Group policy"
+      ],
+      "q": "What is SID history?",
+      "topic": "Migration"
+    },
+    {
+      "answer": 1,
+      "explanation": "Determines features available across entire forest.",
+      "level": 5,
+      "options": [
+        "User level",
+        "Feature level across forest",
+        "Password level",
+        "DNS level"
+      ],
+      "q": "What is forest functional level?",
+      "topic": "AD Concepts"
+    },
+    {
+      "answer": 0,
+      "explanation": "Active Directory Migration Tool is used for domain migrations.",
+      "level": 5,
+      "options": [
+        "Migration tool",
+        "Monitoring tool",
+        "Backup tool",
+        "DNS tool"
+      ],
+      "q": "What is ADMT?",
+      "topic": "Migration"
+    },
+    {
+      "answer": 1,
+      "explanation": "Defines which credentials can be cached on RODC.",
+      "level": 5,
+      "options": [
+        "Stores all passwords",
+        "Controls which passwords are cached",
+        "Deletes passwords",
+        "Encrypts passwords"
+      ],
+      "q": "What is password replication policy in RODC?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "NTLM is used if Kerberos authentication fails.",
+      "level": 5,
+      "options": [
+        "Primary authentication",
+        "Fallback when Kerberos fails",
+        "DNS protocol",
+        "Backup method"
+      ],
+      "q": "What is NTLM fallback?",
+      "topic": "Authentication"
+    },
+    {
+      "answer": 1,
+      "explanation": "DFS-R replicates SYSVOL and files efficiently.",
+      "level": 5,
+      "options": [
+        "DNS replication",
+        "File replication service",
+        "Authentication service",
+        "Backup tool"
+      ],
+      "q": "What is DFS-R?",
+      "topic": "Replication"
+    },
+    {
+      "answer": 1,
+      "explanation": "Secure channel maintains trust between computer and domain.",
+      "level": 5,
+      "options": [
+        "Network cable",
+        "Trust between machine and domain",
+        "DNS connection",
+        "Firewall rule"
+      ],
+      "q": "What is secure channel?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "nltest is used to reset secure channel.",
+      "level": 5,
+      "options": [
+        "ipconfig",
+        "nltest /sc_reset",
+        "gpupdate",
+        "netstat"
+      ],
+      "q": "Which command resets secure channel?",
+      "topic": "Troubleshooting"
+    },
+    {
+      "answer": 1,
+      "explanation": "Defines how DCs replicate data.",
+      "level": 5,
+      "options": [
+        "User structure",
+        "Replication path design",
+        "DNS hierarchy",
+        "OU structure"
+      ],
+      "q": "What is AD replication topology?",
+      "topic": "Replication"
+    },
+    {
+      "answer": 1,
+      "explanation": "This command provides a quick summary of replication health across DCs.",
+      "level": 6,
+      "options": [
+        "Reset replication",
+        "Show replication health summary",
+        "Delete replication",
+        "Backup AD"
+      ],
+      "q": "What is the purpose of 'repadmin /replsummary'?",
+      "topic": "Replication"
+    },
+    {
+      "answer": 0,
+      "explanation": "Displays inbound replication status for each DC.",
+      "level": 6,
+      "options": [
+        "Show detailed replication status",
+        "Create replication",
+        "Delete DC",
+        "Reset GPO"
+      ],
+      "q": "What is 'repadmin /showrepl' used for?",
+      "topic": "Replication"
+    },
+    {
+      "answer": 1,
+      "explanation": "DNS misconfiguration is the most common cause of AD replication failure.",
+      "level": 6,
+      "options": [
+        "Power failure",
+        "DNS issues",
+        "Hardware upgrade",
+        "User login"
+      ],
+      "q": "What is the primary cause of replication failure in AD?",
+      "topic": "Troubleshooting"
+    },
+    {
+      "answer": 0,
+      "explanation": "dcdiag with DNS test checks domain controller DNS health.",
+      "level": 6,
+      "options": [
+        "dcdiag /test:dns",
+        "ipconfig /all",
+        "nslookup",
+        "netstat"
+      ],
+      "q": "Which command checks DNS health on a DC?",
+      "topic": "DNS"
+    },
+    {
+      "answer": 1,
+      "explanation": "SYSVOL migration upgrades replication from FRS to DFS-R.",
+      "level": 6,
+      "options": [
+        "User migration",
+        "Moving from FRS to DFS-R",
+        "DNS migration",
+        "Domain rename"
+      ],
+      "q": "What is SYSVOL migration?",
+      "topic": "Replication"
+    },
+    {
+      "answer": 0,
+      "explanation": "FRS is legacy SYSVOL replication method replaced by DFS-R.",
+      "level": 6,
+      "options": [
+        "File Replication Service",
+        "Fast Recovery System",
+        "File Routing Service",
+        "Forest Replication System"
+      ],
+      "q": "What is FRS?",
+      "topic": "Replication"
+    },
+    {
+      "answer": 1,
+      "explanation": "DFS Namespace provides unified folder structure.",
+      "level": 6,
+      "options": [
+        "DNS record",
+        "Logical grouping of shared folders",
+        "User group",
+        "Replication protocol"
+      ],
+      "q": "What is DFS Namespace?",
+      "topic": "File Services"
+    },
+    {
+      "answer": 0,
+      "explanation": "ntdsutil is used for advanced AD tasks like metadata cleanup.",
+      "level": 6,
+      "options": [
+        "Manage AD database and metadata",
+        "Reset passwords",
+        "Check logs",
+        "Run GPO"
+      ],
+      "q": "What is 'ntdsutil' used for?",
+      "topic": "Tools"
+    },
+    {
+      "answer": 1,
+      "explanation": "Used when a DC is removed improperly.",
+      "level": 6,
+      "options": [
+        "Delete logs",
+        "Remove failed DC records",
+        "Backup AD",
+        "Reset GPO"
+      ],
+      "q": "What is metadata cleanup?",
+      "topic": "Recovery"
+    },
+    {
+      "answer": 1,
+      "explanation": "Stale accounts are unused and should be cleaned up.",
+      "level": 6,
+      "options": [
+        "Active account",
+        "Unused or inactive machine account",
+        "Admin account",
+        "DNS record"
+      ],
+      "q": "What is a stale computer account?",
+      "topic": "Maintenance"
+    },
+    {
+      "answer": 0,
+      "explanation": "dsquery is used to find objects in AD.",
+      "level": 6,
+      "options": [
+        "Query AD objects",
+        "Delete users",
+        "Reset DC",
+        "Backup AD"
+      ],
+      "q": "What does 'dsquery' do?",
+      "topic": "Tools"
+    },
+    {
+      "answer": 0,
+      "explanation": "dsmod modifies existing AD objects.",
+      "level": 6,
+      "options": [
+        "Modify AD objects",
+        "Delete AD",
+        "Create DNS",
+        "Restart DC"
+      ],
+      "q": "What is 'dsmod' used for?",
+      "topic": "Tools"
+    },
+    {
+      "answer": 1,
+      "explanation": "dsa.msc opens Active Directory Users and Computers.",
+      "level": 6,
+      "options": [
+        "DNS console",
+        "ADUC console",
+        "Event Viewer",
+        "Registry Editor"
+      ],
+      "q": "What is 'dsa.msc'?",
+      "topic": "Tools"
+    },
+    {
+      "answer": 1,
+      "explanation": "Used to manage AD replication topology.",
+      "level": 6,
+      "options": [
+        "DNS tool",
+        "AD Sites and Services",
+        "GPO editor",
+        "Backup tool"
+      ],
+      "q": "What is 'sites.msc'?",
+      "topic": "Sites & Services"
+    },
+    {
+      "answer": 0,
+      "explanation": "GPMC manages Group Policies.",
+      "level": 6,
+      "options": [
+        "Group Policy Management Console",
+        "DNS tool",
+        "User manager",
+        "Backup tool"
+      ],
+      "q": "What is 'gpmc.msc'?",
+      "topic": "Tools"
+    },
+    {
+      "answer": 0,
+      "explanation": "Without RIDs, new objects cannot be assigned unique SIDs.",
+      "level": 7,
+      "options": [
+        "No new objects can be created",
+        "Replication stops",
+        "DNS fails",
+        "Users cannot login"
+      ],
+      "q": "What happens if RID pool is exhausted?",
+      "topic": "FSMO"
+    },
+    {
+      "answer": 1,
+      "explanation": "FSMO roles can be transferred via GUI or Move-ADDirectoryServerOperationMasterRole.",
+      "level": 7,
+      "options": [
+        "Restart DC",
+        "Using PowerShell or GUI",
+        "Delete DC",
+        "Backup system"
+      ],
+      "q": "How do you transfer FSMO roles?",
+      "topic": "FSMO"
+    },
+    {
+      "answer": 1,
+      "explanation": "Seizure is done when original role holder is unavailable.",
+      "level": 7,
+      "options": [
+        "Normal transfer",
+        "Forceful role takeover",
+        "Backup restore",
+        "Replication error"
+      ],
+      "q": "What is FSMO seizure?",
+      "topic": "FSMO"
+    },
+    {
+      "answer": 0,
+      "explanation": "Schema extension allows new object types.",
+      "level": 7,
+      "options": [
+        "Adding new attributes/classes",
+        "Creating users",
+        "Deleting domain",
+        "Backup process"
+      ],
+      "q": "What is AD schema extension?",
+      "topic": "Schema"
+    },
+    {
+      "answer": 1,
+      "explanation": "Used for integration scenarios.",
+      "level": 7,
+      "options": [
+        "Hidden group",
+        "Group mapped to external directory",
+        "Deleted group",
+        "System group"
+      ],
+      "q": "What is a shadow group?",
+      "topic": "Integration"
+    },
+    {
+      "answer": 1,
+      "explanation": "Prevents SID spoofing across trusts.",
+      "level": 7,
+      "options": [
+        "Allow all SIDs",
+        "Block unauthorized SID history",
+        "DNS filter",
+        "GPO filter"
+      ],
+      "q": "What is SID filtering?",
+      "topic": "Security"
+    },
+    {
+      "answer": 0,
+      "explanation": "Kerberos requires time sync within 5 minutes.",
+      "level": 7,
+      "options": [
+        "Clock mismatch breaking Kerberos",
+        "DNS issue",
+        "Replication issue",
+        "Disk failure"
+      ],
+      "q": "What is time skew issue?",
+      "topic": "Authentication"
+    },
+    {
+      "answer": 0,
+      "explanation": "w32tm manages Windows time service.",
+      "level": 7,
+      "options": [
+        "Time sync",
+        "DNS config",
+        "User creation",
+        "Replication"
+      ],
+      "q": "What is 'w32tm' used for?",
+      "topic": "Tools"
+    },
+    {
+      "answer": 1,
+      "explanation": "Occurs when domains cannot authenticate each other.",
+      "level": 7,
+      "options": [
+        "Network cable issue",
+        "Failure in domain relationship",
+        "DNS failure",
+        "User login issue"
+      ],
+      "q": "What is a broken trust?",
+      "topic": "Trusts"
+    },
+    {
+      "answer": 1,
+      "explanation": "Fix involves re-establishing trust.",
+      "level": 7,
+      "options": [
+        "Restart PC",
+        "Rejoin domain or reset trust",
+        "Delete user",
+        "Run gpupdate"
+      ],
+      "q": "How to fix broken trust?",
+      "topic": "Troubleshooting"
+    },
+    {
+      "answer": 0,
+      "explanation": "Duplicate SPNs cause Kerberos authentication failures.",
+      "level": 7,
+      "options": [
+        "Duplicate service names",
+        "DNS issue",
+        "Replication issue",
+        "User error"
+      ],
+      "q": "What is SPN duplication issue?",
+      "topic": "Security"
+    },
+    {
+      "answer": 0,
+      "explanation": "setspn -X detects duplicate SPNs.",
+      "level": 7,
+      "options": [
+        "setspn -X",
+        "ipconfig",
+        "dcdiag",
+        "netstat"
+      ],
+      "q": "Which command finds SPN issues?",
+      "topic": "Troubleshooting"
+    },
+    {
+      "answer": 0,
+      "explanation": "Latency is time taken for changes to replicate.",
+      "level": 7,
+      "options": [
+        "Delay in replication",
+        "DNS delay",
+        "Login delay",
+        "Backup delay"
+      ],
+      "q": "What is AD replication latency?",
+      "topic": "Replication"
+    },
+    {
+      "answer": 1,
+      "explanation": "LDAPS secures directory communication.",
+      "level": 7,
+      "options": [
+        "LDAP without security",
+        "LDAP over SSL/TLS",
+        "DNS encryption",
+        "Firewall rule"
+      ],
+      "q": "What is secure LDAP?",
+      "topic": "Security"
+    },
+    {
+      "answer": 0,
+      "explanation": "Audit policies track security events.",
+      "level": 7,
+      "options": [
+        "Monitoring changes and logins",
+        "DNS config",
+        "Replication setting",
+        "Backup policy"
+      ],
+      "q": "What is AD audit policy?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Kerberos requires time sync within 5 minutes; time skew breaks authentication.",
+      "level": 8,
+      "options": [
+        "Disk space",
+        "Time synchronization",
+        "Printer status",
+        "Firewall logs"
+      ],
+      "q": "A user cannot log in but DNS is working. What should you check first?",
+      "topic": "Troubleshooting"
+    },
+    {
+      "answer": 1,
+      "explanation": "DNS issues are the most common cause of replication failure.",
+      "level": 8,
+      "options": [
+        "Disk usage",
+        "DNS resolution",
+        "User accounts",
+        "Group policy"
+      ],
+      "q": "Replication between two DCs is failing. What is the first thing to verify?",
+      "topic": "Replication"
+    },
+    {
+      "answer": 1,
+      "explanation": "SID history ensures access to old resources after migration.",
+      "level": 8,
+      "options": [
+        "DNS issue",
+        "Missing SID history",
+        "GPO issue",
+        "Disk issue"
+      ],
+      "q": "Users cannot access a resource after migration. What could be the cause?",
+      "topic": "Migration"
+    },
+    {
+      "answer": 1,
+      "explanation": "Roles should be distributed for redundancy in large environments.",
+      "level": 8,
+      "options": [
+        "All on one DC always",
+        "Spread across multiple DCs depending on size",
+        "Only on RODC",
+        "Random placement"
+      ],
+      "q": "What is the best practice for placing FSMO roles?",
+      "topic": "Design"
+    },
+    {
+      "answer": 1,
+      "explanation": "Metadata cleanup removes failed DC references from AD.",
+      "level": 8,
+      "options": [
+        "Restart server",
+        "Metadata cleanup",
+        "Delete users",
+        "Disable DNS"
+      ],
+      "q": "What would you do if a DC fails permanently?",
+      "topic": "Recovery"
+    },
+    {
+      "answer": 1,
+      "explanation": "GC enables universal group membership and forest-wide searches.",
+      "level": 8,
+      "options": [
+        "DNS resolution",
+        "Authentication and searches",
+        "Backup",
+        "Replication"
+      ],
+      "q": "Why is Global Catalog important in multi-domain environments?",
+      "topic": "AD Structure"
+    },
+    {
+      "answer": 1,
+      "explanation": "Disabling SID filtering can allow privilege escalation.",
+      "level": 8,
+      "options": [
+        "DNS failure",
+        "Security vulnerability",
+        "Replication issue",
+        "Login delay"
+      ],
+      "q": "What is the risk of disabling SID filtering?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Incorrect OU linking or filtering often prevents GPO application.",
+      "level": 8,
+      "options": [
+        "Disk space",
+        "OU linkage and security filtering",
+        "Printer drivers",
+        "CPU usage"
+      ],
+      "q": "What should you check if GPO is not applying?",
+      "topic": "Group Policy"
+    },
+    {
+      "answer": 1,
+      "explanation": "DNS is critical for AD; misconfiguration breaks core functionality.",
+      "level": 8,
+      "options": [
+        "Only login issues",
+        "Major AD failures including replication",
+        "Printer issues",
+        "File system errors"
+      ],
+      "q": "What is the impact of DNS misconfiguration in AD?",
+      "topic": "DNS"
+    },
+    {
+      "answer": 1,
+      "explanation": "dcdiag provides a full health check for DCs.",
+      "level": 8,
+      "options": [
+        "ping",
+        "dcdiag",
+        "netstat",
+        "tasklist"
+      ],
+      "q": "How do you verify DC health quickly?",
+      "topic": "Troubleshooting"
+    },
+    {
+      "answer": 1,
+      "explanation": "Sites optimize replication and authentication traffic.",
+      "level": 8,
+      "options": [
+        "Security",
+        "Control replication traffic",
+        "User login",
+        "Password policy"
+      ],
+      "q": "What is the purpose of site design in AD?",
+      "topic": "Design"
+    },
+    {
+      "answer": 1,
+      "explanation": "SYSVOL is required for Group Policy distribution.",
+      "level": 8,
+      "options": [
+        "DNS failure",
+        "GPOs won't apply",
+        "Replication stops",
+        "Users deleted"
+      ],
+      "q": "What happens if SYSVOL is not shared?",
+      "topic": "Replication"
+    },
+    {
+      "answer": 1,
+      "explanation": "AD-integrated DNS ensures proper replication and resolution.",
+      "level": 8,
+      "options": [
+        "Use external DNS",
+        "Use AD-integrated DNS",
+        "Disable DNS",
+        "Manual DNS only"
+      ],
+      "q": "What is the best practice for DNS in AD?",
+      "topic": "DNS"
+    },
+    {
+      "answer": 2,
+      "explanation": "Provides detailed graphical GPO analysis.",
+      "level": 8,
+      "options": [
+        "Event Viewer",
+        "gpresult /r",
+        "Group Policy Results Wizard",
+        "Task Manager"
+      ],
+      "q": "What tool helps analyze GPO issues visually?",
+      "topic": "Group Policy"
+    },
+    {
+      "answer": 1,
+      "explanation": "Stored old credentials often cause lockouts.",
+      "level": 8,
+      "options": [
+        "DNS",
+        "Cached credentials",
+        "Replication",
+        "GPO"
+      ],
+      "q": "What is a common cause of account lockouts?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Proper site link configuration ensures efficient replication.",
+      "level": 9,
+      "options": [
+        "Printer setup",
+        "Site links and replication schedules",
+        "User passwords",
+        "File systems"
+      ],
+      "q": "Design a multi-site AD: what is critical?",
+      "topic": "Design"
+    },
+    {
+      "answer": 1,
+      "explanation": "DCs should be close to users for performance.",
+      "level": 9,
+      "options": [
+        "Single location",
+        "Place DCs near users",
+        "Random placement",
+        "Only cloud"
+      ],
+      "q": "How do you handle DC placement globally?",
+      "topic": "Design"
+    },
+    {
+      "answer": 1,
+      "explanation": "Schema corruption affects entire forest.",
+      "level": 9,
+      "options": [
+        "Minor issue",
+        "Forest-wide failure",
+        "DNS only",
+        "User login delay"
+      ],
+      "q": "What is the impact of schema corruption?",
+      "topic": "Schema"
+    },
+    {
+      "answer": 1,
+      "explanation": "Forest recovery involves restoring AD from backup.",
+      "level": 9,
+      "options": [
+        "Restart DC",
+        "Full forest restore",
+        "Delete users",
+        "Reset DNS"
+      ],
+      "q": "What is forest recovery strategy?",
+      "topic": "Recovery"
+    },
+    {
+      "answer": 1,
+      "explanation": "Separates admin access levels to reduce risk.",
+      "level": 9,
+      "options": [
+        "DNS model",
+        "Security model separating admin roles",
+        "Replication model",
+        "Backup model"
+      ],
+      "q": "What is tiered administration model?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Used for secure administrative tasks.",
+      "level": 9,
+      "options": [
+        "User PC",
+        "Secure admin workstation",
+        "Server",
+        "Backup device"
+      ],
+      "q": "What is PAW (Privileged Access Workstation)?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Represents vulnerabilities in AD environment.",
+      "level": 9,
+      "options": [
+        "Physical damage",
+        "Security exposure points",
+        "DNS structure",
+        "Replication topology"
+      ],
+      "q": "What is AD attack surface?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Attackers forge Kerberos tickets using KRBTGT hash.",
+      "level": 9,
+      "options": [
+        "DNS attack",
+        "Kerberos ticket forgery",
+        "Replication attack",
+        "Password reset"
+      ],
+      "q": "What is Golden Ticket attack?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "KRBTGT is used by Kerberos to encrypt tickets.",
+      "level": 9,
+      "options": [
+        "Admin account",
+        "Kerberos service account",
+        "User account",
+        "DNS account"
+      ],
+      "q": "What is KRBTGT account?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Users should have only necessary permissions.",
+      "level": 9,
+      "options": [
+        "Full access",
+        "Minimum required access",
+        "No access",
+        "Admin only"
+      ],
+      "q": "What is least privilege principle?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Improper delegation can expose sensitive access.",
+      "level": 9,
+      "options": [
+        "Performance issue",
+        "Privilege escalation risk",
+        "DNS issue",
+        "Replication delay"
+      ],
+      "q": "What is delegation risk?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Hardening improves DC security posture.",
+      "level": 9,
+      "options": [
+        "Hardware upgrade",
+        "Securing domain controllers",
+        "Backup process",
+        "DNS setup"
+      ],
+      "q": "What is DC hardening?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Used to detect suspicious activities.",
+      "level": 9,
+      "options": [
+        "Deleting logs",
+        "Tracking events for security",
+        "DNS monitoring",
+        "Replication monitoring"
+      ],
+      "q": "What is audit log monitoring?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Allows authentication across systems.",
+      "level": 9,
+      "options": [
+        "DNS sharing",
+        "Cross-domain identity sharing",
+        "Replication",
+        "Backup"
+      ],
+      "q": "What is identity federation?",
+      "topic": "Integration"
+    },
+    {
+      "answer": 1,
+      "explanation": "Hybrid AD integrates on-prem AD with cloud identity.",
+      "level": 9,
+      "options": [
+        "On-prem only",
+        "On-prem + cloud integration",
+        "Cloud only",
+        "DNS only"
+      ],
+      "q": "What is hybrid AD?",
+      "topic": "Cloud"
+    },
+    {
+      "answer": 1,
+      "explanation": "Large environments require scalable design.",
+      "level": 10,
+      "options": [
+        "Single DC",
+        "Multiple sites, DCs, proper OU design",
+        "No DNS",
+        "Manual setup"
+      ],
+      "q": "How would you design AD for 100k users?",
+      "topic": "Architecture"
+    },
+    {
+      "answer": 1,
+      "explanation": "Zero trust enforces strict verification.",
+      "level": 10,
+      "options": [
+        "Trust all users",
+        "Never trust, always verify",
+        "Disable AD",
+        "Use only DNS"
+      ],
+      "q": "What is zero trust in AD context?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Regular rotation reduces attack risk.",
+      "level": 10,
+      "options": [
+        "Delete it",
+        "Rotate password regularly",
+        "Disable it",
+        "Share password"
+      ],
+      "q": "How to secure KRBTGT account?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Ensures recovery from catastrophic failures.",
+      "level": 10,
+      "options": [
+        "Restart server",
+        "Backup and restore strategy",
+        "Delete users",
+        "Disable DNS"
+      ],
+      "q": "What is AD disaster recovery plan?",
+      "topic": "Recovery"
+    },
+    {
+      "answer": 1,
+      "explanation": "Trusts must be carefully designed for security.",
+      "level": 10,
+      "options": [
+        "Ignore security",
+        "Security boundaries and authentication flow",
+        "Only DNS",
+        "User passwords"
+      ],
+      "q": "What is forest trust design consideration?",
+      "topic": "Trusts"
+    },
+    {
+      "answer": 1,
+      "explanation": "Detects attacks like lateral movement.",
+      "level": 10,
+      "options": [
+        "DNS logs",
+        "Monitoring suspicious behavior",
+        "User creation",
+        "Backup"
+      ],
+      "q": "What is advanced threat detection in AD?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Ensures proper identity management.",
+      "level": 10,
+      "options": [
+        "DNS control",
+        "Managing identities and access lifecycle",
+        "Replication",
+        "Backup"
+      ],
+      "q": "What is identity governance?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "JIT reduces standing privileges.",
+      "level": 10,
+      "options": [
+        "Permanent access",
+        "Temporary elevated access",
+        "No access",
+        "DNS access"
+      ],
+      "q": "What is Just-In-Time (JIT) access?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Mitigation includes monitoring and controls.",
+      "level": 10,
+      "options": [
+        "Ignore attacks",
+        "Prevent and respond to threats",
+        "Disable AD",
+        "Delete users"
+      ],
+      "q": "What is AD attack mitigation?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Monitoring ensures stability and security.",
+      "level": 10,
+      "options": [
+        "DNS only",
+        "Continuous tracking of AD health and security",
+        "User login",
+        "Backup"
+      ],
+      "q": "What is enterprise AD monitoring?",
+      "topic": "Operations"
+    },
+    {
+      "answer": 1,
+      "explanation": "Automation improves efficiency and reduces errors.",
+      "level": 10,
+      "options": [
+        "Manual work",
+        "Using scripts/tools to manage AD",
+        "DNS config",
+        "Replication"
+      ],
+      "q": "What is AD automation?",
+      "topic": "Automation"
+    },
+    {
+      "answer": 1,
+      "explanation": "DSC automates configuration management.",
+      "level": 10,
+      "options": [
+        "DNS tool",
+        "Configuration management",
+        "Backup tool",
+        "Replication tool"
+      ],
+      "q": "What is PowerShell DSC in AD?",
+      "topic": "Automation"
+    },
+    {
+      "answer": 1,
+      "explanation": "Scalability ensures AD supports growth.",
+      "level": 10,
+      "options": [
+        "Small system",
+        "Ability to grow efficiently",
+        "DNS only",
+        "Backup"
+      ],
+      "q": "What is AD scalability?",
+      "topic": "Architecture"
+    },
+    {
+      "answer": 1,
+      "explanation": "Baseline defines minimum security settings.",
+      "level": 10,
+      "options": [
+        "Default config",
+        "Standard secure configuration",
+        "DNS config",
+        "Replication"
+      ],
+      "q": "What is security baseline in AD?",
+      "topic": "Security"
+    },
+    {
+      "answer": 1,
+      "explanation": "Includes creation, modification, and deletion of objects.",
+      "level": 10,
+      "options": [
+        "DNS cycle",
+        "Managing object lifecycle",
+        "Replication",
+        "Backup"
+      ],
+      "q": "What is AD lifecycle management?",
+      "topic": "Operations"
+    },
+    {
+      "answer": 1,
+      "explanation": "Authorization determines what resources a user can access.",
+      "level": 1,
+      "options": [
+        "Verifying identity",
+        "Granting access rights",
+        "Logging events",
+        "DNS resolution"
+      ],
+      "q": "What is authorization?",
+      "topic": "Security"
+    }
+  ]
+}
