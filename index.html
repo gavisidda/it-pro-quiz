@@ -124,7 +124,8 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .qtopic{font-size:11px;color:var(--muted);margin-bottom:14px;font-family:var(--mono)}
 .question-text{font-size:17px;font-weight:600;line-height:1.6;margin-bottom:24px;color:var(--text)}
 .options-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
-@media(max-width:520px){.options-grid{grid-template-columns:1fr}}
+/*@media(max-width:520px){.options-grid{grid-template-columns:1fr}}*/
+@media(max-width:520px){.options-grid{grid-template-columns:1fr}.hero-banner p{font-size:13px;line-height:1.3}.hero-stats{gap:8px}} /* mobile compact UI */
 /*.opt{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;cursor:pointer;transition:all .2s;display:flex;align-items:flex-start;gap:10px;font-size:14px;line-height:1.4;text-align:left;width:100%}*/
 .opt{background:#1e293b;border:1px solid #334155;border-radius:10px;padding:14px 16px;cursor:pointer;transition:all .2s;display:flex;align-items:flex-start;gap:10px;font-size:15px;line-height:1.5;text-align:left;width:100%;color:#ffffff;} /* darker card + visible white answer text */
 .opt:hover:not(.disabled){border-color:var(--accent);background:rgba(0,200,255,.06)}
@@ -221,7 +222,7 @@ tr:hover td{background:rgba(0,200,255,.03)}
     </div>
     <div class="stats-row">
       <div class="stat-box"><div class="stat-num">20</div><div class="stat-lbl">Categories</div></div>
-      <div class="stat-box"><div class="stat-num">5+</div><div class="stat-lbl">Levels Each</div></div>
+      <div class="stat-box"><div class="stat-num">10+</div><div class="stat-lbl">Levels Each</div></div>
       <div class="stat-box"><div class="stat-num">500+</div><div class="stat-lbl">Questions</div></div>
     </div>
     <div class="card login-card">
@@ -253,7 +254,7 @@ tr:hover td{background:rgba(0,200,255,.03)}
   <div class="home-content fade-in">
     <div class="hero-banner">
       <h1>Welcome, <span id="welcomeName" style="color:var(--accent)">Admin</span> 👋</h1>
-      <p>Master IT infrastructure across 20 technology domains. Complete all levels in each category to become an IT Pro.</p>
+      <p>Learn IT infrastructure across 20 domains. Complete levels to become an IT Pro.</p>
       <div class="hero-stats">
         <div class="hs"><div class="hs-val" id="totalScore">0</div><div class="hs-key">Total Score</div></div>
         <div class="hs"><div class="hs-val" id="totalCorrect">0</div><div class="hs-key">Correct Answers</div></div>
