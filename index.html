@@ -618,17 +618,21 @@ function speakResult(isCorrect, correctText, isTimeUp=false){
   stopTTS();
 
   // "1947 is the correct answer"  /  "Wrong. The correct answer is 1857"
-let msg;
+  const safeAnswer = correctText || "Unknown answer";
+
+let msg = "";
 
 if(isTimeUp){
-  msg = `⏱ Time up! The correct answer is ${correctText}.`;
+  msg = `⏱ Time up! The correct answer is ${safeAnswer}.`;
 }
 else if(isCorrect){
-  msg = `${correctText} is the correct answer.`;
+  msg = `${safeAnswer} is the correct answer.`;
 }
 else{
-  msg = `Wrong. The correct answer is ${correctText}.`;
+  msg = `Wrong. The correct answer is ${safeAnswer}.`;
 }
+
+document.getElementById('ttsMsg').textContent = msg;
 
   const bar   = document.getElementById('ttsBar');
   const icon  = document.getElementById('ttsIcon');
