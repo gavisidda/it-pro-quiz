@@ -94,16 +94,12 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .level-cat-name{font-size:22px;font-weight:800;margin-top:8px}
 .level-cat-desc{font-size:13px;color:var(--muted);margin-top:4px}
 .levels-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
-/*.level-btn{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px 10px;cursor:pointer;text-align:center;transition:all .2s;position:relative}*/
 .level-btn{background:#1e293b;border:1px solid #334155;border-radius:10px;padding:16px 10px;cursor:pointer;text-align:center;transition:all .2s;position:relative;color:#ffffff;}
 .level-btn:hover:not(.lk){border-color:var(--accent);box-shadow:0 4px 16px rgba(0,200,255,.2)}
-/*.level-btn.lk{opacity:.4;cursor:not-allowed}*/
 .level-btn.lk{opacity:.5;color:#94a3b8;cursor:not-allowed;}
 .level-btn.done{border-color:var(--accent2)}
 .level-btn.no-qs{opacity:.25;cursor:not-allowed;border-style:dashed}
-/*.level-num{font-family:var(--mono);font-size:20px;font-weight:700;color:var(--accent)}*/
 .level-num{font-family:var(--mono);font-size:22px;font-weight:800;color:#ffffff;}
-/*.level-label{font-size:11px;color:var(--muted);margin-top:4px}*/
 .level-label{font-size:12px;color:#cbd5e1;margin-top:4px;}
 .level-stars{font-size:12px;margin-top:4px}
 
@@ -124,7 +120,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .qtopic{font-size:11px;color:var(--muted);margin-bottom:14px;font-family:var(--mono)}
 .question-text{font-size:17px;font-weight:600;line-height:1.6;margin-bottom:24px;color:var(--text)}
 .options-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
-/*@media(max-width:520px){.options-grid{grid-template-columns:1fr}}*/
 @media(max-width:520px){.options-grid{grid-template-columns:1fr}.hero-banner p{font-size:13px;line-height:1.3}.hero-stats{gap:8px}} /* mobile compact UI */
 /*.opt{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;cursor:pointer;transition:all .2s;display:flex;align-items:flex-start;gap:10px;font-size:14px;line-height:1.4;text-align:left;width:100%}*/
 .opt{background:#1e293b;border:1px solid #334155;border-radius:10px;padding:14px 16px;cursor:pointer;transition:all .2s;display:flex;align-items:flex-start;gap:10px;font-size:15px;line-height:1.5;text-align:left;width:100%;color:#ffffff;} /* darker card + visible white answer text */
@@ -132,16 +127,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .opt.correct{border-color:var(--accent2)!important;background:rgba(10,240,160,.12)!important;color:var(--accent2)}
 .opt.wrong{border-color:var(--red)!important;background:rgba(255,68,68,.12)!important;color:var(--red)}
 .opt.disabled{cursor:not-allowed}
-/*.opt-letter{font-family:var(--mono);font-size:12px;color:var(--muted);flex-shrink:0;width:18px;margin-top:1px}*/
-.opt-letter{
-  font-family:var(--mono);
-  font-size:12px;
-  color:#fff;
-  background:#0077b6;
-  border-radius:4px;
-  padding:2px 6px;
-  font-weight:700;
-}
+.opt-letter{font-family:var(--mono);font-size:12px;color:#fff;background:#0077b6;border-radius:4px;padding:2px 6px;font-weight:700;}
 .lifelines{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
 .lifeline{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:8px 14px;cursor:pointer;font-size:12px;display:flex;align-items:center;gap:6px;transition:all .2s}
 .lifeline:hover:not(.used){border-color:var(--gold);color:var(--gold)}
@@ -489,6 +475,7 @@ let quizQs=[], qIdx=0, correctCount=0;
 let startTime=null, timer=null, timeLeft=30;
 let lifelines={f:false,s:false,h:false};
 let streak=0;
+let answered = false; // ✅ lock after first answer
 let PASS_THRESH=0.7, Q_PER_LEVEL=10;
 let speed=1, soundOn=true, ttsOn=true;
 const ADMIN_PWD_KEY='itpq_apwd';
@@ -497,24 +484,6 @@ let adminPwd = localStorage.getItem(ADMIN_PWD_KEY) || 'itpro2024';
 // question cache: catId → { levelNum: [q,q,...], ... }
 const qCache={};
 
-// ════════════════════════════════════════════
-// QUESTION LOADING
-//
-// JSON format (questions/<catId>.json):
-// {
-//   "category": "ad",
-//   "questions": [
-//     {
-//       "q":          "What does AD stand for?",
-//       "options":    ["Active Directory","Azure Deployment","Auto Domain","Access Directory"],
-//       "answer":     0,          ← index of correct option (0=A, 1=B, 2=C, 3=D)
-//       "explanation":"AD = Active Directory, Microsoft's directory service.",
-//       "topic":      "Basics",   ← optional label shown above question
-//       "level":      1           ← 1–5 (or higher if you extend)
-//     }
-//   ]
-// }
-// ════════════════════════════════════════════
 async function loadCatQs(catId){
   if(qCache[catId]!==undefined) return qCache[catId];
   try{
@@ -558,7 +527,12 @@ async function prefetchMeta(){
   await Promise.all(CATEGORIES.map(async cat=>{
     const byLv=await loadCatQs(cat.id);
     if(!byLv){ catMeta[cat.id]={maxLv:0,totalQs:0}; return; }
-    const maxLv=Math.max(0,...Object.keys(byLv).map(Number));
+    const maxLv = Math.max(
+  0,
+  ...Object.keys(byLv)
+    .map(Number)
+    .filter(lv => byLv[lv] && byLv[lv].length > 0)
+);
     const totalQs=Object.values(byLv).reduce((s,a)=>s+a.length,0);
     catMeta[cat.id]={maxLv,totalQs};
   }));
@@ -841,6 +815,8 @@ async function startQuiz(catId,lv){
 
 function renderQ(){
   stopTTS();
+  window.timeExpired = false;
+  answered = false; // ✅ reset lock
   if(qIdx>=quizQs.length){ endQuiz(); return; }
   const q=quizQs[qIdx];
   set('qNum',`Question ${qIdx+1} of ${quizQs.length}`);
@@ -865,7 +841,7 @@ function renderQ(){
 clearInterval(timer);
 
 const base = 60;
-timeLeft = Math.round(base / speed);
+timeLeft = Math.max(15, Math.round(base / speed));
 
 drawTimer(timeLeft, timeLeft);
 
@@ -873,8 +849,7 @@ timer = setInterval(() => {
   timeLeft--;
 
   if(timeLeft === 10){
-    toast('⚠️ 10 seconds left!');
-    playWrong();
+  toast('⚠️ 10 seconds left!');
   }
 
   drawTimer(timeLeft, Math.round(base / speed));
@@ -898,21 +873,6 @@ timer = setInterval(() => {
 }, 1000);
 }
 
-//TIME UP voice (NEW)
-function speakTimeUp(q){
-  if(!ttsOn || !window.speechSynthesis) return;
-  stopTTS();
-
-  const correctText = q.options[q.answer] || '';
-  const msg = `Time is up. The correct answer is ${correctText}.`;
-
-  const utt = new SpeechSynthesisUtterance(msg);
-  utt.rate = Math.min(speed * 0.95, 1.4);
-  utt.pitch = 0.9;
-  utt.volume = 1;
-
-  window.speechSynthesis.speak(utt);
-}
 
 function drawTimer(t,max){
   const el=$('timerCircle');
@@ -922,7 +882,8 @@ function drawTimer(t,max){
 }
 
 function pick(i,q){
-  if(window.timeExpired) return; // ⛔ stop clicks after time up
+  if(window.timeExpired || answered) return; // ✅ block re-click
+  answered = true; // ✅ lock immediately
   clearInterval(timer);
   reveal(i,q);
 }
@@ -938,9 +899,23 @@ function reveal(sel,q){
   const ok = window.timeExpired ? false : sel === q.answer;
   if(sel === -1 || window.timeExpired){
   window.timeExpired = true;
-  speakTimeUp(q);
-  return;
+
+  const correctText = q.options[q.answer] || '';
+
+  // ✅ unified TTS
+  speakResult(false, correctText, true);
+
+  // ✅ show explanation
+  if(q.explanation){
+    set('explanationText', q.explanation);
+    $('explanationBox').style.display='block';
   }
+
+  // ✅ allow next
+  $('nextBtn').style.display='inline-flex';
+
+  return;
+}
   if(ok){ correctCount++; streak++; playCorrect(); flash('✅'); }
   else   { streak=0;            playWrong();  flash('❌'); }
   $('streakBox').style.display=streak>=3?'block':'none';
