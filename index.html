@@ -637,22 +637,39 @@ function toggleTTS(){
   localStorage.setItem('itpq_tts',ttsOn?'1':'0');
 }
 
-function speakResult(isCorrect, correctText){
+function speakResult(isCorrect, correctText, isTimeUp=false){
   if(!ttsOn||!soundOn) return;
   if(!window.speechSynthesis) return;
   stopTTS();
 
   // "1947 is the correct answer"  /  "Wrong. The correct answer is 1857"
-  const msg = isCorrect
-    ? `${correctText} is the correct answer.`
-    : `Wrong. The correct answer is ${correctText}.`;
+let msg;
+
+if(isTimeUp){
+  msg = `⏱ Time up! The correct answer is ${correctText}.`;
+}
+else if(isCorrect){
+  msg = `${correctText} is the correct answer.`;
+}
+else{
+  msg = `Wrong. The correct answer is ${correctText}.`;
+}
 
   const bar   = document.getElementById('ttsBar');
   const icon  = document.getElementById('ttsIcon');
   const msgEl = document.getElementById('ttsMsg');
-  icon.textContent  = isCorrect ? '✅' : '❌';
-  msgEl.textContent = msg;
-  bar.className     = 'tts-bar show ' + (isCorrect ? 'correct-bar' : 'wrong-bar');
+  if(isTimeUp){
+  icon.textContent = '⏱';
+  bar.className = 'tts-bar show timeup-bar';
+}
+else if(isCorrect){
+  icon.textContent = '✅';
+  bar.className = 'tts-bar show correct-bar';
+}
+else{
+  icon.textContent = '❌';
+  bar.className = 'tts-bar show wrong-bar';
+}
 
   const utt = new SpeechSynthesisUtterance(msg);
   utt.rate  = Math.min(speed * 0.95, 1.7);
@@ -930,7 +947,7 @@ function reveal(sel,q){
 
   // TTS — slight delay so audio chime finishes first
   const correctText=q.options[q.answer]||'';
-  setTimeout(()=>speakResult(ok,correctText),320);
+  setTimeout(()=>speakResult(ok, correctText, window.timeExpired), 320);
 
   if(q.explanation){ set('explanationText',q.explanation); $('explanationBox').style.display='block'; }
   $('nextBtn').style.display='inline-flex';
