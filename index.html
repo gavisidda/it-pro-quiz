@@ -233,6 +233,7 @@ tr:hover td{background:rgba(0,200,255,.03)}
     <div class="nav-brand">IT_PRO_QUIZ</div>
     <div class="nav-user">
       <span id="navScore" style="font-family:var(--mono);font-size:13px;color:var(--accent2)">⭐ 0</span>
+      <button id="navAdminBtn" onclick="showAdmin()" style="display:none;padding:6px 12px;font-size:12px" class="btn btn-outline">🔐 Admin</button>
       <div class="avatar" id="navAvatar">U</div>
       <button class="btn btn-outline" onclick="logout()" style="padding:6px 14px;font-size:12px">Logout</button>
     </div>
@@ -338,13 +339,17 @@ tr:hover td{background:rgba(0,200,255,.03)}
 <!-- ADMIN -->
 <div id="adminScreen" class="screen">
   <div class="admin-nav">
-    <div style="font-family:var(--mono);font-size:14px;color:var(--accent)">🔐 Admin Dashboard</div>
-    <button class="btn btn-outline" onclick="goScreen('homeScreen')" style="padding:6px 14px;font-size:12px">← Exit</button>
+    <div style="font-family:var(--mono);font-size:14px;color:var(--accent)">🔐 Admin Dashboard &nbsp;<span id="adminNameTag" style="font-size:11px;color:var(--muted)"></span></div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <button class="btn btn-primary" onclick="adminPlayQuiz()" style="padding:6px 14px;font-size:12px">🎮 Play Quiz</button>
+      <button class="btn btn-outline" onclick="adminLogout()" style="padding:6px 14px;font-size:12px">Logout</button>
+    </div>
   </div>
   <div class="admin-body">
     <div class="admin-tabs">
       <div class="atab active" onclick="switchTab(this,'overview')">📊 Overview</div>
       <div class="atab" onclick="switchTab(this,'participants')">👥 Participants</div>
+      <div class="atab" onclick="switchTab(this,'admins')">🔐 Admins</div>
       <div class="atab" onclick="switchTab(this,'settings')">⚙️ Settings</div>
     </div>
     <div class="tab-content active" id="tab-overview">
@@ -365,6 +370,22 @@ tr:hover td{background:rgba(0,200,255,.03)}
         <tbody id="playersTable"><tr><td colspan="7" style="text-align:center;color:var(--muted);padding:24px">Loading...</td></tr></tbody></table>
       </div>
     </div>
+    <div class="tab-content" id="tab-admins">
+      <div style="font-size:14px;font-weight:600;margin-bottom:16px">Admin Accounts</div>
+      <div class="card" style="max-width:500px;margin-bottom:16px">
+        <div style="font-size:13px;color:var(--muted);margin-bottom:12px">Add a Google account email as admin. They can sign in via <em>Admin Login</em> on the login screen.</div>
+        <div style="display:flex;gap:8px">
+          <input class="input" id="newAdminEmail" placeholder="admin@example.com" type="email" style="flex:1">
+          <button class="btn btn-primary" onclick="addAdminEmail()" style="padding:10px 16px;font-size:13px;flex-shrink:0">Add Admin</button>
+        </div>
+      </div>
+      <div class="card" style="overflow-x:auto">
+        <table>
+          <thead><tr><th>Email</th><th>Role</th><th>Action</th></tr></thead>
+          <tbody id="adminsTable"><tr><td colspan="3" style="text-align:center;color:var(--muted);padding:24px">Loading...</td></tr></tbody>
+        </table>
+      </div>
+    </div>
     <div class="tab-content" id="tab-settings">
       <div class="card" style="max-width:400px">
         <div style="font-size:14px;font-weight:600;margin-bottom:16px">Quiz Settings</div>
@@ -380,35 +401,27 @@ tr:hover td{background:rgba(0,200,255,.03)}
           <button class="btn btn-primary" onclick="saveSettings()">💾 Save Settings</button>
         </div>
       </div>
-      <div class="card" style="max-width:400px;margin-top:16px">
-        <div style="font-size:14px;font-weight:600;margin-bottom:16px">Change Admin Password</div>
-        <div style="display:flex;flex-direction:column;gap:10px">
-          <input class="input" type="password" id="curPwd" placeholder="Current password">
-          <input class="input" type="password" id="newPwd" placeholder="New password (min 6 chars)">
-          <button class="btn btn-outline" onclick="changeAdminPwd()">🔄 Change Password</button>
-        </div>
-      </div>
       <div class="card" style="max-width:400px;margin-top:16px;border-color:rgba(255,68,68,.3)">
         <div style="font-size:14px;font-weight:600;color:var(--red);margin-bottom:8px">⚠️ Danger Zone</div>
         <p style="font-size:12px;color:var(--muted);margin-bottom:12px">Reset all local progress for this device.</p>
         <button class="btn btn-danger" onclick="resetAllData()">Reset Local Data</button>
       </div>
-    </div>
+    </div><!-- /tab-settings -->
   </div>
 </div>
 
 <!-- MODALS -->
 <div class="modal-bg" id="adminModal">
   <div class="modal">
-    <h3>🔐 Admin Login</h3>
+    <h3>🔐 Admin Portal</h3>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Sign in with your authorised Google admin account.</p>
     <div style="display:flex;flex-direction:column;gap:12px">
-      <input class="input" type="text" id="adminUser" placeholder="Username" value="admin">
-      <input class="input" type="password" id="adminPwdIn" placeholder="Password">
-      <div style="display:flex;gap:8px">
-        <button class="btn btn-primary" onclick="verifyAdmin()" style="flex:1">Login</button>
-        <button class="btn btn-guest" onclick="closeAdminModal()" style="flex:1">Cancel</button>
-      </div>
-      <div id="adminErr" style="font-size:12px;color:var(--red);text-align:center;display:none">Invalid credentials</div>
+      <button class="btn btn-google" onclick="loginAdminGoogle()" id="adminGoogleBtn">
+        <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        Sign in with Google
+      </button>
+      <button class="btn btn-guest" onclick="closeAdminModal()">✕ Cancel</button>
+      <div id="adminErr" style="font-size:12px;color:var(--red);text-align:center;display:none">Not authorised as admin. Contact the system owner.</div>
     </div>
   </div>
 </div>
@@ -478,8 +491,6 @@ let streak=0;
 let answered = false; // ✅ lock after first answer
 let PASS_THRESH=0.7, Q_PER_LEVEL=10;
 let speed=1, soundOn=true, ttsOn=true;
-const ADMIN_PWD_KEY='itpq_apwd';
-let adminPwd = localStorage.getItem(ADMIN_PWD_KEY) || 'itpro2024';
 
 // question cache: catId → { levelNum: [q,q,...], ... }
 const qCache={};
@@ -695,6 +706,7 @@ function confirmGuest(){
 }
 function setUser(u){ currentUser=u; saveUser(u); }
 function logout(){
+  if(isAdmin){ adminLogout(); return; }
   if(fbReady&&auth.currentUser) auth.signOut();
   currentUser=null; saveUser(null); goScreen('loginScreen');
 }
@@ -725,6 +737,9 @@ function goHome(){
   currentUser=u;
   document.getElementById('welcomeName').textContent=u.name.split(' ')[0];
   document.getElementById('navAvatar').textContent=u.name.charAt(0).toUpperCase();
+  // Show Admin button only for admin users
+  const adminBtn=document.getElementById('navAdminBtn');
+  if(adminBtn) adminBtn.style.display=isAdmin?'inline-flex':'none';
   updateStats(); renderCategories(); goScreen('homeScreen');
   prefetchMeta(); // async refresh
 }
@@ -999,20 +1014,97 @@ function goNextLevel(){
 function retryLevel(){ startQuiz(currentCat.id,currentLevel); }
 
 // ════════════════════════════════════════════
-// ADMIN
+// ADMIN — Google-based via Firebase
+// Admin emails are stored in Firestore:
+//   Collection: itpq_admins / doc: {email}
+//   Fields: { email, addedAt }
 // ════════════════════════════════════════════
-function openAdminModal(){ $('adminErr').style.display='none'; $('adminPwdIn').value=''; $('adminModal').classList.add('open'); }
-function closeAdminModal(){ $('adminModal').classList.remove('open'); }
-function verifyAdmin(){
-  if($('adminUser').value==='admin'&&$('adminPwdIn').value===adminPwd){ closeAdminModal(); $('adminScreen'); showAdmin(); }
-  else $('adminErr').style.display='block';
+
+// Hardcoded bootstrap admin — first admin that can add others
+// Change this to YOUR Google account email
+const BOOTSTRAP_ADMIN = 'gavisidda@gmail.com';
+
+let isAdmin = false;       // true when current session is admin
+let adminUser = null;      // Firebase user object for admin
+
+function openAdminModal(){
+  $('adminErr').style.display='none';
+  $('adminModal').classList.add('open');
 }
-function showAdmin(){ goScreen('adminScreen'); loadPlayers(); }
+function closeAdminModal(){ $('adminModal').classList.remove('open'); }
+
+async function loginAdminGoogle(){
+  if(!fbReady){ toast('Firebase not configured'); return; }
+  $('adminErr').style.display='none';
+  $('adminGoogleBtn').textContent='Signing in…';
+  try{
+    const provider=new firebase.auth.GoogleAuthProvider();
+    const result=await auth.signInWithPopup(provider);
+    const u=result.user;
+    const email=u.email.toLowerCase();
+
+    // Check if this email is an admin
+    const ok=await isAdminEmail(email);
+    if(!ok){
+      $('adminErr').style.display='block';
+      $('adminGoogleBtn').innerHTML=`<svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg> Sign in with Google`;
+      // sign them out so they don't stay logged in as regular user accidentally
+      await auth.signOut();
+      return;
+    }
+
+    // Authorised admin
+    isAdmin=true;
+    adminUser=u;
+    closeAdminModal();
+    // Also set as current quiz user so they can play
+    setUser({uid:u.uid,name:u.displayName||email.split('@')[0],email,type:'google'});
+    syncFirestore();
+    showAdmin();
+  }catch(e){
+    $('adminGoogleBtn').innerHTML=`<svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg> Sign in with Google`;
+    toast('Login failed: '+e.message);
+  }
+}
+
+// Check if email is admin — bootstrap email always passes;
+// others are looked up in Firestore itpq_admins collection
+async function isAdminEmail(email){
+  if(email===BOOTSTRAP_ADMIN.toLowerCase()) return true;
+  if(!fbReady) return false;
+  try{
+    const doc=await db.collection('itpq_admins').doc(email).get();
+    return doc.exists;
+  }catch(e){ return false; }
+}
+
+function adminLogout(){
+  isAdmin=false; adminUser=null;
+  if(fbReady&&auth.currentUser) auth.signOut();
+  currentUser=null; saveUser(null);
+  goScreen('loginScreen');
+}
+
+// Admin can switch to quiz player mode without logging out
+function adminPlayQuiz(){
+  goHome();
+}
+
+function showAdmin(){
+  if(!isAdmin){ toast('Admin access required'); return; }
+  goScreen('adminScreen');
+  set('adminNameTag', adminUser ? adminUser.email : '');
+  loadPlayers();
+  loadAdminList();
+}
+
 function switchTab(el,id){
   document.querySelectorAll('.atab').forEach(t=>t.classList.remove('active'));
   document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
   el.classList.add('active'); $('tab-'+id).classList.add('active');
+  if(id==='admins') loadAdminList();
 }
+
 async function loadPlayers(){
   const tb=$('playersTable');
   if(!fbReady){ tb.innerHTML='<tr><td colspan="7" style="text-align:center;color:var(--muted);padding:24px">Firebase not configured.</td></tr>'; return; }
@@ -1029,16 +1121,57 @@ async function loadPlayers(){
     set('adGames',pl.reduce((s,p)=>s+(p.games||0),0));
   }catch(e){ tb.innerHTML='<tr><td colspan="7" style="text-align:center;color:var(--red);padding:24px">Error loading.</td></tr>'; }
 }
+
+// ── Admin list management ──────────────────
+async function loadAdminList(){
+  const tb=$('adminsTable');
+  if(!tb||!fbReady){ return; }
+  try{
+    const snap=await db.collection('itpq_admins').get();
+    const rows=[];
+    // Always show bootstrap admin
+    rows.push(`<tr><td><strong>${BOOTSTRAP_ADMIN}</strong></td><td><span style="color:var(--accent2);font-size:11px">Bootstrap Admin</span></td><td>—</td></tr>`);
+    snap.docs.forEach(d=>{
+      const a=d.data();
+      const dt=a.addedAt?new Date(a.addedAt.seconds*1000).toLocaleDateString():'—';
+      rows.push(`<tr>
+        <td><strong>${a.email}</strong></td>
+        <td><span style="color:var(--gold);font-size:11px">Admin</span></td>
+        <td><button onclick="removeAdmin('${a.email}')" class="btn btn-danger" style="padding:4px 10px;font-size:11px">Remove</button></td>
+      </tr>`);
+    });
+    tb.innerHTML=rows.join('');
+  }catch(e){ if(tb) tb.innerHTML='<tr><td colspan="3" style="color:var(--red)">Error loading admins.</td></tr>'; }
+}
+
+async function addAdminEmail(){
+  const inp=$('newAdminEmail');
+  const email=(inp.value||'').trim().toLowerCase();
+  if(!email||!email.includes('@')){ toast('Enter a valid email'); return; }
+  if(email===BOOTSTRAP_ADMIN.toLowerCase()){ toast('Already the bootstrap admin'); return; }
+  try{
+    await db.collection('itpq_admins').doc(email).set({
+      email, addedAt:firebase.firestore.FieldValue.serverTimestamp(), addedBy:adminUser?.email||'unknown'
+    });
+    inp.value='';
+    toast('Admin added: '+email);
+    loadAdminList();
+  }catch(e){ toast('Error: '+e.message); }
+}
+
+async function removeAdmin(email){
+  if(!confirm('Remove admin: '+email+'?')) return;
+  try{
+    await db.collection('itpq_admins').doc(email).delete();
+    toast('Removed: '+email);
+    loadAdminList();
+  }catch(e){ toast('Error: '+e.message); }
+}
+
 function saveSettings(){
   const pass=parseInt($('cfgPass').value), qpl=parseInt($('cfgQPL').value);
   PASS_THRESH=pass/100; Q_PER_LEVEL=qpl;
   localStorage.setItem('itpq_cfg',JSON.stringify({pass,qpl})); toast('Settings saved!');
-}
-function changeAdminPwd(){
-  const c=$('curPwd').value,n=$('newPwd').value;
-  if(c!==adminPwd){ toast('Current password wrong'); return; }
-  if(n.length<6){ toast('New password too short'); return; }
-  adminPwd=n; localStorage.setItem(ADMIN_PWD_KEY,n); toast('Password changed!');
 }
 function resetAllData(){ if(confirm('Reset all local progress?')){ localStorage.removeItem('itpq_prog'); toast('Data reset!'); } }
 
@@ -1065,7 +1198,13 @@ window.addEventListener('load',()=>{
   if(spd){ speed=parseFloat(spd); $('speedSel').value=spd; }
 
   const u=getUser(); if(u){ currentUser=u; goHome(); }
-  if(fbReady) auth.onAuthStateChanged(u=>{ if(u&&!currentUser){ setUser({uid:u.uid,name:u.displayName||u.email?.split('@')[0]||'User',type:'google'}); goHome(); } });
+  if(fbReady) auth.onAuthStateChanged(fbUser=>{
+    // Skip if already have a user, OR if this is an admin flow (isAdmin=true)
+    if(fbUser && !currentUser && !isAdmin){
+      setUser({uid:fbUser.uid,name:fbUser.displayName||fbUser.email?.split('@')[0]||'User',type:'google'});
+      goHome();
+    }
+  });
 });
 </script>
 </body>
